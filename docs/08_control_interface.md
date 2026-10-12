@@ -35,7 +35,7 @@ Servo counts: `counts = center + dir × servo_deg × 4096/360`. `center` and `di
 
 ## 2. Jetson ↔ ESP32 link
 
-USB serial, 921 600 Bd, 8N1. Code: `firmware/.../src/host_link.*` and `software/.../wra_driver/protocol.py` (identical framing).
+USB serial, 921 600 Bd, 8N1. Code: `firmware/.../src/host_link.*` and `software/wra_ros2/wra_driver/wra_driver/protocol.py` (identical framing).
 
 ```
 A5 5A | type u8 | seq u8 | len u16 LE | payload[len] | crc16 u16 LE      (CRC-16/CCITT-FALSE over type..payload)

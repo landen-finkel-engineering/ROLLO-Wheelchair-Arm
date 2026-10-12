@@ -434,7 +434,11 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 6. **Accuracy is unproven.** The ≈ 5.7 mm RSS is an estimate; teaching the knob pose by hand (`teach-knob`) removes most of it for repeated doors.
 7. **Provisional chair model.** Only the published Silver Sport 2 data is real: seat width, depth and height, 8" casters. The clamps, strut and clearances depend on your measurements.
 8. **Firmware never run on a board.** It compiles and links for the ESP32, but has never run on one. The 3.x Arduino core path is untested.
-9. **No vision hardware,** by design. Knob poses come from teaching or from your own perception node via `/wra/knob_pose`.
+9. **Open safety items** (docs/09), all needed before user trials (T5):
+   - no guards are modelled yet over the open belts and gears, and there is no cover sleeve over the exposed ABENICS teeth;
+   - the firmware does not yet flag a position deviation, such as after a belt tooth jump;
+   - the J1 soft window is the same on both sides, with no tighter inboard limit per side.
+10. **No vision hardware,** by design. Knob poses come from teaching or from your own perception node via `/wra/knob_pose`.
 
 **Measurements needed next** (`docs/12_measurement_worksheet.md` has the full list and maps each to a parameter):
 - **Chair:** front-post OD and free length, the post's position from the seat edge and rear axle, the lower-rail height and OD, the rear-cane OD, and the wheel-lock and footrest-hanger positions.
