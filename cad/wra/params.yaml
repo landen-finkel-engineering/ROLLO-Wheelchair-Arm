@@ -1,0 +1,361 @@
+# =====================================================================================
+#  WRA-1  Wheelchair Robotic Arm — SINGLE SOURCE OF TRUTH for CAD, calculations, URDF
+#  and firmware limits.  Edit values here, then run:   python build.py --all
+#
+#  UNITS:  millimetres, degrees, grams (unless a key says otherwise: *_N, *_Nm, *_kg ...)
+#
+#  COORDINATE CONVENTION (also see docs/03_left_right_interchangeability.md)
+#   chair frame   {C}: origin on the floor, mid-way between the rear-wheel contact
+#                      points; +X forward, +Y to the user's LEFT, +Z up (ROS REP-103).
+#   arm base      {B}: origin = centre of the dock interface plane (top face of the
+#                      Receiver).  +Z = J1 axis (up).  +X = "front mark" arrow moulded
+#                      on the Receiver and on the Base Housing.
+#   turntable     {T}: rotates with J1 about Z_B; origin on J1 axis at the top face of
+#                      the turntable plate.
+#   Joint angles: see section `joints`.  theta2/theta3 are ABSOLUTE elevation angles
+#                 of the upper arm / forearm measured from the turntable horizontal,
+#                 positive = up.  (URDF uses relative q3 = theta3 - theta2.)
+#
+#  VALUE STATUS TAGS used in comments:
+#   [V]  verified from a cited source (see docs/01_research_findings.md)
+#   [M]  measured from the SO-ARM100 STS3215 reference STEP model (Apache-2.0)
+#   [D]  design choice (free to change)
+#   [P]  PROVISIONAL — depends on YOUR wheelchair / parts. Measure and replace.
+# =====================================================================================
+
+project:
+  name: "WRA-1 Wheelchair Robotic Arm"
+  version: "0.1.0"
+
+build_side: right              # [D] which side the single-side outputs show (left|right)
+
+printer:                        # [V] Bambu Lab P1S build volume 256 x 256 x 256 mm
+  model: "Bambu Lab P1S"
+  build_volume: [256, 256, 256]
+  margin: 5                     # [D] keep parts this far from the plate edge
+
+# ------------------------------------------------------------------ print fits ------
+fit:                            # [D] tune with output/stl/00_fit_test_coupon.stl
+  hole_extra: 0.15              # added to ISO-273 clearance diameters (printed holes shrink)
+  bearing_seat_extra: 0.10      # added to bearing OD for printed housings (light press)
+  pin_bore_extra: 0.15          # added to steel pin dia for printed bores (slip fit)
+  pin_press_minus: 0.05         # subtracted for printed press-fit pin bores (tight)
+  servo_pocket_clear: 0.25      # per side, servo body to printed pocket
+  slide_clear: 0.30             # per side, sliding printed-on-printed fits
+  tube_socket_extra: 0.20       # added to tube OD for printed tube sockets
+
+# ISO 273 "medium" clearance-hole diameters (+fit.hole_extra applied in code) [V]
+clearance: {M2: 2.4, M2.5: 2.9, M3: 3.4, M4: 4.5, M5: 5.5, M6: 6.6, M8: 9.0}
+# Socket-head cap screw head (ISO 4762) dia / height [V]
+shcs_head: {M3: [5.5, 3.0], M4: [7.0, 4.0], M5: [8.5, 5.0], M6: [10.0, 6.0], M8: [13.0, 8.0]}
+# Hex nut across-flats / thickness (ISO 4032) [V]
+nut: {M3: [5.5, 2.4], M4: [7.0, 3.2], M5: [8.0, 4.7], M6: [10.0, 5.2], M8: [13.0, 6.8]}
+# Heat-set inserts: pilot-hole dia [V accu.co.uk chart], insert length [V CNC-Kitchen std]
+insert:
+  M3: {hole: 4.0, length: 5.7, depth: 6.6}
+  M4: {hole: 5.6, length: 8.1, depth: 9.0}
+  M5: {hole: 6.4, length: 9.5, depth: 10.5}
+  M6: {hole: 8.0, length: 12.7, depth: 13.5}
+
+# ------------------------------------------------------------------ bearings --------
+bearings:                       # ISO 15 deep-groove ball bearings [V]  [d, D, B]
+  "608": [8, 22, 7]
+  "688": [8, 16, 5]
+  "625": [5, 16, 5]
+  "626": [6, 19, 6]
+  "623": [3, 10, 4]
+  "6800": [10, 19, 5]
+  "6802": [15, 24, 5]
+  "6805": [25, 37, 7]
+  "6806": [30, 42, 7]
+  "6808": [40, 52, 7]
+
+# ------------------------------------------------------------------ servo -----------
+servo:                          # Waveshare ST3215 (SKU 22414) — Feetech STS3215-C018 class
+  # ---- electrical / performance  [V] Waveshare product page + wiki
+  voltage_range_V: [6.0, 12.6]
+  supply_V: 12.0                # [D] regulated servo bus
+  stall_torque_Nm: 2.94         # 30 kg.cm @ 12 V ("locked-rotor")
+  no_load_rpm: 45               # 0.222 s/60deg @ 12 V
+  no_load_current_A: 0.20
+  stall_current_A: 2.7
+  kt_Nm_per_A: 1.079            # 11 kg.cm/A
+  mass_g: 89                    # Waveshare lists 0.089 kg; servodatabase lists 69 g -> use 89
+  counts_per_rev: 4096
+  # ---- derating (design rules, see docs/04_design_rules_and_derating.md)  [D]
+  continuous_fraction: 0.25     # max sustained (holding) torque as fraction of stall
+  peak_fraction: 0.50           # max short-time torque (firmware torque limit ceiling)
+  # ---- geometry, servo frame: origin = body centre, +Z = output axis direction,
+  #      output axis at (out_x, 0).  [M] from SO-ARM100 STS3215_03a.step, cross-checked
+  #      with Waveshare outline 45.22 x 24.72 x 35 mm [V]
+  body: {x: [-22.7, 22.7], y: [-12.4, 12.4], z: [-14.4, 14.4]}
+  cover_top_z: 17.0             # raised label/cover area on the non-output half
+  cover_top_x_max: 6.8
+  cover_bot_z: -15.9
+  out_x: 12.5
+  horn: {dia: 20.0, z0: 16.2, z1: 18.7, hub_dia: 9.0, screw_head_z: 20.2, screw_head_dia: 6.0,
+         bolt_circle: 14.0, bolt: M3, bolt_angle0: 45}   # 4x M3 tapped on BC14 at 45/135/..
+  rear_horn: {dia: 20.0, z0: -17.7, z1: -15.6, boss_dia: 6.0, boss_z0: -18.3}
+  rear_block: {x: [-17.4, -4.0], y: [-9.2, 9.2], z: [-17.7, -15.9]}   # raised block on bottom cover
+  connector: {x: [-6.0, 2.5], y: [-11.0, 11.0], z_out: -19.4, cable_clear: 14.0}
+  side_chamfer: 3.0             # 45deg chamfer on output-end vertical edges
+
+# ------------------------------------------------------------------ belts -----------
+belt:                           # HTD 3M, 15 mm wide  [V] Gates data: 64 lbf/in working
+  pitch: 3.0                    #   tension -> ~168 N for 15 mm
+  width: 15.0
+  pld: 0.381                    # pitch-line differential: OD = PD - 2*pld
+  allowable_N: 168
+  groove_depth: 1.19
+  groove_r: 0.89
+  print_clear: 0.10
+  flange: 1.5                   # printed flange thickness each side
+  flange_h: 1.6                 # flange height above OD
+  tooth_len: 16.0               # face width of toothed section (belt 15 + 1)
+  standard_lengths: [225, 231, 240, 243, 246, 252, 255, 261, 264, 267, 270, 276, 285, 288,
+                     291, 294, 300, 312, 315, 318, 321, 330, 336, 339, 345, 351, 357]
+
+# ------------------------------------------------------------------ drive module ----
+# One standard "Drive Module" (DM) is used for J1, J2, J3 and J4: the servo horn is
+# bolted to a 36T pulley that spins on 2x 608 bearings on a FIXED 8 mm pin held by the
+# module's pin wall.  The servo floats in its pocket until the cap is tightened, so it
+# carries torque only — belt tension goes pulley -> bearings -> pin -> bracket.
+dm:
+  teeth: 36
+  bearing: "608"
+  pin_dia: 8.0
+  pin_len: 24.0                 # ISO 8734 hardened dowel 8 x 24 (fixed pulley axle)
+  flange_plate: 5.0             # pulley bottom plate bolted to horn
+  gap_horn: 0.6
+  wall: 5.0                     # bracket wall
+  pin_wall: 8.0
+  cap_t: 4.0
+
+# ------------------------------------------------------------------ arm geometry ----
+# Kinematic layout (see docs/02_architecture_trade_study.md, figure "shoulder stack"):
+#   J1 yaw (turntable) -> J2 shoulder elevation theta2 (upper arm)
+#   -> J3 forearm elevation theta3, driven from the shoulder through a PARALLELOGRAM
+#      (crank on J2 axis, rod parallel to the upper arm, crank on the forearm)
+#   -> J4 wrist pitch -> J5 wrist roll -> J6 gripper.
+# All Y values below are in the turntable frame {T}; the J2 axis O is at (0, *, shoulder_h).
+arm:
+  L2: 250.0                     # [D] J2 -> elbow axis (upper arm)
+  L3: 230.0                     # [D] elbow -> wrist pitch axis (forearm)
+  crank: 40.0                   # [D] parallelogram crank length (both ends)
+  shoulder_h: 80.0              # [D] J2 axis height above turntable plate top
+  stub_dia: 15.0                # [D] J2 stub axle, 15 mm h6 steel, cantilevered from left cheek
+  stub_bearing: "6802"          # [V] 15 x 24 x 5
+  stub_end_y: 43.0              # stub (with 15 mm set-screw collar) ends here; cord gap beyond
+  y_stub_cheek: [-50.0, -38.0]  # cheek on the -Y side that clamps the stub
+  y_86t_center: -28.0           # J2 driven pulley tooth centre plane
+  y_ua_hub: [-37.5, 4.0]        # upper-arm hub incl. integral 86T pulley
+  ua_plane_y: -7.25             # upper-arm tube centre plane
+  ua_tube_od: 12.0              # [D] 2x aluminium tube 12 x 1, stacked in the arm plane
+  ua_tube_wall: 1.0
+  ua_tube_offset: 15.0          # +/- in-plane offset of the two tubes from the arm line
+  y_j3_hub: [4.5, 30.0]
+  y_72t_center: 14.0            # J3 driven pulley tooth centre plane
+  y_crank_arm: [24.0, 30.0]
+  rod_plane_y: 37.5             # parallelogram rod centre plane
+  rod_od: 10.0                  # [D] rod tube 10 x 1
+  rod_wall: 1.0
+  rod_end_bearing: "626"         # on 6 mm shoulder screws (ISO 7379, M5 thread)
+  j3_cord_y: 47.5               # J3 spring cord plane (beyond the stub end)
+  elbow_pin_dia: 10.0           # [D] elbow pin 10 mm h6, cantilevered from elbow block
+  elbow_bearing: "6800"
+  elbow_pin_end_y: 39.0         # elbow pin (10 mm) end incl. set-screw collar
+  rod_end_r: 12.5
+  fa_tube_od: 12.0              # [D] forearm: 2x tube 12 x 1, stacked
+  fa_tube_wall: 1.0
+  fa_tube_offset: 12.0
+  socket_depth: 28.0            # tube socket depth in printed nodes
+  hub_tube_r0: 34.0             # tube sockets start at this radius from the joint axis
+  wrist_to_flange: 56.5         # J4 axis -> tool-flange FRONT face (along roll axis) = wrist.X_FLANGE1
+  tcp_from_flange: 115.0        # tool-flange face -> TCP (mid-pad between the jaws at phi = 0)
+
+base:
+  dock_plate_t: 8.0
+  bearing: "6806"               # J1 pair, 30 x 42 x 7
+  bearing_z: [25.0, 55.0]       # bottom faces of lower / upper J1 bearing (base frame)
+  spindle_od: 30.0
+  spindle_bore: 20.0            # cable pass-through inside the J1 spindle
+  tower_od: 58.0
+  tower_flange_od: 68.0
+  turntable_plate_z: 95.0       # underside of turntable plate (base frame)
+  turntable_plate_t: 10.0
+  cable_cavity: [8.0, 23.5]
+  cavity_dia: 48.0
+  collar_z: [10.2, 23.2]         # J1 spindle clamp collar position (base frame)
+  collar: [30.0, 45.0, 13.0]    # [V-type] 30 mm aluminium clamp shaft collar (bore, OD, width)
+  connector_hole: 16.2          # GX16 aviation panel connector
+  stop_r: 21.5                  # J1 hard-stop pin radius
+
+pulleys:                        # teeth per joint (DM pulley is dm.teeth = 36)
+  j1: 54                        # fixed pulley on base; J1 DM walks around it, ratio 1.5
+  j2: 86                        # ratio 2.389
+  j3: 72                        # ratio 2.0
+  j4: 54                        # ratio 1.5
+belt_lengths:                   # chosen standard HTD-3M-15 pitch lengths (mm)
+  j1: 240                       # C = 51.79
+  j2: 345                       # C = 77.28 (dual drive module, shared axis)
+  j3: 321                       # C = 77.59 (J3 half slides independently)
+  j4: 276                       # C = 69.97 (DM clears the pitch-yoke sweep)
+ddm:                            # Dual Drive Module: J2 + J3 drive brackets back-to-back behind O.
+  angle_deg: 180.0              # direction O -> DDM axes in the turntable XZ plane
+  pin_len: 24.0                 # each half: own 8 x 24 dowel (independent belt tension)
+  center_wall: [-17.4, 3.4]     # Y extent of the two pin walls together
+  split_y: -7.0
+
+springs:                        # gravity balance (zero-free-length emulation, docs/04_design_rules_and_derating.md)
+  a: 48.0                       # [D] cord idler point below J2 axis
+  b2: 30.0                      # [D] J2: spring point on upper-arm rear lever
+  b3: 20.0                      # [D] J3: spring point on J3 crank L-lever
+  per_joint: 2                  # [D] two springs + equaliser = redundancy
+  balance_fraction: 0.90        # [D] keep ~10% gravity preload on the gear trains
+  idler: "623"                  # 3 x 10 x 4 bearing as cord idler
+  cord: "UHMWPE (Dyneema) braid 1.5 mm, >= 100 kg"
+  j2_offset: 25.0               # J2 cord runs along the upper arm at this offset
+
+joints:                         # limits in joint space (deg).  soft = firmware, hard = stops
+  j1: {soft: [-105, 105], hard: [-110, 110]}
+  j2: {soft: [-30, 100], hard: [-34, 104]}           # theta2 absolute
+  j3: {soft: [-95, 60], hard: [-99, 64]}              # theta3 absolute (forearm)
+  j3_rel: {soft: [42, 140]}                           # theta2 - theta3; 42: rod end P clears J3-hub spring post; 140: wrist clears upper arm
+  j4: {soft: [-105, 105], hard: [-110, 110]}
+  j5: {soft: [-150, 150], hard: [-160, 160]}
+  j6_half_open_mm: [0, 32.5]   # claw: pad-to-pad opening = 2 x j6 (0..65 mm)
+  home_deg: {j1: 0, j2: 95, j3: -25, j4: -65, j5: 0}  # PARK: folded upright, gripper pointing down (q3_rel = 120)
+  home_abenics: {wt: [-28, 0, 0]}   # ABENICS park: wt = (pitch, yaw, roll) of the tool vs. the forearm; 28 deg down (inside the 30 deg soft cone)
+  park_j1_inboard_deg: 20       # on the chair J1 parks 20 deg INBOARD so the drive modules swing away from the wheel lock
+
+payload:
+  rated_kg: 0.30                # [D] target at full reach (checked in docs/05_calculations.md)
+  peak_kg: 0.50                 # close-in, gripper pointing down
+
+# ------------------------------------------------------------------ wrist / gripper -
+wrist:
+  roll_bearing: "6802"          # 2x on the roll spindle
+  pitch_bearing: "688"          # 2x pitch stub-axle bearings (8 x 16 x 5)
+  pitch_pin_dia: 8.0
+  yoke_wall: 4.0
+  yoke_wall_pulley_side: 8.0    # thicker wall takes the 54T pulley's M3 inserts
+  tool_flange: {bolt_circle: 30.0, bolts: M3, n: 4, dowel_dia: 4.0, center_bore: 10.0, dia: 40.0, t: 6.0}
+wrist_type: abenics             # [D] abenics (WRA-1A, 6-DoF, default) | pitch_roll (WRA-1B, 5-DoF fallback)
+
+# ------------------------------------------------------------------ ABENICS wrist ---
+# Active ball joint after Abe, Tadakuma & Tadakuma, IEEE T-RO 37(5):1806-1825 (2021).
+# Cross-spherical gear (CS) with involute ring teeth about body g and h; two monopole (MP)
+# S-gears of half the pitch radius on module axes u1/u2 (+/-45 deg from vertical, normal to the
+# tool axis).  Each module: carrier angle q (coaxial q servo) + monopole spin Theta (servo on the
+# carrier, spur pair).  WRA additions: fixed centre ball (sphere carries no translation via the
+# teeth), smooth caps outside the toothed band, cable through the centre.
+abenics:
+  module: 1.5                   # [D] printed PA-CF / PETG-CF teeth
+  cs_teeth: 34                  # [D] teeth on a great circle -> CS pitch radius 25.5
+  mp_teeth: 17                  # [D] monopole (half radius, 12.75)
+  backlash: 0.15
+  segments: 300                 # [D] mesh segments around each ring family (print STL)
+  tilt_soft_deg: 30             # [D] tool cone (pitch/yaw)
+  tilt_hard_deg: 33
+  toward_module_soft_deg: 21    # [D] tilt component toward a module axis u_k (up-left / up-right
+  toward_module_hard_deg: 24    #     diagonals): limited by module packaging vs. the claw (docs/06_abenics_wrist.md)
+  roll_soft_deg: 90             # [D] limited by the Theta servo range (no multi-turn needed)
+  band_margin_deg: 12           # [D] toothed band = 90 +/- (tilt_hard + margin) from the tool axis
+  mp_width: 10.0                # monopole disc width (spin-axis direction)
+  ball_dia: 19.0                # [D] fixed centre ball (PA-CF), socket clearance 0.15
+  post_od: 8.0                  # [D] 8 x 1 aluminium tube, J6 cable inside
+  flange_back: 50.0             # tool-flange back face from the sphere centre (front face = +6)
+  carrier_bearing: "6808"       # [V] 40 x 52 x 7 thin-section (61808 equivalent), locating bearing
+  carrier_bearing_u: 43.0       # [D] near face along u (surrounds the monopole, outside the claw cone)
+  far_bearing: "6805"           # [V] 25 x 37 x 7, floating bearing at the carrier's far end
+  theta_gear: {module: 1.5, servo_teeth: 20, mp_teeth: 15, width: 4.5}   # servo -> monopole, 1.333x speed-up; m1.5: +19 % tooth strength vs 24/18 m1.25 at the same centre distance
+  q_window_deg: [-120, 120]     # [D] carrier range (strut + Theta cable stay in the unswept sector)
+  mp_pin: [8.0, 30.0]           # ISO 8734 8 x 30 monopole axle (press in the -x fork arm)
+claw:                           # knob claw (parallel rack & pinion), replaces the rotating-jaw gripper
+  pinion_module: 1.5
+  pinion_teeth: 14              # r 10.5 -> jaw force = tau / 0.021 m
+  pinion_width: 10.0            # [C] 10 mm: Lewis stress at the 1.47 N m knob limit -> margin >= 1.7 in PA-CF
+  x_pinion: 56.6                # pinion mid-plane from tool-flange face (servo rear boss clears the dovetail by 0.9 mm)
+  rack_h: 5.0                   # rack body thickness behind the tooth roots
+  rack_len: 60.0
+  rail_len: 124.0               # [V-check] MGN9 rail, cut to length
+  rail_h: 6.5                   # [V] MGN9 rail height
+  rail_z: 18.0                  # rail bottom above the tool axis
+  block_len: 28.9               # [V-check] MGN9C block length (along the rail)
+  block_w: 20.0                 # [V] MGN9 block width
+  block_h: 10.0                 # [V] rail bottom -> block top
+  block_holes: [15.0, 10.0]     # [V-check] MGN9C M3 pattern (across x along)
+  carriage_t: 4.0
+  beam_h: 7.0
+  finger_t: 6.0
+  finger_x: [66.0, 116.0]       # finger (pad zone) from tool-flange face
+  pad_h: 22.0
+  pad_pocket: 3.0
+  pad_proud: 3.0                # pad flats stand 3 mm proud of the finger
+  v_depth: 4.0                  # 100 deg V-groove depth
+  lip_d: 6.0                    # knob lip protrusion toward the object
+  lip_t: 5.0
+  open_max: 65.0                # [D] pad-to-pad opening range 0..65 mm
+  torque_cont_Nm: 0.735         # 25 % stall -> 35 N per jaw
+  torque_knob_Nm: 1.47          # 50 % stall for <= 10 s -> 70 N per jaw
+tool_interface:                 # quick-change between the tool flange adapter (56) and any tool
+  dovetail: [22.0, 28.0, 6.0, 40.0]   # root width, top width, height, length; M4 lock screw
+
+# ------------------------------------------------------------------ dock / mount ----
+dock:
+  plate: [100.0, 100.0]
+  receiver_t: 14.0
+  dowel_dia: 6.0                # ISO 8734 6 x 20 hardened dowels
+  dowel_len: 20.0
+  dowel_xy: [[34.0, 34.0], [-34.0, -34.0]]   # diagonal; arm plate: round hole + slot
+  thumb_screw: M6               # DIN 464 knurled thumb screw M6 x 25 (captive)
+  thumb_xy: [[34.0, -34.0], [-34.0, 34.0]]
+  index_holes: 24               # receiver: 24 holes @15deg -> yaw indexing on the mount shelf
+  index_bc: 70.0
+  index_bolt: M4
+  switch_pocket: [20.0, 10.5, 6.5]   # dock-present microswitch (SS-5GL size) pocket
+
+mount:                          # chair-side post mount (clamps to a VERTICAL frame tube)
+  tube_od: 25.4                 # [P] MEASURE your frame tube (worksheet item T1)
+  liner: 1.5                    # [D] rubber/TPU liner thickness
+  clamp_bolt: M5
+  clamp_h: 28.0
+  clamp_spacing: 70.0           # [P] centre-to-centre of the two clamps on the post (needs >= 160 mm free tube)
+  shelf_offset: 70.0            # [P] bracket spine face -> receiver centre (horizontal)
+  shelf_above_clamp: 22.0
+  bracket_yaw_deg: {right: -90, left: 90}    # [P] shelf points straight OUTBOARD (clear of the footrest hanger and hand rim)
+  receiver_yaw_deg: {right: 0, left: 0}      # [P] arm 'front mark' points FORWARD on both sides (index ring, 15 deg steps)
+  torque_arm_len: [90.0, 160.0] # adjustable strut range (M6 threaded rod)
+
+# ------------------------------------------------------------------ chair reference -
+# PROVISIONAL reference geometry used ONLY for visual assemblies and collision checks.
+# Published Drive Silver Sport 2 data [V]: seat width 16/18/20 in, seat depth 16 in,
+# seat-to-floor 17.5-19.5 in, back height 16 in, overall length 42 in, 8 in casters.
+# Everything else below is [P] and must be replaced from docs/12_measurement_worksheet.
+chair:
+  seat_width: 457.2             # 18 in [V option]
+  seat_depth: 406.4             # 16 in [V]
+  seat_height: 495.3            # 19.5 in [V]
+  back_height: 406.4            # 16 in [V]
+  frame_tube_od: 25.4           # [P]
+  front_post_x: 445.0           # [P] front post axis, from rear-axle plane
+  post_from_seat_edge: 15.0     # [P] post axis outboard of seat edge
+  rear_wheel_dia: 610.0         # [P] 24 in typical
+  rear_wheel_camber_y: 40.0     # [P] wheel centre outboard of frame
+  caster_dia: 203.2             # 8 in [V]
+  mount_z: 460.0                # [P] receiver (dock) top above floor -> J2 axis at mount_z + 185.  460 puts a 36" knob (914 mm) at z_B = 454, mid knob window (docs/10)
+  front_post_z: [220.0, 470.0]  # [P] free length of the front frame post (caster housing top .. seat rail)
+  lower_rail_z: 200.0           # [P] lower side-frame rail height (torque-strut clamp)
+  strut_clamp_x: 330.0          # [P] strut clamp position on the lower rail (from rear axle)
+  hanger_top_z: 440.0           # [P] swing-away footrest hanger attachment height
+  wheel_lock_x: 300.0           # [P] wheel-lock (brake) position
+  armrest_height: 735.0         # [P]
+  ebox_center_z: 360.0          # [P] electronics box centre height on the rear cane (BELOW the seat, behind the frame)
+
+# ------------------------------------------------------------------ electronics ----
+electronics:
+  box_inner: [190.0, 140.0, 62.0]   # [P] fits Jetson Orin Nano dev kit + controller
+  jetson_board: [100.0, 79.0]        # [P] verify against your dev-kit carrier
+  esp32_board: [55.0, 28.0]          # [P] Freenove ESP32-WROOM / DevKitC footprint
+  bus_adapter: [42.0, 33.0]          # [V] Waveshare Bus Servo Adapter (A)
+  estop_hole: 22.5                   # [V] 22 mm panel-mount operator

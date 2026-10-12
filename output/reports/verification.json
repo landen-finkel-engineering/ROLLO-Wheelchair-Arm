@@ -1,0 +1,1303 @@
+{
+ "generated": "2026-10-12T10:40:35",
+ "params_sha": "b8b62fd5c287d452",
+ "build_volume_mm": [
+  256.0,
+  256.0,
+  256.0
+ ],
+ "margin_mm": 5.0,
+ "parts": [
+  {
+   "part": "00_fit_test_coupon",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.013,
+   "stl_triangles": 8988,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "01_receiver",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.006,
+   "stl_triangles": 26552,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "02_tube_clamp_body",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.012,
+   "stl_triangles": 3110,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "03_tube_clamp_cap",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.013,
+   "stl_triangles": 1984,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "04_post_bracket",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.0,
+   "stl_triangles": 4200,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "05_stop_collar",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.036,
+   "stl_triangles": 2008,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "10_base_housing",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.014,
+   "stl_triangles": 8900,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "11_j1_fixed_pulley",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.002,
+   "stl_triangles": 10852,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "12_dm_bracket",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.002,
+   "stl_triangles": 6784,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "12_dm_cap",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.004,
+   "stl_triangles": 3116,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "12_dm_pulley36",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.008,
+   "stl_triangles": 9246,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "20_turntable",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.005,
+   "stl_triangles": 10774,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "21_stub_cheek",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.012,
+   "stl_triangles": 7122,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "22_ddm_bracket_j2",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.002,
+   "stl_triangles": 5220,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "22_ddm_bracket_j3",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.002,
+   "stl_triangles": 5208,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "30_ua_hub",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.009,
+   "stl_triangles": 15866,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "31_j3_hub",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.001,
+   "stl_triangles": 12398,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "32_elbow_block",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.012,
+   "stl_triangles": 9910,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "33_rod_end",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.03,
+   "stl_triangles": 4324,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "34_forearm_root",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.016,
+   "stl_triangles": 8660,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "35_stub_spacer_14p46mm",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.041,
+   "stl_triangles": 1008,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "35_stub_spacer_30p96mm",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.041,
+   "stl_triangles": 1008,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "40_wrist_housing",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.004,
+   "stl_triangles": 10686,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "41_pitch_yoke",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.006,
+   "stl_triangles": 8066,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "42_yoke_cap",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.002,
+   "stl_triangles": 2064,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "43_j4_pulley54",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.004,
+   "stl_triangles": 9072,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "44_j5_horn_adapter",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.018,
+   "stl_triangles": 4656,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "45_roll_spindle",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.043,
+   "stl_triangles": 2548,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "46_tool_flange",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.042,
+   "stl_triangles": 5564,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "47_roll_spacer",
+   "variant": "WRA-1B",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.041,
+   "stl_triangles": 1008,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "50_claw_palm",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.004,
+   "stl_triangles": 7314,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "51_claw_cradle_cap",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.001,
+   "stl_triangles": 2064,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "52_claw_pinion",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.024,
+   "stl_triangles": 5388,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "53_claw_jaw_a",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.0,
+   "stl_triangles": 3408,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "53_claw_jaw_b",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.0,
+   "stl_triangles": 3404,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "54_claw_pad_a",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.001,
+   "stl_triangles": 1160,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "54_claw_pad_b",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.001,
+   "stl_triangles": 1160,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "56_tool_adapter",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.015,
+   "stl_triangles": 6096,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "60_electronics_box",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.001,
+   "stl_triangles": 11876,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "61_electronics_lid",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.0,
+   "stl_triangles": 2332,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "62_estop_pendant",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.003,
+   "stl_triangles": 3548,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "63_estop_pendant_lid",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.01,
+   "stl_triangles": 4070,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "70_bench_test_stand",
+   "variant": "common",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.003,
+   "stl_triangles": 5574,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "80_cs_gear_front",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_source": "toothed mesh",
+   "stl_volume_vs_blank_pct": -12.02,
+   "stl_triangles": 207424,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "81_cs_gear_back",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_source": "toothed mesh",
+   "stl_volume_vs_blank_pct": -28.42,
+   "stl_triangles": 184142,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "82_monopole",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_source": "toothed mesh",
+   "stl_volume_vs_blank_pct": -17.66,
+   "stl_triangles": 371726,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "83_mp_fork",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.057,
+   "stl_triangles": 5676,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "84_mp_cradle",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.006,
+   "stl_triangles": 6698,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "85_theta_gear",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.007,
+   "stl_triangles": 4776,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "86_q_coupling",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.029,
+   "stl_triangles": 5116,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "87_module_frame",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.005,
+   "stl_triangles": 9970,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "88_q_servo_cap",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.001,
+   "stl_triangles": 2064,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "89_abenics_housing",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.001,
+   "stl_triangles": 7822,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "90_center_ball",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.201,
+   "stl_triangles": 9924,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "91_holder_retainer",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.039,
+   "stl_triangles": 4422,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  },
+  {
+   "part": "92_cradle_strap",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": 0.002,
+   "stl_triangles": 1028,
+   "step_volume_err_pct": -0.0,
+   "pass": true
+  },
+  {
+   "part": "93_mp_spacer",
+   "variant": "WRA-1A",
+   "valid": true,
+   "solids": 1,
+   "fits_bed": true,
+   "on_bed": true,
+   "stl_watertight": true,
+   "stl_winding_ok": true,
+   "stl_volume_err_pct": -0.041,
+   "stl_triangles": 1008,
+   "step_volume_err_pct": 0.0,
+   "pass": true
+  }
+ ],
+ "summary": {
+  "all_pass": true,
+  "parts": 57,
+  "parts_pass": 57,
+  "note": "interface checks re-run after replacing the approximate belt-length formula with the exact one"
+ },
+ "interfaces": {
+  "dock_dowel_0_clears_base_hole": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "thumb_screw_0_clears_base_hole": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "thumb_screw_0_in_receiver_insert_bore": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "dock_dowel_1_clears_base_hole": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "thumb_screw_1_clears_base_hole": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "thumb_screw_1_in_receiver_insert_bore": {
+   "value_mm3": 0,
+   "pass": true
+  },
+  "belt_j1_length": {
+   "centre_mm": 51.785,
+   "pitch_length_mm": 240.0,
+   "nominal": 240,
+   "pass": true
+  },
+  "belt_j2_length": {
+   "centre_mm": 77.282,
+   "pitch_length_mm": 345.0,
+   "nominal": 345,
+   "pass": true
+  },
+  "belt_j3_length": {
+   "centre_mm": 77.588,
+   "pitch_length_mm": 321.0,
+   "nominal": 321,
+   "pass": true
+  },
+  "belt_j4_length": {
+   "centre_mm": 69.972,
+   "pitch_length_mm": 276.0,
+   "nominal": 276,
+   "pass": true
+  },
+  "claw_closed_pads_touch": {
+   "overlap_mm3": 0,
+   "gap_mm": 0.0,
+   "pass": true
+  },
+  "claw_carriage_on_rail_at_full_open": {
+   "carriage_edge_mm": 62.0,
+   "rail_half_mm": 62.0,
+   "pass": true
+  },
+  "claw_jaw_force_N_per_jaw": {
+   "cont": 35.0,
+   "knob": 70.0,
+   "pass": true
+  },
+  "abenics_fk_ik_roundtrip": {
+   "max_err": 5.100087019371813e-15,
+   "pass": true
+  },
+  "abenics_cs_monopole_centre_distance": {
+   "D_MP": 38.25,
+   "from_teeth": 38.25,
+   "pass": true
+  },
+  "abenics_theta_pair_centre_distance": {
+   "Z_TS - D_MP": 26.25,
+   "from_teeth": 26.25,
+   "pass": true
+  },
+  "abenics_toothed_mesh_overlap_home": {
+   "overlap_mm3": [
+    0.0,
+    -0.0
+   ],
+   "pass": true
+  }
+ },
+ "self_interference_sweep": [
+  {
+   "pose": {},
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 40,
+    "j3": -10,
+    "wt": [
+     -20,
+     0,
+     0
+    ],
+    "j6": 20
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": -30,
+    "j3": -90,
+    "wt": [
+     0,
+     0,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 85,
+    "j3": 40,
+    "wt": [
+     -30,
+     0,
+     90
+    ],
+    "j6": 6
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j1": 105,
+    "j2": 10,
+    "j3": -60,
+    "wt": [
+     30,
+     0,
+     0
+    ],
+    "j6": 0
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j1": -105,
+    "j2": 45,
+    "j3": -95,
+    "wt": [
+     10,
+     0,
+     -90
+    ],
+    "j6": 6
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 100,
+    "j3": 58,
+    "wt": [
+     -30,
+     0,
+     90
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 50,
+    "j3": 8,
+    "wt": [
+     33,
+     0,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 50,
+    "j3": 8,
+    "wt": [
+     -33,
+     0,
+     90
+    ],
+    "j6": 0
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": -30,
+    "j3": -95,
+    "wt": [
+     -30,
+     0,
+     0
+    ]
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 100,
+    "j3": -40,
+    "wt": [
+     0,
+     0,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 100,
+    "j3": -40,
+    "wt": [
+     0,
+     33,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 100,
+    "j3": -40,
+    "wt": [
+     0,
+     -33,
+     90
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 100,
+    "j3": -40,
+    "wt": [
+     -33,
+     0,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 45,
+    "j3": -95,
+    "wt": [
+     33,
+     0,
+     0
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  },
+  {
+   "pose": {
+    "j2": 45,
+    "j3": -95,
+    "wt": [
+     17,
+     17,
+     90
+    ],
+    "j6": 32.5
+   },
+   "interferences": [],
+   "pass": true
+  }
+ ],
+ "wrist_sweep": {
+  "poses": 73,
+  "with_mesh_check": true,
+  "problems": [],
+  "pass": true
+ },
+ "installation_checks": [
+  {
+   "side": "right",
+   "pose": "park",
+   "q": null,
+   "interferences": [],
+   "clearance_mm": {
+    "chair_rear_wheel": [
+     102.0,
+     "turntable",
+     "chair_rear_wheel_R"
+    ],
+    "chair_hand_rim": [
+     118.2,
+     "turntable",
+     "chair_hand_rim_R"
+    ],
+    "chair_wheel_lock": [
+     60.8,
+     "turntable",
+     "chair_wheel_lock_R"
+    ],
+    "chair_footrest_hanger": [
+     11.5,
+     "post_bracket",
+     "chair_footrest_hanger_R"
+    ],
+    "user": [
+     62.0,
+     "j3_dm_cap",
+     "user_upper_arms_elbows"
+    ]
+   },
+   "outboard_extent_mm": 449.1,
+   "hand_rim_outer_mm": 308.6,
+   "added_width_mm": 140.5,
+   "front_extent_x_mm": 744.6,
+   "t_s": 192.1
+  },
+  {
+   "side": "right",
+   "pose": "knob_36in",
+   "q": {
+    "j1": -2.8573831852282083,
+    "j2": 64.61713355195928,
+    "j3": 10.809235812803571,
+    "wt": [
+     -10.795635388708561,
+     2.9089095669088736,
+     0.5453097893595374
+    ],
+    "j6": 28.0
+   },
+   "interferences": [],
+   "clearance_mm": {
+    "chair_rear_wheel": [
+     93.9,
+     "j1_dm_cap",
+     "chair_rear_wheel_R"
+    ],
+    "chair_hand_rim": [
+     111.9,
+     "j1_dm_cap",
+     "chair_hand_rim_R"
+    ],
+    "chair_wheel_lock": [
+     17.4,
+     "turntable",
+     "chair_wheel_lock_R"
+    ],
+    "chair_footrest_hanger": [
+     11.5,
+     "post_bracket",
+     "chair_footrest_hanger_R"
+    ],
+    "user": [
+     44.3,
+     "j3_dm_cap",
+     "user_upper_arms_elbows"
+    ]
+   },
+   "outboard_extent_mm": 460.2,
+   "hand_rim_outer_mm": 308.6,
+   "added_width_mm": 151.6,
+   "front_extent_x_mm": 950.5,
+   "t_s": 147.5
+  },
+  {
+   "side": "left",
+   "pose": "park",
+   "q": null,
+   "interferences": [],
+   "clearance_mm": {
+    "chair_rear_wheel": [
+     98.9,
+     "turntable",
+     "chair_rear_wheel_L"
+    ],
+    "chair_hand_rim": [
+     115.7,
+     "turntable",
+     "chair_hand_rim_L"
+    ],
+    "chair_wheel_lock": [
+     54.8,
+     "turntable",
+     "chair_wheel_lock_L"
+    ],
+    "chair_footrest_hanger": [
+     11.5,
+     "post_bracket",
+     "chair_footrest_hanger_L"
+    ],
+    "user": [
+     50.4,
+     "j2_dm_cap",
+     "user_upper_arms_elbows"
+    ]
+   },
+   "outboard_extent_mm": 436.0,
+   "hand_rim_outer_mm": 308.6,
+   "added_width_mm": 127.4,
+   "front_extent_x_mm": 755.9,
+   "t_s": 154.4
+  },
+  {
+   "side": "left",
+   "pose": "knob_36in",
+   "q": {
+    "j1": 2.8573831852282083,
+    "j2": 64.61713355195928,
+    "j3": 10.809235812803571,
+    "wt": [
+     -10.795635388708561,
+     -2.9089095669088736,
+     -0.5453097893595374
+    ],
+    "j6": 28.0
+   },
+   "interferences": [],
+   "clearance_mm": {
+    "chair_rear_wheel": [
+     93.9,
+     "j1_dm_cap",
+     "chair_rear_wheel_L"
+    ],
+    "chair_hand_rim": [
+     111.9,
+     "j1_dm_cap",
+     "chair_hand_rim_L"
+    ],
+    "chair_wheel_lock": [
+     16.4,
+     "turntable",
+     "chair_wheel_lock_L"
+    ],
+    "chair_footrest_hanger": [
+     11.5,
+     "post_bracket",
+     "chair_footrest_hanger_L"
+    ],
+    "user": [
+     44.5,
+     "ddm_bracket_j2",
+     "user_upper_arms_elbows"
+    ]
+   },
+   "outboard_extent_mm": 493.4,
+   "hand_rim_outer_mm": 308.6,
+   "added_width_mm": 184.8,
+   "front_extent_x_mm": 948.8,
+   "t_s": 149.7
+  }
+ ]
+}

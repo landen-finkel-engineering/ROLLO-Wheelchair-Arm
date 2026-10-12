@@ -1,0 +1,1535 @@
+[
+ {
+  "wt": [
+   -30,
+   0,
+   0
+  ],
+  "j6": 8.0,
+  "limits_ok": true,
+  "act_deg": [
+   -79.3,
+   42.2,
+   79.3,
+   -42.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   189.3,
+   22.7,
+   170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   189.3,
+   22.7,
+   170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -78.2,
+   -46.3,
+   -78.2,
+   46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -78.2,
+   -46.3,
+   -78.2,
+   46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   -170.7,
+   22.7,
+   -189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   33.0,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   -170.7,
+   22.7,
+   -189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   6.8,
+   178.1,
+   23.8,
+   172.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   6.8,
+   178.1,
+   23.8,
+   172.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -81.1,
+   -48.0,
+   82.1,
+   -13.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -81.1,
+   -48.0,
+   82.1,
+   -13.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   6.8,
+   -181.9,
+   23.8,
+   -187.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   21.59,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   6.8,
+   -181.9,
+   23.8,
+   -187.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -5.9,
+   172.6,
+   24.3,
+   178.1
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -5.9,
+   172.6,
+   24.3,
+   178.1
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -87.7,
+   -48.6,
+   -57.8,
+   -13.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -87.7,
+   -48.6,
+   -57.8,
+   -13.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -5.9,
+   -187.4,
+   24.3,
+   -181.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   12.62,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -5.9,
+   -187.4,
+   24.3,
+   -181.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   170.7,
+   22.7,
+   189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   170.7,
+   22.7,
+   189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   78.2,
+   46.3,
+   -78.2,
+   -46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   78.2,
+   46.3,
+   -78.2,
+   -46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   -189.3,
+   22.7,
+   -170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   33.0,
+   0.0,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   -189.3,
+   22.7,
+   -170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -24.3,
+   181.9,
+   5.9,
+   187.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -24.3,
+   181.9,
+   5.9,
+   187.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   57.8,
+   13.9,
+   87.7,
+   48.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   57.8,
+   13.9,
+   87.7,
+   48.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -24.3,
+   -178.1,
+   5.9,
+   -172.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   21.86,
+   -12.62,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -24.3,
+   -178.1,
+   5.9,
+   -172.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -23.8,
+   187.2,
+   -6.8,
+   181.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -23.8,
+   187.2,
+   -6.8,
+   181.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -82.1,
+   13.7,
+   81.1,
+   48.0
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -82.1,
+   13.7,
+   81.1,
+   48.0
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -23.8,
+   -172.8,
+   -6.8,
+   -178.1
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   12.47,
+   -21.59,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -23.8,
+   -172.8,
+   -6.8,
+   -178.1
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   189.3,
+   -22.7,
+   170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   189.3,
+   -22.7,
+   170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   78.2,
+   -46.3,
+   78.2,
+   46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   78.2,
+   -46.3,
+   78.2,
+   46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   -170.7,
+   -22.7,
+   -189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   0.0,
+   -33.0,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -22.7,
+   -170.7,
+   -22.7,
+   -189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -9.3,
+   176.8,
+   -31.2,
+   167.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -9.3,
+   176.8,
+   -31.2,
+   167.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   78.1,
+   -63.5,
+   -80.3,
+   -18.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.168,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   78.1,
+   -63.5,
+   -80.3,
+   -18.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.168,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -9.3,
+   -183.2,
+   -31.2,
+   -192.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   -28.58,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -9.3,
+   -183.2,
+   -31.2,
+   -192.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   7.1,
+   167.6,
+   -31.7,
+   176.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   7.1,
+   167.6,
+   -31.7,
+   176.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   87.0,
+   -63.5,
+   48.8,
+   -18.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.199,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   87.0,
+   -63.5,
+   48.8,
+   -18.9
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.199,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   7.1,
+   -192.4,
+   -31.7,
+   -183.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   -16.5,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   7.1,
+   -192.4,
+   -31.7,
+   -183.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   170.7,
+   -22.7,
+   189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   170.7,
+   -22.7,
+   189.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -78.2,
+   46.3,
+   78.2,
+   -46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -78.2,
+   46.3,
+   78.2,
+   -46.3
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   -189.3,
+   -22.7,
+   -170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -33.0,
+   -0.0,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   22.7,
+   -189.3,
+   -22.7,
+   -170.7
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   31.7,
+   183.2,
+   -7.1,
+   192.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   31.7,
+   183.2,
+   -7.1,
+   192.4
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   -48.8,
+   18.9,
+   -87.0,
+   63.5
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.198
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   -48.8,
+   18.9,
+   -87.0,
+   63.5
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.198
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   31.7,
+   -176.8,
+   -7.1,
+   -167.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -28.58,
+   16.5,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   31.7,
+   -176.8,
+   -7.1,
+   -167.6
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   -90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   31.2,
+   192.4,
+   9.3,
+   183.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   -90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   31.2,
+   192.4,
+   9.3,
+   183.2
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   0
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   80.3,
+   18.9,
+   -78.1,
+   63.5
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.168
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   0
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   80.3,
+   18.9,
+   -78.1,
+   63.5
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.168
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   90
+  ],
+  "j6": 0.0,
+  "limits_ok": true,
+  "act_deg": [
+   31.2,
+   -167.6,
+   9.3,
+   -176.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ },
+ {
+  "wt": [
+   -16.5,
+   28.58,
+   90
+  ],
+  "j6": 32.5,
+  "limits_ok": true,
+  "act_deg": [
+   31.2,
+   -167.6,
+   9.3,
+   -176.8
+  ],
+  "interferences": [],
+  "gear_mesh_overlap_mm3": [
+   0.0,
+   0.0
+  ],
+  "mesh_check_from": "2026-10-12 --mesh run (toothed CS gear + monopole unchanged since)"
+ }
+]

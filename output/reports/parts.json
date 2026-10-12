@@ -1,0 +1,2303 @@
+[
+ {
+  "part": "00_fit_test_coupon",
+  "title": "PRINT FIRST: fit-test coupon (bearings, pins, inserts)",
+  "qty": 1,
+  "material": "same as production",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {
+   "M3": 1,
+   "M4": 1,
+   "M5": 1
+  },
+  "model_bbox_mm": [
+   170.0,
+   64.0,
+   10.0
+  ],
+  "print_bbox_mm": [
+   170.0,
+   64.0,
+   10.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   92.6,
+   32.6,
+   4.8
+  ],
+  "volume_cm3": 82.8,
+  "area_cm2": 279.7,
+  "fill_effective": 0.582,
+  "material_key": "PETG",
+  "mass_g": 61.2,
+  "mass_solid_g": 105.2
+ },
+ {
+  "part": "01_receiver",
+  "title": "Dock receiver (chair side, same part L/R)",
+  "qty": 1,
+  "material": "PETG (PA-CF optional)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Top face DOWN on the plate (flat dock face). Dowels pressed in after printing.",
+  "notes": "",
+  "inserts": {
+   "M6": 2
+  },
+  "model_bbox_mm": [
+   100.0,
+   100.0,
+   14.0
+  ],
+  "print_bbox_mm": [
+   100.0,
+   100.0,
+   14.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   0.0,
+   -0.5,
+   -6.9
+  ],
+  "volume_cm3": 118.64,
+  "area_cm2": 329.1,
+  "fill_effective": 0.687,
+  "material_key": "PETG",
+  "mass_g": 103.5,
+  "mass_solid_g": 150.7
+ },
+ {
+  "part": "02_tube_clamp_body",
+  "title": "Tube clamp body (parametric tube OD)",
+  "qty": 5,
+  "material": "PA-CF recommended (PETG ok)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "80%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Ring end-face down (layers wrap the tube). Re-torque after 24 h (creep).",
+  "notes": "",
+  "inserts": {
+   "M5": 2
+  },
+  "model_bbox_mm": [
+   22.2,
+   53.4,
+   28.0
+  ],
+  "print_bbox_mm": [
+   22.2,
+   53.4,
+   28.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   11.9,
+   -0.0,
+   -0.0
+  ],
+  "volume_cm3": 13.45,
+  "area_cm2": 61.3,
+  "fill_effective": 0.923,
+  "material_key": "PA-CF",
+  "mass_g": 14.9,
+  "mass_solid_g": 16.1
+ },
+ {
+  "part": "03_tube_clamp_cap",
+  "title": "Tube clamp cap",
+  "qty": 5,
+  "material": "PA-CF recommended (PETG ok)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "80%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   19.6,
+   53.4,
+   28.0
+  ],
+  "print_bbox_mm": [
+   19.6,
+   53.4,
+   28.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -9.9,
+   0.0,
+   -0.0
+  ],
+  "volume_cm3": 10.78,
+  "area_cm2": 50.3,
+  "fill_effective": 0.926,
+  "material_key": "PA-CF",
+  "mass_g": 12.0,
+  "mass_solid_g": 12.9
+ },
+ {
+  "part": "04_post_bracket",
+  "title": "Post bracket (spine + shelf), same part L/R",
+  "qty": 1,
+  "material": "PA-CF recommended",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Spine back face down: gussets and shelf print as vertical walls. Aluminium alternative: see output/dxf/04_post_bracket_plates.dxf.",
+  "notes": "",
+  "inserts": {
+   "M4": 4
+  },
+  "model_bbox_mm": [
+   125.0,
+   110.0,
+   162.0
+  ],
+  "print_bbox_mm": [
+   162.0,
+   110.0,
+   125.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   59.4,
+   -0.3,
+   -56.5
+  ],
+  "volume_cm3": 236.54,
+  "area_cm2": 633.6,
+  "fill_effective": 0.745,
+  "material_key": "PA-CF",
+  "mass_g": 211.4,
+  "mass_solid_g": 283.9
+ },
+ {
+  "part": "05_stop_collar",
+  "title": "Post stop collar (secondary retention)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "80%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   40.4,
+   48.4,
+   14.0
+  ],
+  "print_bbox_mm": [
+   40.4,
+   48.4,
+   14.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   1.2,
+   0.0
+  ],
+  "volume_cm3": 11.11,
+  "area_cm2": 51.6,
+  "fill_effective": 0.926,
+  "material_key": "PETG",
+  "mass_g": 13.1,
+  "mass_solid_g": 14.1
+ },
+ {
+  "part": "10_base_housing",
+  "title": "Base housing + dock plate",
+  "qty": 1,
+  "material": "PA-CF (required: dock plate bending)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Dock face on plate. Bearing seats print vertical = round. Supports: only under the connector boss (build-plate only).",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   100.0,
+   100.0,
+   62.0
+  ],
+  "print_bbox_mm": [
+   100.0,
+   100.0,
+   62.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.1,
+   0.0,
+   22.0
+  ],
+  "volume_cm3": 155.03,
+  "area_cm2": 486.1,
+  "fill_effective": 0.654,
+  "material_key": "PA-CF",
+  "mass_g": 121.7,
+  "mass_solid_g": 186.0
+ },
+ {
+  "part": "11_j1_fixed_pulley",
+  "title": "J1 fixed pulley 54T (+ hard-stop arc)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Base disc down. 0.16 mm layers.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   68.0,
+   68.0,
+   28.8
+  ],
+  "print_bbox_mm": [
+   68.0,
+   68.0,
+   28.8
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.9,
+   -0.0,
+   72.9
+  ],
+  "volume_cm3": 33.28,
+  "area_cm2": 157.9,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 42.3,
+  "mass_solid_g": 42.3
+ },
+ {
+  "part": "12_dm_bracket",
+  "title": "Drive-module bracket",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Pin wall down on the plate (mounting face flat). Supports: none needed except under the cable window bridge (auto, build-plate only).",
+  "notes": "J1 only (J2/J3 use 22_ddm_bracket_*; WRA-1B J4 is integral in 40_wrist_housing)",
+  "inserts": {
+   "M4": 5,
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   58.9,
+   60.0,
+   63.5
+  ],
+  "print_bbox_mm": [
+   58.9,
+   60.0,
+   63.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -12.1,
+   0.0,
+   -1.5
+  ],
+  "volume_cm3": 56.52,
+  "area_cm2": 245.1,
+  "fill_effective": 0.744,
+  "material_key": "PETG",
+  "mass_g": 53.4,
+  "mass_solid_g": 71.8
+ },
+ {
+  "part": "12_dm_cap",
+  "title": "Drive-module servo cap",
+  "qty": 3,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "J1, J2, J3 (+ J4 on WRA-1B)",
+  "inserts": {},
+  "model_bbox_mm": [
+   58.9,
+   38.3,
+   4.0
+  ],
+  "print_bbox_mm": [
+   58.9,
+   38.3,
+   4.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -16.3,
+   0.0,
+   -36.8
+  ],
+  "volume_cm3": 3.79,
+  "area_cm2": 32.3,
+  "fill_effective": 0.859,
+  "material_key": "PETG",
+  "mass_g": 4.1,
+  "mass_solid_g": 4.8
+ },
+ {
+  "part": "12_dm_pulley36",
+  "title": "36T HTD-3M drive pulley",
+  "qty": 3,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Horn face down. 0.16 mm layers for tooth quality; 100% infill.",
+  "notes": "J1, J2, J3 (+ J4 on WRA-1B)",
+  "inserts": {},
+  "model_bbox_mm": [
+   36.8,
+   36.8,
+   20.0
+  ],
+  "print_bbox_mm": [
+   36.8,
+   36.8,
+   20.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   0.0,
+   0.0,
+   9.1
+  ],
+  "volume_cm3": 10.66,
+  "area_cm2": 68.6,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 13.5,
+  "mass_solid_g": 13.5
+ },
+ {
+  "part": "20_turntable",
+  "title": "Turntable plate + J1 spindle",
+  "qty": 1,
+  "material": "PETG (PA-CF optional)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Plate TOP face down, spindle pointing up (bearing journals print round). Supports from build plate under the tension lug only.",
+  "notes": "",
+  "inserts": {
+   "M4": 8
+  },
+  "model_bbox_mm": [
+   157.6,
+   119.5,
+   134.8
+  ],
+  "print_bbox_mm": [
+   157.6,
+   119.5,
+   134.8
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -41.3,
+   -0.8,
+   -11.5
+  ],
+  "volume_cm3": 222.73,
+  "area_cm2": 643.3,
+  "fill_effective": 0.634,
+  "material_key": "PETG",
+  "mass_g": 179.3,
+  "mass_solid_g": 282.9
+ },
+ {
+  "part": "21_stub_cheek",
+  "title": "Stub cheek (clamps J2 stub axle)",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Lay on its INBOARD face (stub axis vertical) so the clamp boss layers wrap the stub; gussets then print as walls.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   52.0,
+   30.0,
+   106.0
+  ],
+  "print_bbox_mm": [
+   52.0,
+   106.0,
+   30.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   0.0,
+   -48.5,
+   52.4
+  ],
+  "volume_cm3": 84.86,
+  "area_cm2": 228.8,
+  "fill_effective": 0.746,
+  "material_key": "PETG",
+  "mass_g": 80.4,
+  "mass_solid_g": 107.8
+ },
+ {
+  "part": "22_ddm_bracket_j2",
+  "title": "Dual drive bracket (J2 half)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Central-wall face (split plane) DOWN. Supports: build-plate only under servo-cradle lips.",
+  "notes": "",
+  "inserts": {
+   "M3": 4,
+   "M4": 1
+  },
+  "model_bbox_mm": [
+   58.9,
+   65.7,
+   110.0
+  ],
+  "print_bbox_mm": [
+   58.9,
+   110.0,
+   65.7
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -89.3,
+   -31.4,
+   67.2
+  ],
+  "volume_cm3": 80.15,
+  "area_cm2": 301.7,
+  "fill_effective": 0.712,
+  "material_key": "PETG",
+  "mass_g": 72.4,
+  "mass_solid_g": 101.8
+ },
+ {
+  "part": "22_ddm_bracket_j3",
+  "title": "Dual drive bracket (J3 half)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Central-wall face (split plane) DOWN. Supports: build-plate only under servo-cradle lips.",
+  "notes": "",
+  "inserts": {
+   "M3": 4,
+   "M4": 1
+  },
+  "model_bbox_mm": [
+   58.9,
+   65.7,
+   110.0
+  ],
+  "print_bbox_mm": [
+   58.9,
+   110.0,
+   65.7
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -89.7,
+   17.2,
+   65.6
+  ],
+  "volume_cm3": 82.39,
+  "area_cm2": 305.3,
+  "fill_effective": 0.708,
+  "material_key": "PETG",
+  "mass_g": 74.1,
+  "mass_solid_g": 104.6
+ },
+ {
+  "part": "30_ua_hub",
+  "title": "Upper-arm hub with integral 86T (J2) pulley",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Pulley flange (-Y face) down: teeth and bearing seats vertical. Tube sockets horizontal: supports OFF (bores bridge as teardrops).",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   104.3,
+   41.5,
+   84.6
+  ],
+  "print_bbox_mm": [
+   104.3,
+   84.6,
+   41.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   2.8,
+   -21.3,
+   0.9
+  ],
+  "volume_cm3": 132.79,
+  "area_cm2": 366.2,
+  "fill_effective": 0.749,
+  "material_key": "PETG",
+  "mass_g": 126.3,
+  "mass_solid_g": 168.6
+ },
+ {
+  "part": "31_j3_hub",
+  "title": "J3 hub: 72T pulley + parallelogram crank + spring L-lever",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Pulley flange down; L-lever prints upward.",
+  "notes": "",
+  "inserts": {
+   "M5": 1
+  },
+  "model_bbox_mm": [
+   86.6,
+   45.5,
+   71.2
+  ],
+  "print_bbox_mm": [
+   86.6,
+   71.2,
+   45.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   2.3,
+   16.2,
+   0.0
+  ],
+  "volume_cm3": 62.22,
+  "area_cm2": 219.5,
+  "fill_effective": 0.791,
+  "material_key": "PETG",
+  "mass_g": 62.5,
+  "mass_solid_g": 79.0
+ },
+ {
+  "part": "32_elbow_block",
+  "title": "Elbow block (clamps elbow pin, J2 spring anchor, stop lugs)",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   78.0,
+   20.0,
+   64.3
+  ],
+  "print_bbox_mm": [
+   78.0,
+   64.3,
+   20.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   228.7,
+   -7.3,
+   2.1
+  ],
+  "volume_cm3": 38.19,
+  "area_cm2": 163.6,
+  "fill_effective": 0.831,
+  "material_key": "PETG",
+  "mass_g": 40.3,
+  "mass_solid_g": 48.5
+ },
+ {
+  "part": "33_rod_end",
+  "title": "Parallelogram rod end (626 bearing)",
+  "qty": 2,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "80%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   46.5,
+   14.0,
+   25.0
+  ],
+  "print_bbox_mm": [
+   46.5,
+   25.0,
+   14.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   9.9,
+   4.0,
+   0.0
+  ],
+  "volume_cm3": 4.03,
+  "area_cm2": 41.3,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 5.1,
+  "mass_solid_g": 5.1
+ },
+ {
+  "part": "34_forearm_root",
+  "title": "Forearm root: elbow bearings + crank + stop tab",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {
+   "M5": 1
+  },
+  "model_bbox_mm": [
+   113.0,
+   32.8,
+   48.5
+  ],
+  "print_bbox_mm": [
+   113.0,
+   48.5,
+   32.8
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   13.1,
+   17.3,
+   0.7
+  ],
+  "volume_cm3": 36.48,
+  "area_cm2": 159.9,
+  "fill_effective": 0.837,
+  "material_key": "PETG",
+  "mass_g": 38.8,
+  "mass_solid_g": 46.3
+ },
+ {
+  "part": "35_stub_spacer_14p46mm",
+  "title": "Stub inner-ring spacer 14.46 mm",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "Print upright (axis Z), 0.12 mm layers.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   17.4,
+   14.5,
+   17.4
+  ],
+  "print_bbox_mm": [
+   17.4,
+   17.4,
+   14.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   7.2,
+   0.0
+  ],
+  "volume_cm3": 0.78,
+  "area_cm2": 15.9,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 1.0,
+  "mass_solid_g": 1.0
+ },
+ {
+  "part": "35_stub_spacer_30p96mm",
+  "title": "Stub inner-ring spacer 30.96 mm",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "Print upright (axis Z), 0.12 mm layers.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   17.4,
+   31.0,
+   17.4
+  ],
+  "print_bbox_mm": [
+   17.4,
+   17.4,
+   31.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   15.5,
+   0.0
+  ],
+  "volume_cm3": 1.67,
+  "area_cm2": 32.9,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 2.1,
+  "mass_solid_g": 2.1
+ },
+ {
+  "part": "40_wrist_housing",
+  "title": "Wrist housing: forearm sockets + J4 drive cradle + pitch fork",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Lay on the -Y cheek (J4 pin wall) face. Supports: build-plate only, under the +Y cheek bridge.",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   175.0,
+   75.9,
+   60.0
+  ],
+  "print_bbox_mm": [
+   175.0,
+   60.0,
+   75.9
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   151.5,
+   6.9,
+   -0.0
+  ],
+  "volume_cm3": 262.16,
+  "area_cm2": 838.7,
+  "fill_effective": 0.68,
+  "material_key": "PETG",
+  "mass_g": 226.4,
+  "mass_solid_g": 332.9
+ },
+ {
+  "part": "41_pitch_yoke",
+  "title": "Pitch yoke: J5 servo pocket + roll bearing housing",
+  "qty": 1,
+  "material": "PETG (PA-CF recommended)",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Roll housing UP (front face down).",
+  "notes": "",
+  "inserts": {
+   "M3": 8
+  },
+  "model_bbox_mm": [
+   66.2,
+   39.3,
+   56.5
+  ],
+  "print_bbox_mm": [
+   56.5,
+   39.3,
+   66.2
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   12.7,
+   13.5,
+   -9.7
+  ],
+  "volume_cm3": 46.35,
+  "area_cm2": 214.3,
+  "fill_effective": 0.76,
+  "material_key": "PETG",
+  "mass_g": 44.7,
+  "mass_solid_g": 58.9
+ },
+ {
+  "part": "42_yoke_cap",
+  "title": "Pitch-yoke rear cap",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   4.0,
+   37.3,
+   53.9
+  ],
+  "print_bbox_mm": [
+   53.9,
+   37.3,
+   4.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -18.1,
+   12.8,
+   -13.4
+  ],
+  "volume_cm3": 4.14,
+  "area_cm2": 35.0,
+  "fill_effective": 0.856,
+  "material_key": "PETG",
+  "mass_g": 4.5,
+  "mass_solid_g": 5.3
+ },
+ {
+  "part": "43_j4_pulley54",
+  "title": "J4 54T pulley (bolts to yoke)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   54.0,
+   19.0,
+   54.0
+  ],
+  "print_bbox_mm": [
+   54.0,
+   54.0,
+   19.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   -13.3,
+   0.2
+  ],
+  "volume_cm3": 33.64,
+  "area_cm2": 111.5,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 42.7,
+  "mass_solid_g": 42.7
+ },
+ {
+  "part": "44_j5_horn_adapter",
+  "title": "J5 horn adapter with drive dogs",
+  "qty": 1,
+  "material": "PETG (PA-CF)",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   7.0,
+   19.0,
+   19.0
+  ],
+  "print_bbox_mm": [
+   19.0,
+   19.0,
+   7.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   21.2,
+   16.6,
+   0.0
+  ],
+  "volume_cm3": 0.74,
+  "area_cm2": 9.9,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 0.9,
+  "mass_solid_g": 0.9
+ },
+ {
+  "part": "45_roll_spindle",
+  "title": "Roll spindle",
+  "qty": 1,
+  "material": "PA-CF or PETG",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 8,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Vertical (axis Z) so bearing journals are round; 100% infill.",
+  "notes": "",
+  "inserts": {
+   "M5": 1
+  },
+  "model_bbox_mm": [
+   25.5,
+   20.0,
+   20.0
+  ],
+  "print_bbox_mm": [
+   20.0,
+   20.0,
+   25.5
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   35.2,
+   16.6,
+   0.0
+  ],
+  "volume_cm3": 4.38,
+  "area_cm2": 23.4,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 5.3,
+  "mass_solid_g": 5.3
+ },
+ {
+  "part": "46_tool_flange",
+  "title": "Tool flange (WRA-TF30 interface)",
+  "qty": 1,
+  "material": "PETG (PA-CF)",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   7.0,
+   40.0,
+   40.0
+  ],
+  "print_bbox_mm": [
+   40.0,
+   40.0,
+   7.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   53.4,
+   16.6,
+   -0.1
+  ],
+  "volume_cm3": 7.04,
+  "area_cm2": 38.2,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 8.9,
+  "mass_solid_g": 8.9
+ },
+ {
+  "part": "47_roll_spacer",
+  "title": "Roll-spindle inner-ring spacer",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "WRA-1B",
+  "active": false,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   12.0,
+   17.4,
+   17.4
+  ],
+  "print_bbox_mm": [
+   17.4,
+   17.4,
+   12.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   38.5,
+   16.6,
+   0.0
+  ],
+  "volume_cm3": 0.65,
+  "area_cm2": 13.4,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 0.8,
+  "mass_solid_g": 0.8
+ },
+ {
+  "part": "50_claw_palm",
+  "title": "Claw palm: dovetail, servo cradle, rail beam",
+  "qty": 1,
+  "material": "PA-CF (PETG ok)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Rail-beam top face DOWN on the bed (flat, precise rail seat); support only under the dovetail block overhang.",
+  "notes": "",
+  "inserts": {
+   "M3": 6
+  },
+  "model_bbox_mm": [
+   45.2,
+   124.0,
+   53.5
+  ],
+  "print_bbox_mm": [
+   45.2,
+   124.0,
+   53.5
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   32.4,
+   0.0,
+   -1.4
+  ],
+  "volume_cm3": 33.72,
+  "area_cm2": 202.6,
+  "fill_effective": 0.838,
+  "material_key": "PA-CF",
+  "mass_g": 33.9,
+  "mass_solid_g": 40.5
+ },
+ {
+  "part": "51_claw_cradle_cap",
+  "title": "Claw servo cradle cap",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   39.4,
+   33.3,
+   4.0
+  ],
+  "print_bbox_mm": [
+   39.4,
+   33.3,
+   4.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   31.1,
+   -0.0,
+   -37.4
+  ],
+  "volume_cm3": 3.05,
+  "area_cm2": 26.1,
+  "fill_effective": 0.862,
+  "material_key": "PETG",
+  "mass_g": 3.3,
+  "mass_solid_g": 3.9
+ },
+ {
+  "part": "52_claw_pinion",
+  "title": "Claw pinion 14T m1.5 (on servo horn)",
+  "qty": 1,
+  "material": "PA-CF / PETG-CF",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "0.12 mm layers, hardened nozzle for CF.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   10.0,
+   23.6,
+   24.0
+  ],
+  "print_bbox_mm": [
+   24.0,
+   23.6,
+   10.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   56.3,
+   0.0,
+   0.0
+  ],
+  "volume_cm3": 1.82,
+  "area_cm2": 23.5,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 2.2,
+  "mass_solid_g": 2.2
+ },
+ {
+  "part": "53_claw_jaw_a",
+  "title": "Claw jaw A (rack on top of pinion, upper knob lip)",
+  "qty": 1,
+  "material": "PA-CF / PETG-CF",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Outer finger face down; rack teeth print as vertical walls.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   83.9,
+   60.0,
+   46.0
+  ],
+  "print_bbox_mm": [
+   83.9,
+   46.0,
+   60.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   74.1,
+   8.1,
+   17.7
+  ],
+  "volume_cm3": 24.2,
+  "area_cm2": 130.9,
+  "fill_effective": 0.892,
+  "material_key": "PA-CF",
+  "mass_g": 25.9,
+  "mass_solid_g": 29.0
+ },
+ {
+  "part": "53_claw_jaw_b",
+  "title": "Claw jaw B (rack below pinion, lower knob lip)",
+  "qty": 1,
+  "material": "PA-CF / PETG-CF",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Outer finger face down.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   83.9,
+   60.0,
+   49.4
+  ],
+  "print_bbox_mm": [
+   83.9,
+   49.4,
+   60.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   77.0,
+   -7.2,
+   10.0
+  ],
+  "volume_cm3": 22.65,
+  "area_cm2": 132.8,
+  "fill_effective": 0.917,
+  "material_key": "PA-CF",
+  "mass_g": 24.9,
+  "mass_solid_g": 27.2
+ },
+ {
+  "part": "54_claw_pad_a",
+  "title": "Claw pad A, 100 deg V (glue 1.5 mm silicone facing)",
+  "qty": 1,
+  "material": "TPU 95A + silicone sheet",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "40%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   41.0,
+   5.9,
+   21.6
+  ],
+  "print_bbox_mm": [
+   21.6,
+   5.9,
+   41.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   88.5,
+   3.2,
+   0.0
+  ],
+  "volume_cm3": 4.26,
+  "area_cm2": 25.9,
+  "fill_effective": 0.646,
+  "material_key": "TPU",
+  "mass_g": 3.4,
+  "mass_solid_g": 5.2
+ },
+ {
+  "part": "54_claw_pad_b",
+  "title": "Claw pad B (mirror of A)",
+  "qty": 1,
+  "material": "TPU 95A + silicone sheet",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "40%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   41.0,
+   5.9,
+   21.6
+  ],
+  "print_bbox_mm": [
+   21.6,
+   5.9,
+   41.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   88.5,
+   -3.2,
+   -0.0
+  ],
+  "volume_cm3": 4.26,
+  "area_cm2": 25.9,
+  "fill_effective": 0.646,
+  "material_key": "TPU",
+  "mass_g": 3.4,
+  "mass_solid_g": 5.2
+ },
+ {
+  "part": "56_tool_adapter",
+  "title": "Quick-change tool adapter (dovetail, both wrists)",
+  "qty": 1,
+  "material": "PA-CF (PETG ok)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   12.0,
+   40.0,
+   40.0
+  ],
+  "print_bbox_mm": [
+   40.0,
+   40.0,
+   12.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   5.7,
+   -0.0,
+   -0.0
+  ],
+  "volume_cm3": 12.06,
+  "area_cm2": 51.8,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 14.5,
+  "mass_solid_g": 14.5
+ },
+ {
+  "part": "60_electronics_box",
+  "title": "Electronics enclosure (Jetson, ESP32, power, E-stop relays)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "20% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "Open side up. 0.24 mm layers OK.",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   196.0,
+   146.0,
+   71.0
+  ],
+  "print_bbox_mm": [
+   196.0,
+   146.0,
+   71.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   0.0,
+   -1.8,
+   21.1
+  ],
+  "volume_cm3": 204.66,
+  "area_cm2": 1424.7,
+  "fill_effective": 0.701,
+  "material_key": "PETG",
+  "mass_g": 182.3,
+  "mass_solid_g": 259.9
+ },
+ {
+  "part": "61_electronics_lid",
+  "title": "Electronics enclosure lid",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "15%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   196.0,
+   146.0,
+   5.2
+  ],
+  "print_bbox_mm": [
+   196.0,
+   146.0,
+   5.2
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   0.4,
+   0.0,
+   66.6
+  ],
+  "volume_cm3": 81.13,
+  "area_cm2": 603.0,
+  "fill_effective": 0.576,
+  "material_key": "PETG",
+  "mass_g": 59.4,
+  "mass_solid_g": 103.0
+ },
+ {
+  "part": "62_estop_pendant",
+  "title": "E-stop pendant body",
+  "qty": 1,
+  "material": "PETG (yellow recommended)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "20%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   64.0,
+   48.0,
+   42.0
+  ],
+  "print_bbox_mm": [
+   64.0,
+   48.0,
+   42.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   -0.1,
+   17.8
+  ],
+  "volume_cm3": 38.73,
+  "area_cm2": 237.3,
+  "fill_effective": 0.531,
+  "material_key": "PETG",
+  "mass_g": 26.1,
+  "mass_solid_g": 49.2
+ },
+ {
+  "part": "63_estop_pendant_lid",
+  "title": "E-stop pendant lid (E-stop + guarded START)",
+  "qty": 1,
+  "material": "PETG (yellow)",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "20%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   65.0,
+   48.0,
+   12.0
+  ],
+  "print_bbox_mm": [
+   65.0,
+   48.0,
+   12.0
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   3.5,
+   0.0,
+   44.8
+  ],
+  "volume_cm3": 8.66,
+  "area_cm2": 72.7,
+  "fill_effective": 0.654,
+  "material_key": "PETG",
+  "mass_g": 7.2,
+  "mass_solid_g": 11.0
+ },
+ {
+  "part": "70_bench_test_stand",
+  "title": "Bench test stand (holds a post tube like the chair)",
+  "qty": 1,
+  "material": "PETG",
+  "variant": "common",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   220.0,
+   170.0,
+   72.0
+  ],
+  "print_bbox_mm": [
+   220.0,
+   170.0,
+   72.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.1,
+   0.0,
+   12.3
+  ],
+  "volume_cm3": 558.95,
+  "area_cm2": 1079.1,
+  "fill_effective": 0.53,
+  "material_key": "PETG",
+  "mass_g": 376.4,
+  "mass_solid_g": 709.9
+ },
+ {
+  "part": "80_cs_gear_front",
+  "title": "CS-gear front hemisphere + tool flange",
+  "qty": 1,
+  "material": "PA-CF (PETG-CF ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "toothed mesh (manifold3d)",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Split face DOWN. 0.12 mm layers, no supports (both ring-tooth families have horizontal axes -> vertical flanks). Teeth: use the STL (mesh pipeline).",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   54.0,
+   54.0,
+   56.0
+  ],
+  "print_bbox_mm": [
+   54.0,
+   54.0,
+   56.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   0.0,
+   22.9
+  ],
+  "volume_cm3": 53.58,
+  "area_cm2": 142.7,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 64.3,
+  "mass_solid_g": 64.3,
+  "mesh": {
+   "triangles": 207440,
+   "watertight": true,
+   "bodies": 1,
+   "volume_mm3": 53580.3,
+   "status": "Error.NoError",
+   "genus": 5,
+   "zmin": 0.0
+  }
+ },
+ {
+  "part": "81_cs_gear_back",
+  "title": "CS-gear back hemisphere",
+  "qty": 1,
+  "material": "PA-CF (PETG-CF ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "toothed mesh (manifold3d)",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Split face DOWN. 0.12 mm layers, no supports (both ring-tooth families have horizontal axes -> vertical flanks). Teeth: use the STL (mesh pipeline).",
+  "notes": "",
+  "inserts": {
+   "M3": 4
+  },
+  "model_bbox_mm": [
+   54.0,
+   54.0,
+   19.5
+  ],
+  "print_bbox_mm": [
+   54.0,
+   54.0,
+   19.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -0.0,
+   -0.0,
+   -7.3
+  ],
+  "volume_cm3": 18.67,
+  "area_cm2": 75.7,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 22.4,
+  "mass_solid_g": 22.4,
+  "mesh": {
+   "triangles": 184150,
+   "watertight": true,
+   "bodies": 1,
+   "volume_mm3": 18667.7,
+   "status": "Error.NoError",
+   "genus": 25,
+   "zmin": 0.0
+  }
+ },
+ {
+  "part": "82_monopole",
+  "title": "Monopole S-gear 17T m1.5 + 15T m1.5 drive gear",
+  "qty": 2,
+  "material": "PA-CF",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "toothed mesh (manifold3d)",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Drive-gear face down (spin axis vertical): ring teeth print as vertical walls.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   15.5,
+   28.5,
+   28.5
+  ],
+  "print_bbox_mm": [
+   28.5,
+   28.5,
+   15.5
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -2.0,
+   -0.0,
+   0.0
+  ],
+  "volume_cm3": 4.53,
+  "area_cm2": 33.4,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 5.4,
+  "mass_solid_g": 5.4,
+  "mesh": {
+   "triangles": 371726,
+   "watertight": true,
+   "bodies": 1,
+   "volume_mm3": 4533.5,
+   "status": "Error.NoError",
+   "genus": 1,
+   "zmin": 0.0
+  }
+ },
+ {
+  "part": "83_mp_fork",
+  "title": "Monopole fork: pin arms + 6808 inner-race ring (carrier part 1)",
+  "qty": 2,
+  "material": "PA-CF (PETG-CF ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "60% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Far ring face down, arms up; no supports.  Ream the pin bores (8 mm press in the -x arm, slip in the +x arm).",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   43.5,
+   43.5,
+   23.3
+  ],
+  "print_bbox_mm": [
+   43.5,
+   43.5,
+   23.3
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -0.3,
+   -0.0,
+   43.8
+  ],
+  "volume_cm3": 7.59,
+  "area_cm2": 60.2,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 9.1,
+  "mass_solid_g": 9.1
+ },
+ {
+  "part": "84_mp_cradle",
+  "title": "Theta-servo cradle: sleeve, U-channel, 6805 hub, q dogs (carrier part 2)",
+  "qty": 2,
+  "material": "PA-CF (PETG ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "50% gyroid",
+  "supports": "end-plate overhang only",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Sleeve down (module axis vertical): the 6805 hub prints round.",
+  "notes": "",
+  "inserts": {
+   "M3": 2
+  },
+  "model_bbox_mm": [
+   55.4,
+   45.9,
+   61.5
+  ],
+  "print_bbox_mm": [
+   55.4,
+   45.9,
+   61.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   12.1,
+   -0.0,
+   83.8
+  ],
+  "volume_cm3": 29.9,
+  "area_cm2": 165.2,
+  "fill_effective": 0.811,
+  "material_key": "PA-CF",
+  "mass_g": 29.1,
+  "mass_solid_g": 35.9
+ },
+ {
+  "part": "85_theta_gear",
+  "title": "Theta drive gear 20T m1.5 (on servo horn)",
+  "qty": 2,
+  "material": "PA-CF / PETG-CF",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   4.5,
+   33.0,
+   33.0
+  ],
+  "print_bbox_mm": [
+   33.0,
+   33.0,
+   4.5
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -8.2,
+   0.0,
+   64.5
+  ],
+  "volume_cm3": 2.62,
+  "area_cm2": 23.8,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 3.1,
+  "mass_solid_g": 3.1
+ },
+ {
+  "part": "86_q_coupling",
+  "title": "q-servo horn coupling with drive dogs",
+  "qty": 2,
+  "material": "PA-CF / PETG",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Disc down, dogs up.  Dogs: sand to a snug slide in the hub slots (no shake).",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   22.0,
+   22.0,
+   8.6
+  ],
+  "print_bbox_mm": [
+   22.0,
+   22.0,
+   8.6
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -0.0,
+   -0.0,
+   112.7
+  ],
+  "volume_cm3": 1.2,
+  "area_cm2": 14.0,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 1.4,
+  "mass_solid_g": 1.4
+ },
+ {
+  "part": "87_module_frame",
+  "title": "Module frame: 6808 holder, lug, strut, 6805 boss, q-servo cradle",
+  "qty": 2,
+  "material": "PA-CF (PETG ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "40% gyroid",
+  "supports": "under the 6805 boss / q-cradle overhang",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Holder (near lip) down: both bearing seats print round.",
+  "notes": "",
+  "inserts": {
+   "M3": 3
+  },
+  "model_bbox_mm": [
+   83.0,
+   66.0,
+   112.4
+  ],
+  "print_bbox_mm": [
+   83.0,
+   66.0,
+   112.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -18.3,
+   -0.0,
+   102.7
+  ],
+  "volume_cm3": 60.16,
+  "area_cm2": 324.5,
+  "fill_effective": 0.764,
+  "material_key": "PA-CF",
+  "mass_g": 55.2,
+  "mass_solid_g": 72.2
+ },
+ {
+  "part": "88_q_servo_cap",
+  "title": "q-servo cap",
+  "qty": 2,
+  "material": "PETG",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   52.9,
+   38.3,
+   3.0
+  ],
+  "print_bbox_mm": [
+   52.9,
+   38.3,
+   3.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -12.5,
+   0.0,
+   155.5
+  ],
+  "volume_cm3": 3.77,
+  "area_cm2": 35.3,
+  "fill_effective": 0.907,
+  "material_key": "PETG",
+  "mass_g": 4.3,
+  "mass_solid_g": 4.8
+ },
+ {
+  "part": "89_abenics_housing",
+  "title": "ABENICS housing: forearm sockets, post clamp, shoulders",
+  "qty": 1,
+  "material": "PA-CF (PETG ok)",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 5,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {
+   "M4": 4
+  },
+  "model_bbox_mm": [
+   115.0,
+   78.5,
+   60.2
+  ],
+  "print_bbox_mm": [
+   115.0,
+   78.5,
+   60.2
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -77.9,
+   -0.0,
+   5.0
+  ],
+  "volume_cm3": 76.51,
+  "area_cm2": 220.2,
+  "fill_effective": 0.594,
+  "material_key": "PA-CF",
+  "mass_g": 54.6,
+  "mass_solid_g": 91.8
+ },
+ {
+  "part": "90_center_ball",
+  "title": "Fixed centre ball (sphere bearing)",
+  "qty": 1,
+  "material": "PA-CF",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 6,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "Sand/polish, grease (PTFE). Bonded + pinned on the post.",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   17.8,
+   19.0,
+   19.0
+  ],
+  "print_bbox_mm": [
+   17.8,
+   19.0,
+   19.0
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   0.5,
+   0.0,
+   -0.0
+  ],
+  "volume_cm3": 2.93,
+  "area_cm2": 14.8,
+  "fill_effective": 1.0,
+  "material_key": "PA-CF",
+  "mass_g": 3.5,
+  "mass_solid_g": 3.5
+ },
+ {
+  "part": "91_holder_retainer",
+  "title": "6808 outer-race retainer ring (3x M3 countersunk)",
+  "qty": 2,
+  "material": "PETG",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": true,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   66.0,
+   66.0,
+   2.5
+  ],
+  "print_bbox_mm": [
+   66.0,
+   66.0,
+   2.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   0.0,
+   -0.0,
+   51.2
+  ],
+  "volume_cm3": 3.9,
+  "area_cm2": 41.2,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 5.0,
+  "mass_solid_g": 5.0
+ },
+ {
+  "part": "92_cradle_strap",
+  "title": "Theta-servo strap (closes the cradle, 2x M3)",
+  "qty": 2,
+  "material": "PETG",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 4,
+  "infill": "40% gyroid",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   3.5,
+   35.3,
+   14.0
+  ],
+  "print_bbox_mm": [
+   14.0,
+   35.3,
+   3.5
+  ],
+  "print_zmin_mm": -0.0,
+  "com_model_mm": [
+   -6.3,
+   -0.0,
+   91.0
+  ],
+  "volume_cm3": 1.66,
+  "area_cm2": 13.7,
+  "fill_effective": 0.846,
+  "material_key": "PETG",
+  "mass_g": 1.8,
+  "mass_solid_g": 2.1
+ },
+ {
+  "part": "93_mp_spacer",
+  "title": "Monopole pin spacer 10.5/8.2 x 6.5 (or brass tube)",
+  "qty": 2,
+  "material": "PETG",
+  "variant": "WRA-1A",
+  "active": true,
+  "stl_source": "B-rep",
+  "walls": 3,
+  "infill": "100%",
+  "supports": "none",
+  "load_bearing": false,
+  "lr_specific": false,
+  "print_notes": "",
+  "notes": "",
+  "inserts": {},
+  "model_bbox_mm": [
+   6.5,
+   10.5,
+   10.5
+  ],
+  "print_bbox_mm": [
+   10.5,
+   10.5,
+   6.5
+  ],
+  "print_zmin_mm": 0.0,
+  "com_model_mm": [
+   -8.2,
+   -0.0,
+   38.2
+  ],
+  "volume_cm3": 0.22,
+  "area_cm2": 4.5,
+  "fill_effective": 1.0,
+  "material_key": "PETG",
+  "mass_g": 0.3,
+  "mass_solid_g": 0.3
+ }
+]

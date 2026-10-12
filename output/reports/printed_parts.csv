@@ -1,0 +1,58 @@
+part,title,variant,qty,material,walls,infill,mass_each_g,mass_total_g,print_bbox_x,print_bbox_y,print_bbox_z,supports,load_bearing,inserts,print_notes
+00_fit_test_coupon,"PRINT FIRST: fit-test coupon (bearings, pins, inserts)",common,1,same as production,4,40%,61.2,61.2,170.0,64.0,10.0,none,False,M3x1 M4x1 M5x1,
+01_receiver,"Dock receiver (chair side, same part L/R)",common,1,PETG (PA-CF optional),6,50% gyroid,103.5,103.5,100.0,100.0,14.0,none,True,M6x2,Top face DOWN on the plate (flat dock face). Dowels pressed in after printing.
+02_tube_clamp_body,Tube clamp body (parametric tube OD),common,5,PA-CF recommended (PETG ok),6,80%,14.9,74.5,22.2,53.4,28.0,none,True,M5x2,Ring end-face down (layers wrap the tube). Re-torque after 24 h (creep).
+03_tube_clamp_cap,Tube clamp cap,common,5,PA-CF recommended (PETG ok),6,80%,12.0,60.0,19.6,53.4,28.0,none,True,,
+04_post_bracket,"Post bracket (spine + shelf), same part L/R",common,1,PA-CF recommended,6,60% gyroid,211.4,211.4,162.0,110.0,125.0,none,True,M4x4,Spine back face down: gussets and shelf print as vertical walls. Aluminium alternative: see output/dxf/04_post_bracket_plates.dxf.
+05_stop_collar,Post stop collar (secondary retention),common,1,PETG,6,80%,13.1,13.1,40.4,48.4,14.0,none,True,,
+10_base_housing,Base housing + dock plate,common,1,PA-CF (required: dock plate bending),6,40% gyroid,121.7,121.7,100.0,100.0,62.0,none,True,M3x4,Dock face on plate. Bearing seats print vertical = round. Supports: only under the connector boss (build-plate only).
+11_j1_fixed_pulley,J1 fixed pulley 54T (+ hard-stop arc),common,1,PETG,6,100%,42.3,42.3,68.0,68.0,28.8,none,True,,Base disc down. 0.16 mm layers.
+12_dm_bracket,Drive-module bracket,common,1,PETG,5,50% gyroid,53.4,53.4,58.9,60.0,63.5,none,True,M4x5 M3x4,"Pin wall down on the plate (mounting face flat). Supports: none needed except under the cable window bridge (auto, build-plate only)."
+12_dm_cap,Drive-module servo cap,common,3,PETG,4,40% gyroid,4.1,12.3,58.9,38.3,4.0,none,False,,
+12_dm_pulley36,36T HTD-3M drive pulley,common,3,PETG,6,100%,13.5,40.5,36.8,36.8,20.0,none,True,,Horn face down. 0.16 mm layers for tooth quality; 100% infill.
+20_turntable,Turntable plate + J1 spindle,common,1,PETG (PA-CF optional),6,40% gyroid,179.3,179.3,157.6,119.5,134.8,none,True,M4x8,"Plate TOP face down, spindle pointing up (bearing journals print round). Supports from build plate under the tension lug only."
+21_stub_cheek,Stub cheek (clamps J2 stub axle),common,1,PETG (PA-CF recommended),6,60% gyroid,80.4,80.4,52.0,106.0,30.0,none,True,,Lay on its INBOARD face (stub axis vertical) so the clamp boss layers wrap the stub; gussets then print as walls.
+22_ddm_bracket_j2,Dual drive bracket (J2 half),common,1,PETG,5,50% gyroid,72.4,72.4,58.9,110.0,65.7,none,True,M3x4 M4x1,Central-wall face (split plane) DOWN. Supports: build-plate only under servo-cradle lips.
+22_ddm_bracket_j3,Dual drive bracket (J3 half),common,1,PETG,5,50% gyroid,74.1,74.1,58.9,110.0,65.7,none,True,M3x4 M4x1,Central-wall face (split plane) DOWN. Supports: build-plate only under servo-cradle lips.
+30_ua_hub,Upper-arm hub with integral 86T (J2) pulley,common,1,PETG (PA-CF recommended),6,60% gyroid,126.3,126.3,104.3,84.6,41.5,none,True,,Pulley flange (-Y face) down: teeth and bearing seats vertical. Tube sockets horizontal: supports OFF (bores bridge as teardrops).
+31_j3_hub,J3 hub: 72T pulley + parallelogram crank + spring L-lever,common,1,PETG (PA-CF recommended),6,60% gyroid,62.5,62.5,86.6,71.2,45.5,none,True,M5x1,Pulley flange down; L-lever prints upward.
+32_elbow_block,"Elbow block (clamps elbow pin, J2 spring anchor, stop lugs)",common,1,PETG (PA-CF recommended),6,60% gyroid,40.3,40.3,78.0,64.3,20.0,none,True,,
+33_rod_end,Parallelogram rod end (626 bearing),common,2,PETG,5,80%,5.1,10.2,46.5,25.0,14.0,none,True,,
+34_forearm_root,Forearm root: elbow bearings + crank + stop tab,common,1,PETG (PA-CF recommended),6,60% gyroid,38.8,38.8,113.0,48.5,32.8,none,True,M5x1,
+35_stub_spacer_14p46mm,Stub inner-ring spacer 14.46 mm,common,1,PETG,3,100%,1.0,1.0,17.4,17.4,14.5,none,False,,"Print upright (axis Z), 0.12 mm layers."
+35_stub_spacer_30p96mm,Stub inner-ring spacer 30.96 mm,common,1,PETG,3,100%,2.1,2.1,17.4,17.4,31.0,none,False,,"Print upright (axis Z), 0.12 mm layers."
+40_wrist_housing,Wrist housing: forearm sockets + J4 drive cradle + pitch fork,WRA-1B,1,PETG (PA-CF recommended),5,50% gyroid,226.4,226.4,175.0,60.0,75.9,none,True,M3x4,"Lay on the -Y cheek (J4 pin wall) face. Supports: build-plate only, under the +Y cheek bridge."
+41_pitch_yoke,Pitch yoke: J5 servo pocket + roll bearing housing,WRA-1B,1,PETG (PA-CF recommended),5,50% gyroid,44.7,44.7,56.5,39.3,66.2,none,True,M3x8,Roll housing UP (front face down).
+42_yoke_cap,Pitch-yoke rear cap,WRA-1B,1,PETG,4,40% gyroid,4.5,4.5,53.9,37.3,4.0,none,False,,
+43_j4_pulley54,J4 54T pulley (bolts to yoke),WRA-1B,1,PETG,6,100%,42.7,42.7,54.0,54.0,19.0,none,True,,
+44_j5_horn_adapter,J5 horn adapter with drive dogs,WRA-1B,1,PETG (PA-CF),6,100%,0.9,0.9,19.0,19.0,7.0,none,True,,
+45_roll_spindle,Roll spindle,WRA-1B,1,PA-CF or PETG,8,100%,5.3,5.3,20.0,20.0,25.5,none,True,M5x1,Vertical (axis Z) so bearing journals are round; 100% infill.
+46_tool_flange,Tool flange (WRA-TF30 interface),WRA-1B,1,PETG (PA-CF),6,100%,8.9,8.9,40.0,40.0,7.0,none,True,M3x4,
+47_roll_spacer,Roll-spindle inner-ring spacer,WRA-1B,1,PETG,3,100%,0.8,0.8,17.4,17.4,12.0,none,False,,
+50_claw_palm,"Claw palm: dovetail, servo cradle, rail beam",common,1,PA-CF (PETG ok),5,50% gyroid,33.9,33.9,45.2,124.0,53.5,none,True,M3x6,"Rail-beam top face DOWN on the bed (flat, precise rail seat); support only under the dovetail block overhang."
+51_claw_cradle_cap,Claw servo cradle cap,common,1,PETG,4,40% gyroid,3.3,3.3,39.4,33.3,4.0,none,False,,
+52_claw_pinion,Claw pinion 14T m1.5 (on servo horn),common,1,PA-CF / PETG-CF,6,100%,2.2,2.2,24.0,23.6,10.0,none,True,,"0.12 mm layers, hardened nozzle for CF."
+53_claw_jaw_a,"Claw jaw A (rack on top of pinion, upper knob lip)",common,1,PA-CF / PETG-CF,6,60% gyroid,25.9,25.9,83.9,46.0,60.0,none,True,,Outer finger face down; rack teeth print as vertical walls.
+53_claw_jaw_b,"Claw jaw B (rack below pinion, lower knob lip)",common,1,PA-CF / PETG-CF,6,60% gyroid,24.9,24.9,83.9,49.4,60.0,none,True,,Outer finger face down.
+54_claw_pad_a,"Claw pad A, 100 deg V (glue 1.5 mm silicone facing)",common,1,TPU 95A + silicone sheet,3,40%,3.4,3.4,21.6,5.9,41.0,none,False,,
+54_claw_pad_b,Claw pad B (mirror of A),common,1,TPU 95A + silicone sheet,3,40%,3.4,3.4,21.6,5.9,41.0,none,False,,
+56_tool_adapter,"Quick-change tool adapter (dovetail, both wrists)",common,1,PA-CF (PETG ok),6,100%,14.5,14.5,40.0,40.0,12.0,none,True,,
+60_electronics_box,"Electronics enclosure (Jetson, ESP32, power, E-stop relays)",common,1,PETG,4,20% gyroid,182.3,182.3,196.0,146.0,71.0,none,False,M3x4,Open side up. 0.24 mm layers OK.
+61_electronics_lid,Electronics enclosure lid,common,1,PETG,3,15%,59.4,59.4,196.0,146.0,5.2,none,False,,
+62_estop_pendant,E-stop pendant body,common,1,PETG (yellow recommended),3,20%,26.1,26.1,64.0,48.0,42.0,none,False,M3x4,
+63_estop_pendant_lid,E-stop pendant lid (E-stop + guarded START),common,1,PETG (yellow),3,20%,7.2,7.2,65.0,48.0,12.0,none,False,,
+70_bench_test_stand,Bench test stand (holds a post tube like the chair),common,1,PETG,5,40% gyroid,376.4,376.4,220.0,170.0,72.0,none,True,,
+80_cs_gear_front,CS-gear front hemisphere + tool flange,WRA-1A,1,PA-CF (PETG-CF ok),6,100%,64.3,64.3,54.0,54.0,56.0,none,True,M3x4,"Split face DOWN. 0.12 mm layers, no supports (both ring-tooth families have horizontal axes -> vertical flanks). Teeth: use the STL (mesh pipeline)."
+81_cs_gear_back,CS-gear back hemisphere,WRA-1A,1,PA-CF (PETG-CF ok),6,100%,22.4,22.4,54.0,54.0,19.5,none,True,M3x4,"Split face DOWN. 0.12 mm layers, no supports (both ring-tooth families have horizontal axes -> vertical flanks). Teeth: use the STL (mesh pipeline)."
+82_monopole,Monopole S-gear 17T m1.5 + 15T m1.5 drive gear,WRA-1A,2,PA-CF,6,100%,5.4,10.8,28.5,28.5,15.5,none,True,,Drive-gear face down (spin axis vertical): ring teeth print as vertical walls.
+83_mp_fork,Monopole fork: pin arms + 6808 inner-race ring (carrier part 1),WRA-1A,2,PA-CF (PETG-CF ok),6,60% gyroid,9.1,18.2,43.5,43.5,23.3,none,True,,"Far ring face down, arms up; no supports.  Ream the pin bores (8 mm press in the -x arm, slip in the +x arm)."
+84_mp_cradle,"Theta-servo cradle: sleeve, U-channel, 6805 hub, q dogs (carrier part 2)",WRA-1A,2,PA-CF (PETG ok),5,50% gyroid,29.1,58.2,55.4,45.9,61.5,end-plate overhang only,True,M3x2,Sleeve down (module axis vertical): the 6805 hub prints round.
+85_theta_gear,Theta drive gear 20T m1.5 (on servo horn),WRA-1A,2,PA-CF / PETG-CF,6,100%,3.1,6.2,33.0,33.0,4.5,none,True,,
+86_q_coupling,q-servo horn coupling with drive dogs,WRA-1A,2,PA-CF / PETG,6,100%,1.4,2.8,22.0,22.0,8.6,none,True,,"Disc down, dogs up.  Dogs: sand to a snug slide in the hub slots (no shake)."
+87_module_frame,"Module frame: 6808 holder, lug, strut, 6805 boss, q-servo cradle",WRA-1A,2,PA-CF (PETG ok),5,40% gyroid,55.2,110.4,83.0,66.0,112.5,under the 6805 boss / q-cradle overhang,True,M3x3,Holder (near lip) down: both bearing seats print round.
+88_q_servo_cap,q-servo cap,WRA-1A,2,PETG,4,40% gyroid,4.3,8.6,52.9,38.3,3.0,none,False,,
+89_abenics_housing,"ABENICS housing: forearm sockets, post clamp, shoulders",WRA-1A,1,PA-CF (PETG ok),5,40% gyroid,54.6,54.6,115.0,78.5,60.2,none,True,M4x4,
+90_center_ball,Fixed centre ball (sphere bearing),WRA-1A,1,PA-CF,6,100%,3.5,3.5,17.8,19.0,19.0,none,True,,"Sand/polish, grease (PTFE). Bonded + pinned on the post."
+91_holder_retainer,6808 outer-race retainer ring (3x M3 countersunk),WRA-1A,2,PETG,4,100%,5.0,10.0,66.0,66.0,2.5,none,True,,
+92_cradle_strap,"Theta-servo strap (closes the cradle, 2x M3)",WRA-1A,2,PETG,4,40% gyroid,1.8,3.6,14.0,35.3,3.5,none,False,,
+93_mp_spacer,Monopole pin spacer 10.5/8.2 x 6.5 (or brass tube),WRA-1A,2,PETG,3,100%,0.3,0.6,10.5,10.5,6.5,none,False,,

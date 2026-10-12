@@ -1,0 +1,1131 @@
+{
+ "variant": "WRA-1A (ABENICS wrist)",
+ "generated": "2026-10-12T10:17:25",
+ "mass_g": {
+  "base_fixed_B": 419,
+  "turntable_T_incl_J1J2J3_servos": 997,
+  "upper_arm_U": 312,
+  "j3_hub_K": 64,
+  "parallelogram_rod": 74,
+  "forearm_F_incl_ABENICS_housing_modules_4_servos": 909,
+  "tool_S_cs_gear": 89,
+  "claw_G_incl_servo": 293,
+  "arm_total_on_dock": 3157,
+  "moving_beyond_J2": 1741
+ },
+ "mass_model_missing_parts_json": [],
+ "joint_capacity_Nm": {
+  "j1": {
+   "ratio": 1.5,
+   "continuous": 1.103,
+   "peak": 2.205,
+   "stall": 4.41
+  },
+  "j2": {
+   "ratio": 2.3889,
+   "continuous": 1.756,
+   "peak": 3.512,
+   "stall": 7.023
+  },
+  "j3": {
+   "ratio": 2.0,
+   "continuous": 1.47,
+   "peak": 2.94,
+   "stall": 5.88
+  },
+  "j6": {
+   "ratio": 1.0,
+   "continuous": 0.735,
+   "peak": 1.47,
+   "stall": 2.94
+  },
+  "w1": {
+   "ratio": 1.0,
+   "continuous": 0.735,
+   "peak": 1.47,
+   "stall": 2.94
+  },
+  "w2": {
+   "ratio": 1.0,
+   "continuous": 0.735,
+   "peak": 1.47,
+   "stall": 2.94
+  },
+  "q1": {
+   "ratio": 1.0,
+   "continuous": 0.735,
+   "peak": 1.47,
+   "stall": 2.94
+  },
+  "q2": {
+   "ratio": 1.0,
+   "continuous": 0.735,
+   "peak": 1.47,
+   "stall": 2.94
+  },
+  "note": "w1/w2 = Theta servos (quoted at the servo; sphere torque about the module's actuated axis = 1.50 x servo torque), q1/q2 = carrier servos (no static load from the tool: mesh forces act on the module axis)"
+ },
+ "springs": {
+  "j2": {
+   "G_Nm": 3.589,
+   "k_total_N_per_mm": 2.243,
+   "k_each_N_per_mm": 1.122,
+   "force_max_total_N": 175.0,
+   "force_max_each_N": 87.5,
+   "stroke_mm": 60.0,
+   "spec_each": "extension spring, rate 1.12 N/mm (+/-10%), max working force >= 114 N, working stroke >= 70 mm, initial tension < 10 N; cord length set so tension = k x (distance A-B)"
+  },
+  "j3": {
+   "G_Nm": 3.317,
+   "k_total_N_per_mm": 3.11,
+   "k_each_N_per_mm": 1.555,
+   "force_max_total_N": 211.5,
+   "force_max_each_N": 105.7,
+   "stroke_mm": 40.0,
+   "spec_each": "extension spring, rate 1.55 N/mm (+/-10%), max working force >= 137 N, working stroke >= 50 mm, initial tension < 22 N; cord length set so tension = k x (distance A-B)"
+  }
+ },
+ "torque_worst_no_springs_no_payload_Nm": {
+  "j2": 3.596,
+  "j3": 2.999,
+  "w1": -0.005,
+  "w2": -0.005
+ },
+ "torque_worst_springs_no_payload_Nm": {
+  "j2": 0.366,
+  "j3": 0.667,
+  "w1": -0.005,
+  "w2": -0.005
+ },
+ "torque_worst_springs_rated_payload_Nm": {
+  "j2": 1.102,
+  "j3": 1.311,
+  "w1": -0.005,
+  "w2": -0.005
+ },
+ "torque_worst_pose": {
+  "j2": [
+   0.0,
+   -45.0,
+   30.0,
+   90.0
+  ],
+  "j3": [
+   90.0,
+   -45.0,
+   30.0,
+   0.0
+  ],
+  "w1": [
+   0.0,
+   -45.0,
+   30.0,
+   90.0
+  ],
+  "w2": [
+   0.0,
+   -45.0,
+   30.0,
+   90.0
+  ]
+ },
+ "payload_vs_reach": [
+  {
+   "reach_mm": 300.7,
+   "tcp_z_mm": 316.2,
+   "q": {
+    "j1": 0.0,
+    "j2": 100.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 3.949,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 318.0,
+   "tcp_z_mm": 318.6,
+   "q": {
+    "j1": 0.0,
+    "j2": 96.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 6.658,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 335.4,
+   "tcp_z_mm": 319.8,
+   "q": {
+    "j1": 0.0,
+    "j2": 92.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 20.239,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 352.8,
+   "tcp_z_mm": 319.8,
+   "q": {
+    "j1": 0.0,
+    "j2": 88.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 20.491,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 370.2,
+   "tcp_z_mm": 318.6,
+   "q": {
+    "j1": 0.0,
+    "j2": 84.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 6.742,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 387.5,
+   "tcp_z_mm": 316.2,
+   "q": {
+    "j1": 0.0,
+    "j2": 80.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 3.999,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 404.5,
+   "tcp_z_mm": 312.6,
+   "q": {
+    "j1": 0.0,
+    "j2": 76.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 2.828,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 421.3,
+   "tcp_z_mm": 307.8,
+   "q": {
+    "j1": 0.0,
+    "j2": 72.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 2.181,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 437.7,
+   "tcp_z_mm": 301.8,
+   "q": {
+    "j1": 0.0,
+    "j2": 68.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 1.773,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 453.6,
+   "tcp_z_mm": 294.7,
+   "q": {
+    "j1": 0.0,
+    "j2": 64.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 1.493,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 469.0,
+   "tcp_z_mm": 286.5,
+   "q": {
+    "j1": 0.0,
+    "j2": 60.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 1.29,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 483.8,
+   "tcp_z_mm": 277.3,
+   "q": {
+    "j1": 0.0,
+    "j2": 56.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 1.137,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 497.9,
+   "tcp_z_mm": 267.0,
+   "q": {
+    "j1": 0.0,
+    "j2": 52.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 1.019,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 511.2,
+   "tcp_z_mm": 255.8,
+   "q": {
+    "j1": 0.0,
+    "j2": 48.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.926,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 523.8,
+   "tcp_z_mm": 243.7,
+   "q": {
+    "j1": 0.0,
+    "j2": 44.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.85,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 535.5,
+   "tcp_z_mm": 230.7,
+   "q": {
+    "j1": 0.0,
+    "j2": 40.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.789,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 546.2,
+   "tcp_z_mm": 216.9,
+   "q": {
+    "j1": 0.0,
+    "j2": 36.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.739,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 555.9,
+   "tcp_z_mm": 202.5,
+   "q": {
+    "j1": 0.0,
+    "j2": 32.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.698,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 564.7,
+   "tcp_z_mm": 187.4,
+   "q": {
+    "j1": 0.0,
+    "j2": 28.0,
+    "j3": -30.0,
+    "wt": [
+     30.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.664,
+   "cap_j3_kg": 0.355,
+   "cap_w1_kg": 38792.749,
+   "cap_w2_kg": 38793.17,
+   "cap_kg": 0.355
+  },
+  {
+   "reach_mm": 572.5,
+   "tcp_z_mm": 186.6,
+   "q": {
+    "j1": 0.0,
+    "j2": 26.0,
+    "j3": -28.0,
+    "wt": [
+     28.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.649,
+   "cap_j3_kg": 0.357,
+   "cap_w1_kg": 33666.906,
+   "cap_w2_kg": 33667.327,
+   "cap_kg": 0.357
+  },
+  {
+   "reach_mm": 579.8,
+   "tcp_z_mm": 185.9,
+   "q": {
+    "j1": 0.0,
+    "j2": 24.0,
+    "j3": -26.0,
+    "wt": [
+     26.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.636,
+   "cap_j3_kg": 0.359,
+   "cap_w1_kg": 28928.681,
+   "cap_w2_kg": 28929.102,
+   "cap_kg": 0.359
+  },
+  {
+   "reach_mm": 586.6,
+   "tcp_z_mm": 185.1,
+   "q": {
+    "j1": 0.0,
+    "j2": 22.0,
+    "j3": -24.0,
+    "wt": [
+     24.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.625,
+   "cap_j3_kg": 0.362,
+   "cap_w1_kg": 24570.518,
+   "cap_w2_kg": 24570.938,
+   "cap_kg": 0.362
+  },
+  {
+   "reach_mm": 592.9,
+   "tcp_z_mm": 184.3,
+   "q": {
+    "j1": 0.0,
+    "j2": 20.0,
+    "j3": -22.0,
+    "wt": [
+     22.0,
+     0.0,
+     0.0
+    ],
+    "j6": 0.0
+   },
+   "cap_j2_kg": 0.614,
+   "cap_j3_kg": 0.364,
+   "cap_w1_kg": 20585.513,
+   "cap_w2_kg": 20585.934,
+   "cap_kg": 0.364
+  }
+ ],
+ "max_horizontal_reach_tcp_mm": 592.9,
+ "payload_at_max_reach_kg": 0.364,
+ "payload_rated_check": {
+  "rated_kg": 0.3,
+  "reach_where_rated_payload_holds_mm": 592.9
+ },
+ "abenics": {
+  "direction_limits_deg": {
+   "tilt_soft_hard": [
+    30.0,
+    33.0
+   ],
+   "toward_module_soft_hard": [
+    21.0,
+    24.0
+   ],
+   "theta_soft_hard": [
+    220.0,
+    236.0
+   ],
+   "q_window": [
+    120.0,
+    125.0
+   ]
+  },
+  "theta_servo_worst_Nm_rated_payload_forearm_horizontal": 0.334,
+  "theta_servo_worst_pose_pyr": [
+   0,
+   -15,
+   0
+  ],
+  "theta_servo_continuous_Nm": 0.735,
+  "margin_continuous": 2.2,
+  "sphere_torque_per_module_Nm_cont_peak": [
+   1.1,
+   2.21
+  ],
+  "roll_torque_both_modules_Nm_cont_peak": [
+   2.21,
+   4.41
+  ],
+  "tool_speed_deg_s": {
+   "tilt_or_roll_from_theta": 180.0,
+   "carrier_q": 270
+  },
+  "q_servo_static_load": "none from the tool (mesh forces act through the module axis); carrier gravity only: < 0.03 N m [C]"
+ },
+ "belts": {
+  "j1": {
+   "effective_tension_at_peak_N": 85.5,
+   "at_servo_stall_N": 171.0,
+   "allowable_N": 168,
+   "margin_peak": 1.96,
+   "recommended_static_pretension_N": 53.0
+  },
+  "j2": {
+   "effective_tension_at_peak_N": 85.5,
+   "at_servo_stall_N": 171.0,
+   "allowable_N": 168,
+   "margin_peak": 1.96,
+   "recommended_static_pretension_N": 53.0
+  },
+  "j3": {
+   "effective_tension_at_peak_N": 85.5,
+   "at_servo_stall_N": 171.0,
+   "allowable_N": 168,
+   "margin_peak": 1.96,
+   "recommended_static_pretension_N": 53.0
+  }
+ },
+ "servo_current": {
+  "each_servo": {
+   "continuous_A": 0.88,
+   "peak_A": 1.56,
+   "stall_A": 2.7
+  }
+ },
+ "power": {
+  "servos": 8,
+  "servo_bus_typical_W": 31.2,
+  "servo_bus_worst_W": 150.0,
+  "servo_bus_worst_A": 12.5,
+  "jetson_W": {
+   "typical_W": 10.0,
+   "max_W": 25.0
+  },
+  "misc_W": 2.0,
+  "system_typical_W": 43.2,
+  "system_worst_W": 177.0,
+  "battery_example_Wh": 72.0,
+  "runtime_typical_h": 1.4,
+  "fuse_servo_bus_A": 25,
+  "buck_rating_A": 20,
+  "note": "Worst case = all 8 servos at the 50 % torque limit at once (not a normal state); the 25 A fuse and the 20 A converter's own current limit cover it."
+ },
+ "dock": {
+  "M_static_Nm": 8.46,
+  "M_design_Nm": 25.38,
+  "screw_force_N": 264,
+  "M6_insert_pullout_N_est": 1200,
+  "insert_margin": 4.55,
+  "arm_cg_offset_mm": 183.6,
+  "reach_mm": 564.9
+ },
+ "torque_strut": {
+  "T_about_post_Nm": 24.0,
+  "lever_mm": 40.0,
+  "strut_force_N": 1091,
+  "note": "door-pull scenario 40 N x 0.6 m [E]; SI5 rod ends are rated several kN [E: check]"
+ },
+ "abenics_knob_turn_theta_limit": {
+  "fraction_of_stall": 0.3,
+  "roll_torque_Nm": 2.65
+ },
+ "structure": [
+  {
+   "item": "dock plate bending at thumb screw (base housing, PA-CF)",
+   "stress_MPa": 12.4,
+   "allowable_MPa": 15.0,
+   "margin": 1.21,
+   "note": "M_dock = 8.46 N m static x 3.0 dynamic; screw force 264 N"
+  },
+  {
+   "item": "post bracket spine/gusset root (PA-CF, layers along load)",
+   "stress_MPa": 12.3,
+   "allowable_MPa": 15.0,
+   "margin": 1.22,
+   "note": "design moment 35.3 N m (3 g); aluminium option: output/dxf"
+  },
+  {
+   "item": "strut clevis bolt bearing (PA-CF)",
+   "stress_MPa": 10.9,
+   "allowable_MPa": 18.8,
+   "margin": 1.72,
+   "note": "bearing allowable ~2.5x tensile for confined printed material [E]"
+  },
+  {
+   "item": "J2 stub axle 15 mm h6 steel (bending at cheek)",
+   "stress_MPa": 49.4,
+   "allowable_MPa": 200.0,
+   "margin": 4.05,
+   "note": "steel yield/2 [E]"
+  },
+  {
+   "item": "elbow pin 10 mm h6 (bending)",
+   "stress_MPa": 13.4,
+   "allowable_MPa": 200.0,
+   "margin": 14.9,
+   "note": "forearm side + payload x 3.0"
+  },
+  {
+   "item": "upper-arm tube pair (6063-T5) at the hub, 3 g, springs ignored",
+   "stress_MPa": 18.1,
+   "allowable_MPa": 72.5,
+   "margin": 4.0,
+   "note": "conservative: full moment"
+  },
+  {
+   "item": "forearm tube pair (6063-T5) at the forearm root, 3 g",
+   "stress_MPa": 18.7,
+   "allowable_MPa": 72.5,
+   "margin": 3.88,
+   "note": "wrist + tool + payload at the wrist; conservative lever"
+  },
+  {
+   "item": "tube socket contact pressure (UA hub, PETG/PA-CF)",
+   "stress_MPa": 4.3,
+   "allowable_MPa": 12.5,
+   "margin": 2.93,
+   "note": "plus M3 cross-bolt and structural epoxy - see assembly manual"
+  },
+  {
+   "item": "claw pinion 14T m1.5 x 10 mm, Lewis (continuous 25 %)",
+   "stress_MPa": 8.4,
+   "allowable_MPa": 30.0,
+   "margin": 3.56,
+   "note": "tangential 35 N per rack mesh; print in PA-CF, 0.12 mm layers"
+  },
+  {
+   "item": "claw pinion 14T m1.5 x 10 mm, Lewis (knob mode 50 %, <= 10 s)",
+   "stress_MPa": 16.8,
+   "allowable_MPa": 30.0,
+   "margin": 1.78,
+   "note": "tangential 70 N per rack mesh; print in PA-CF, 0.12 mm layers"
+  },
+  {
+   "item": "ABENICS monopole 17T m1.5 teeth (eff. face 6 mm), Lewis (continuous 25 %)",
+   "stress_MPa": 15.9,
+   "allowable_MPa": 30.0,
+   "margin": 1.89,
+   "note": "F_t = 43 N; sphere torque 1.10 N m per module"
+  },
+  {
+   "item": "Theta spur pair 20T/15T m1.5 x 4.5 mm, Lewis 15T (continuous 25 %)",
+   "stress_MPa": 25.1,
+   "allowable_MPa": 30.0,
+   "margin": 1.19,
+   "note": "F_t = 49 N"
+  },
+  {
+   "item": "ABENICS monopole 17T m1.5 teeth (eff. face 6 mm), Lewis (knob turn 30 %)",
+   "stress_MPa": 19.0,
+   "allowable_MPa": 30.0,
+   "margin": 1.58,
+   "note": "F_t = 52 N; sphere torque 1.32 N m per module"
+  },
+  {
+   "item": "Theta spur pair 20T/15T m1.5 x 4.5 mm, Lewis 15T (knob turn 30 %)",
+   "stress_MPa": 30.1,
+   "allowable_MPa": 30.0,
+   "margin": 1.0,
+   "note": "F_t = 59 N"
+  },
+  {
+   "item": "ABENICS monopole 17T m1.5 teeth (eff. face 6 mm), Lewis (peak 50 % (not used))",
+   "stress_MPa": 31.7,
+   "allowable_MPa": 30.0,
+   "margin": 0.95,
+   "note": "F_t = 86 N; sphere torque 2.21 N m per module"
+  },
+  {
+   "item": "Theta spur pair 20T/15T m1.5 x 4.5 mm, Lewis 15T (peak 50 % (not used))",
+   "stress_MPa": 50.2,
+   "allowable_MPa": 30.0,
+   "margin": 0.6,
+   "note": "F_t = 98 N"
+  },
+  {
+   "item": "centre-ball post 8 x 1 mm tube, bending at the clamp (stainless 304)",
+   "stress_MPa": 56.1,
+   "allowable_MPa": 140.0,
+   "margin": 2.49,
+   "note": "F = 48 N (3 g tool + payload, + mesh separating forces), lever 40 mm; 6063-T5 aluminium would give margin 1.72"
+  },
+  {
+   "item": "centre ball / socket contact pressure (PA-CF on PA-CF, greased)",
+   "stress_MPa": 0.6,
+   "allowable_MPa": 8.0,
+   "margin": 14.11,
+   "note": "allowable ~8 MPa for slow sliding of filled nylon [E]; keep greased"
+  },
+  {
+   "item": "HTD-3M-15 belt J1 effective tension at peak torque",
+   "stress_MPa": 5.7,
+   "allowable_MPa": 11.2,
+   "margin": 1.96,
+   "note": "N per mm of belt width (Gates working tension) [V]"
+  },
+  {
+   "item": "HTD-3M-15 belt J2 effective tension at peak torque",
+   "stress_MPa": 5.7,
+   "allowable_MPa": 11.2,
+   "margin": 1.96,
+   "note": "N per mm of belt width (Gates working tension) [V]"
+  },
+  {
+   "item": "HTD-3M-15 belt J3 effective tension at peak torque",
+   "stress_MPa": 5.7,
+   "allowable_MPa": 11.2,
+   "margin": 1.96,
+   "note": "N per mm of belt width (Gates working tension) [V]"
+  }
+ ],
+ "tcp_error_budget": {
+  "j1": {
+   "encoder_mm": 0.61,
+   "servo_backlash_mm": 3.45,
+   "belt_stretch_mm_at_rated_payload": 0.15
+  },
+  "j2": {
+   "encoder_mm": 0.38,
+   "servo_backlash_mm": 2.17,
+   "belt_stretch_mm_at_rated_payload": 0.09
+  },
+  "j3": {
+   "encoder_mm": 0.29,
+   "servo_backlash_mm": 1.63,
+   "belt_stretch_mm_at_rated_payload": 0.05
+  },
+  "wrist": {
+   "theta_path_deg": 1.05,
+   "q_path_deg": 0.92,
+   "tcp_mm": 3.53,
+   "encoder_mm": 0.15
+  }
+ },
+ "tcp_error_rss_mm": 5.7,
+ "workspace": {
+  "tcp_x_range_mm": [
+   83,
+   587
+  ],
+  "tcp_z_range_B_mm": [
+   -314,
+   760
+  ],
+  "floor_z_B_mm": -460.0,
+  "reaches_floor": false,
+  "door_band_B_mm": [
+   404,
+   759
+  ]
+ },
+ "door_tasks": {
+  "knob_50mm_continuous grip": {
+   "jaw_force_N": 35.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    1.14,
+    1.83
+   ],
+   "wrist_roll_capacity_Nm": 2.21,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    1.14,
+    1.83
+   ],
+   "limited_by": "grip slip"
+  },
+  "knob_56mm_continuous grip": {
+   "jaw_force_N": 35.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    1.28,
+    2.05
+   ],
+   "wrist_roll_capacity_Nm": 2.21,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    1.28,
+    2.05
+   ],
+   "limited_by": "grip slip"
+  },
+  "knob_64mm_continuous grip": {
+   "jaw_force_N": 35.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    1.46,
+    2.34
+   ],
+   "wrist_roll_capacity_Nm": 2.21,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    1.46,
+    2.21
+   ],
+   "limited_by": "grip slip (TPU) / wrist roll (silicone)"
+  },
+  "knob_50mm_knob mode (<= 10 s)": {
+   "jaw_force_N": 70.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    2.28,
+    3.66
+   ],
+   "wrist_roll_capacity_Nm": 2.65,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    2.28,
+    2.65
+   ],
+   "limited_by": "grip slip (TPU) / wrist roll (silicone)"
+  },
+  "knob_56mm_knob mode (<= 10 s)": {
+   "jaw_force_N": 70.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    2.56,
+    4.09
+   ],
+   "wrist_roll_capacity_Nm": 2.65,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    2.56,
+    2.65
+   ],
+   "limited_by": "grip slip (TPU) / wrist roll (silicone)"
+  },
+  "knob_64mm_knob mode (<= 10 s)": {
+   "jaw_force_N": 70.0,
+   "slip_torque_Nm_mu0.5_0.8": [
+    2.92,
+    4.68
+   ],
+   "wrist_roll_capacity_Nm": 2.65,
+   "knob_torque_capacity_Nm_mu0.5_0.8": [
+    2.65,
+    2.65
+   ],
+   "limited_by": "wrist roll"
+  },
+  "knob_torque_demand": {
+   "typical_residential_Nm": [
+    0.3,
+    1.5
+   ],
+   "BHMA_A156.2_max_Nm": 3.16,
+   "source": "BHMA A156.2 latch retraction torque limit; typical values [E] (measure YOUR door)"
+  },
+  "lever_and_pull_vs_distance": [
+   {
+    "x_mm": 325.0,
+    "push_down_N": 7.8,
+    "pull_N": 13.9,
+    "sideways_N_J1": 6.8,
+    "q": {
+     "j1": 0.0,
+     "j2": 99.0,
+     "j3": 25.0,
+     "wt": [
+      -25.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 350.0,
+    "push_down_N": 7.7,
+    "pull_N": 14.0,
+    "sideways_N_J1": 6.3,
+    "q": {
+     "j1": 0.0,
+     "j2": 90.0,
+     "j3": 24.0,
+     "wt": [
+      -24.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 375.0,
+    "push_down_N": 7.7,
+    "pull_N": 14.0,
+    "sideways_N_J1": 5.9,
+    "q": {
+     "j1": 0.0,
+     "j2": 84.0,
+     "j3": 22.0,
+     "wt": [
+      -22.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 400.0,
+    "push_down_N": 7.7,
+    "pull_N": 14.1,
+    "sideways_N_J1": 5.5,
+    "q": {
+     "j1": 0.0,
+     "j2": 78.0,
+     "j3": 24.0,
+     "wt": [
+      -24.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 425.0,
+    "push_down_N": 7.8,
+    "pull_N": 14.3,
+    "sideways_N_J1": 5.2,
+    "q": {
+     "j1": 0.0,
+     "j2": 72.0,
+     "j3": 26.0,
+     "wt": [
+      -26.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 450.0,
+    "push_down_N": 7.8,
+    "pull_N": 14.5,
+    "sideways_N_J1": 4.9,
+    "q": {
+     "j1": 0.0,
+     "j2": 69.0,
+     "j3": 27.0,
+     "wt": [
+      -27.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   },
+   {
+    "x_mm": 475.0,
+    "push_down_N": 7.7,
+    "pull_N": 15.1,
+    "sideways_N_J1": 4.6,
+    "q": {
+     "j1": 0.0,
+     "j2": 63.0,
+     "j3": 21.0,
+     "wt": [
+      -21.0,
+      0.0,
+      0.0
+     ],
+     "j6": 0.0
+    }
+   }
+  ],
+  "ADA_reference": {
+   "interior_door_opening_force_N": 22.2,
+   "operable_parts_max_N": 22.2,
+   "source": "ADA 2010 404.2.9 / 309.4 (see docs/01_research_findings.md)"
+  }
+ },
+ "claw": {
+  "opening_mm": [
+   0.0,
+   65.0
+  ],
+  "jaw_force_N_cont_knob": [
+   35.0,
+   70.0
+  ],
+  "pinion_r_mm": 10.5,
+  "jaw_speed_mm_s": 49.5,
+  "close_time_full_s": 0.66,
+  "servo_deg_full_stroke": 177.3,
+  "v_groove_deg": 100,
+  "v_normal_force_factor": 1.305,
+  "tcp_from_flange_mm": 88.5,
+  "pad_length_mm": 41.0,
+  "lip_mm": 6.0,
+  "note": "parallel jaws: grip force independent of object size; V pads centre round knobs on the roll axis"
+ }
+}

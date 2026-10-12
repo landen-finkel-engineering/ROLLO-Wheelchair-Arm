@@ -1,0 +1,23 @@
+# Test log
+
+## 1. Physical tests (fill in as you go — docs/09 §4 lists the stages)
+
+| date | build (params_sha from output/reports/verification.json) | stage / test | result | measured values | notes / actions |
+|---|---|---|---|---|---|
+| | | T0.1 power-up | | | |
+| | | T0.2 E-stop chain | | | |
+
+## 2. Design verification already done (CAD / simulation only — not a substitute for section 1)
+
+| date | check | tool | result |
+|---|---|---|---|
+| 2026-10-12 | Θ-pair phasing (20T servo gear vs 15T monopole gear) | `tools/wrist_sweep.py` + 2-D involute check | **found:** 36 mm³ tooth overlap at every pose; the odd 15T gear needs a tooth (not a gap) of the 20T gear facing it. **Fixed** in `abenics.theta_gear()`: 0.0 mm² overlap over 5 tooth pitches at 0.2° steps |
+| 2026-10-12 | Θ spur gear on the monopole vs CS gear teeth | `tools/wrist_sweep.py --mesh` | **found:** up to 0.76 mm³ (inner tip corner inside the CS tip sphere) at the hard limits. **Fixed** with a revolved tip relief (`TG_RELIEF_CLR` 0.4 mm) |
+| 2026-10-12 | claw servo vs tool adapter | `tools/wrist_sweep.py` | **found:** 1.6 mm³ (servo rear boss on the dovetail). **Fixed:** `claw.x_pinion` 55.6 → 56.6 mm (0.9 mm clearance) |
+| 2026-10-12 | every part a single solid, watertight STL | `cad/build.py --verify` (first pass) | **found:** `32_elbow_block` printed as 3 bodies (stop lugs 1.5 mm off the boss) → lugs now reach into the boss. Cap screws of `50` and `87` were heat-set inserts as wide as the 3.5–4 mm walls (non-manifold, would split) → `51` cap on 4× M2 thread-forming in the side walls, `88` cap on 4× M3 thread-forming in new bosses on `87`. The first boss placement intruded into the q-servo pocket (sweep: 110 mm³); bosses are now added before the pocket is cut. Fork radial screw tangent to the ring end → moved 0.5 mm. Toothed gear / ball STLs had zero-area slivers from float32 rounding → `lib.stl_clean` after every export (volume unchanged) |
+| 2026-10-12 | ABENICS + claw interference sweep with toothed gears | `tools/wrist_sweep.py --mesh` | 73 poses on the hard-limit boundary (home + 12 tilt directions × roll −90/0/+90 × claw closed/open), every wrist and claw solid plus vitamins: **no interferences** (B-rep part re-run after the fastener fixes above). Toothed CS gear vs both monopoles (with their Θ gears) at the same poses: largest overlap **0.20 mm³** (slivers ≤ 0.27 mm thick on the monopole tooth flanks: the 1° step of the generating sweep). |
+| 2026-10-12 | LEFT / RIGHT installation at `mount_z` 460 (park + gripping a 36" knob 450 mm ahead) | `tools/chair_check.py` | no interferences on either side; closest: footrest hanger 11.5 mm, wheel lock 16.4 mm, user envelope 44.3 mm |
+| 2026-10-12 | engineering calculations | `calcs/arm_calcs.py` → docs/05 | all used load cases ≥ 1.0; lowest: Θ pair at the 30 % knob cap = 1.00, dock plate 1.21, post bracket 1.22. 50 % peak on the wrist is **not** allowed (Θ pair 0.60, monopole 0.95) |
+| 2026-10-12 | driver: framing, CRC, kinematics, actuator mapping, fake-ESP32 client and E-stop, door-knob task, stiff-latch abort, Θ torque cap, user keep-out zone | `pytest software/wra_ros2/wra_driver/test` | 10 / 10 pass |
+| 2026-10-12 | ESP32 firmware compile + link (arduino-esp32 2.0.17, xtensa GCC 8.4.0, ESP32 Dev Module) | `firmware/.../tools/offline_build.py` | **found:** global `link` collided with POSIX `link()` → renamed `hostLink`. Then 0 errors and 0 warnings with -Wall -Wextra on the sketch sources; flash 285.5 kB (21.8 %), RAM 22.6 kB (6.9 %), image 285.9 kB. Rebuilt after adding the firmware-side Θ torque cap. Not yet run on a board |
+| 2026-10-12 | whole build: part validity, bed fit, STL/STEP volumes, interfaces, arm self-interference sweep, chair checks | `cad/build.py --verify` | **ALL PASS**: 57/57 part files (valid single solid, fits and sits on the bed, STL watertight, STL/STEP volume match); 17/17 interface checks; arm sweep 16/16 poses clean; chair checks 4/4 clean (RIGHT/LEFT, park + 36" knob). One check failed on the first pass and was itself wrong: the belt-length interface check used the textbook approximation (0.06 mm off on J2); it now uses the same exact formula as the layout |

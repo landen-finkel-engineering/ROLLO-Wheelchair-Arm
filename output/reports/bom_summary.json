@@ -1,0 +1,66 @@
+{
+ "active_variant": "WRA-1A",
+ "printed_parts": 49,
+ "printed_instances": 72,
+ "printed_mass_total_g_est": 2618.0,
+ "purchased_lines": 75,
+ "servos": 8,
+ "purchased_cost_usd_est_excl_owned": 577.0,
+ "fastener_totals": {
+  "ISO 7380 M3 x 8 button head": 12,
+  "ISO 4762 M3 x 10": 28,
+  "ISO 4762 M4 x 16": 17,
+  "ISO 4762 M4 x 30": 3,
+  "ISO 4762 M4 x 25": 2,
+  "ISO 10642 countersunk M3 x 12": 4,
+  "ISO 4762 M3 x 20": 16,
+  "ISO 7379 shoulder screw 6x10 / M5": 2,
+  "ISO 4762 M3 x 16": 8,
+  "ISO 7380 M3 x 8": 16,
+  "ISO 10642 countersunk M3 x 8 (thread-forming in 2.5 mm pilot)": 4,
+  "ISO 10642 countersunk M3 x 8": 6,
+  "ISO 4762 M3 x 12 (thread-forming in 2.5 mm pilot)": 8,
+  "DIN 7984 low-head M4 x 16": 4,
+  "ISO 7380 M3 x 6": 4,
+  "ISO 7380 M2 x 10 (thread-forming in 1.8 mm pilot)": 4,
+  "ISO 4762 M3 x 8": 6,
+  "ISO 4762 M3 x 6": 8,
+  "M4 x 20 thumb screw (or SHCS)": 1,
+  "DIN 464 M6 x 25": 2,
+  "ISO 4762 M5 x 30": 10,
+  "ISO 4762 M5 x 16": 5,
+  "ISO 4762 M5 x 35": 1,
+  "ISO 4762 M4 x 20": 1,
+  "ISO 4762 M5 x 12": 4,
+  "M3 nylon standoffs": 1,
+  "M2 x 10 self-tapping": 2
+ },
+ "cut_lengths_mm": {
+  "ua_tube": 182.0,
+  "fa_tube": 83.0,
+  "stub": 94.0,
+  "elbow_pin": 56.25,
+  "rod_tube": 222.0,
+  "elbow_spacer": 15.71,
+  "pitch_pins_1B": [
+   13.900000000000002,
+   13.3
+  ],
+  "abenics_post_1A": 53.5,
+  "claw_rail": 124.0
+ },
+ "other_variant": {
+  "name": "WRA-1B",
+  "printed_parts": [
+   "40_wrist_housing",
+   "41_pitch_yoke",
+   "42_yoke_cap",
+   "43_j4_pulley54",
+   "44_j5_horn_adapter",
+   "45_roll_spindle",
+   "46_tool_flange",
+   "47_roll_spacer"
+  ],
+  "purchased_lines": 12
+ }
+}

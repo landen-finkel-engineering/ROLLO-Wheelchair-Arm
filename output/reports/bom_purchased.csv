@@ -1,0 +1,88 @@
+variant,category,item,qty,spec,where,source,unit_price_usd_est
+common,actuator,Waveshare ST3215 serial bus servo (30 kg.cm @12 V),4,SKU 22414; 12 V; 4096-step magnetic encoder; 25T spline; supplied metal disc horn + screws,"J1, J2, J3, claw",[V] owned / Waveshare,22
+WRA-1A,actuator,Waveshare ST3215 serial bus servo (30 kg.cm @12 V),4,SKU 22414; 12 V; 4096-step magnetic encoder; 25T spline; supplied metal disc horn + screws,"ABENICS wrist: q1, Theta1, q2, Theta2",[V] Waveshare,22
+WRA-1B,actuator,Waveshare ST3215 serial bus servo (30 kg.cm @12 V),2,SKU 22414; 12 V; 4096-step magnetic encoder; 25T spline; supplied metal disc horn + screws,"J4 pitch, J5 roll",[V] Waveshare,22
+common,actuator,Waveshare ST3215 serial bus servo (30 kg.cm @12 V) - SPARE,1,recommended: swap-in while a servo is re-calibrated,spares,[V],22
+common,electronics,NVIDIA Jetson Orin Nano 8GB developer kit,1,owned,e-box,[V] owned,
+common,electronics,ESP32-WROOM-32 dev board (Freenove or DevKitC),1,safety supervisor / servo bridge,e-box,[V] owned,8
+common,electronics,Waveshare Bus Servo Adapter (A),1,jumper A = UART mode (ESP32 drives the bus),e-box,[V] Waveshare,6
+common,electronics,ReSpeaker USB mic array,1,owned; USB to Jetson (voice commands),user side,[V] owned,
+common,power,DC-DC buck 12 V / 20 A (input >= 15-24 V),1,servo bus supply; output must stay <= 12.6 V,e-box,[E] generic,18
+common,power,"DC-DC converter for the Jetson (voltage per YOUR carrier spec, >= 45 W)",1,do NOT feed raw 5S battery (21 V full) unless the carrier datasheet allows it,e-box,[E] generic,15
+common,power,"18-20 V power-tool battery (5S Li-ion, >= 4 Ah) + adapter with fuse/switch",1,or any 15-24 V pack with BMS; separate from any chair battery,e-box / chair,[E],60
+common,power,"ATO blade fuse holder + fuses 25 A, 5 A, 2 A",1,servo bus / Jetson / logic,e-box,[E],8
+common,power,TVS diode SMBJ15A (or 1.5KE15A) + 2200 uF 25 V low-ESR capacitor,1,servo bus clamp/bulk,e-box,[E],3
+common,power,XT60 connector pair,2,battery input,e-box,[E],2
+common,safety,"22 mm E-stop, red mushroom, latching twist-release, 1 NC (2 NC preferred)",1,IEC 60947-5-5 marked,pendant,[E],12
+common,safety,"22 mm momentary push button, NO, flush (START/RESET)",1,guarded by the printed ring,pendant,[E],5
+common,safety,Relay K1: 12 V coil DPDT (e.g. Omron G2R-2) + socket,1,self-hold latch,e-box,[E],8
+common,safety,Relay K2: 12 V coil automotive SPST-NO 40 A + socket,1,servo-bus power contactor,e-box,[E],6
+common,safety,"Roller-lever microswitch (SS-5GL size, 20 x 10 x 6.5)",1,dock-present interlock,01_receiver pocket,[E],1
+common,wiring,GX16-5 panel + cable connector pair,1,"arm cable: 12 V, GND, DATA, dock-switch pair",e-box <-> 10_base_housing,[E],4
+common,wiring,GX12-4 panel + cable connector pair,1,pendant: E-stop NC loop + START,e-box <-> pendant,[E],3
+common,wiring,"Silicone wire 14 AWG red/black (2 m each), 22 AWG 3-colour (5 m), 5264 3-pin servo leads",1,star power from the turntable distribution block; DATA daisy-chained,arm,[E],15
+WRA-1A,wiring,"Extra-flexible 3-core servo lead 26 AWG silicone, 0.5 m",2,Theta-servo service loops (carrier turns +/-120 deg),ABENICS modules,[E],2
+common,wiring,WAGO 221 lever connectors or 4-way terminal block (turntable power star),1,,20_turntable,[E],4
+common,wiring,"Spiral wrap 6 mm, cable ties 2.5 mm, PG7 cable gland",1,,arm / pendant,[E],5
+common,bearing,6806-2RS deep-groove ball bearing 30x42x7,2,J1 tower (face-to-face pair),10_base_housing,[V] catalogue part,3
+common,bearing,608-2RS 8x22x7,6,"2 per drive-module pulley (J1, J2, J3)",12_dm_pulley36 x3,[V] catalogue part,0.6
+common,bearing,6802-2RS 15x24x5,4,"UA hub 2, J3 hub 2",30/31,[V] catalogue part,1.5
+common,bearing,6800-2RS 10x19x5,2,elbow,34_forearm_root,[V] catalogue part,1.5
+common,bearing,626-2RS 6x19x6,2,parallelogram rod ends,33_rod_end x2,[V] catalogue part,1
+common,bearing,623-2RS 3x10x4,3,"spring-cord idlers: A3 post 1, UA-hub lever B2/C2 2",20/30,[V] catalogue part,0.5
+WRA-1A,bearing,6808-2RS (61808) thin-section 40x52x7,2,"carrier locating bearing, 1 per module",83_mp_fork / 87_module_frame,[V] catalogue part,4
+WRA-1A,bearing,6805-2RS (61805) 25x37x7,2,"carrier floating bearing, 1 per module",84_mp_cradle / 87_module_frame,[V] catalogue part,2.5
+WRA-1A,bearing,688-2RS 8x16x5,4,"monopoles, 2 each",82_monopole,[V] catalogue part,1
+WRA-1B,bearing,608-2RS 8x22x7,2,J4 drive-module pulley,12_dm_pulley36,[V] catalogue part,0.6
+WRA-1B,bearing,6802-2RS 15x24x5,2,roll spindle,41_pitch_yoke,[V] catalogue part,1.5
+WRA-1B,bearing,688-2RS 8x16x5,2,pitch (yoke + 54T pulley),41/43,[V] catalogue part,1
+WRA-1B,bearing,625-2RS 5x16x5,3,J4 back-side belt idler (stacked on M5),40_wrist_housing,[V] catalogue part,0.6
+common,linear,"MGN9 rail, cut 124 mm (min. 2 mounting holes per 20 mm pitch)",1,"claw jaw guide; cut + deburr, keep the reference edge",50_claw_palm,[V] Hiwin-pattern MGN9,8
+common,linear,MGN9C carriage (standard length) for MGN9 rail,2,one per jaw; preloaded/Z0 preferred,53_claw_jaw_a/b,[V] check hole pattern 15 x 10 (params claw.block_holes),6
+common,belt,HTD-3M closed belt 240-3M-15 (80 teeth),1,"36T -> 54T, centre 51.79 mm; if unavailable pick the nearest length and re-run build.py",J1,[V] standard HTD pitch; check stock,6
+common,belt,HTD-3M closed belt 345-3M-15 (115 teeth),1,"36T -> 86T, centre 77.28 mm; if unavailable pick the nearest length and re-run build.py",J2,[V] standard HTD pitch; check stock,6
+common,belt,HTD-3M closed belt 321-3M-15 (107 teeth),1,"36T -> 72T, centre 77.59 mm; if unavailable pick the nearest length and re-run build.py",J3,[V] standard HTD pitch; check stock,6
+WRA-1B,belt,HTD-3M closed belt 276-3M-15 (92 teeth),1,"36T -> 54T, centre 69.97 mm; if unavailable pick the nearest length and re-run build.py",J4,[V] standard HTD pitch; check stock,6
+common,stock,"Aluminium tube 12 x 1 mm (6060/6063), cut 182.0 mm",2,upper-arm tubes,30_ua_hub <-> 32_elbow_block,[V] stock size; [C] length,4
+common,stock,"Aluminium tube 12 x 1 mm, cut 83.0 mm",2,forearm tubes,34_forearm_root <-> wrist housing (89 or 40: same sockets),[C] length,4
+common,stock,"Aluminium tube 12 x 1 mm, cut 15.71 mm (deburr square)",1,elbow inner-ring spacer,elbow pin,[C],0
+common,stock,"Aluminium tube 10 x 1 mm, cut 222.0 mm",1,parallelogram rod,33_rod_end x2,[C],3
+common,stock,"15 mm h6 linear shaft (hardened), cut 94.0 mm",1,J2/J3 stub axle (cantilever),21_stub_cheek,[C] length,6
+common,stock,"10 mm h6 linear shaft, cut 56.2 mm",1,elbow pin,32_elbow_block,[C],4
+WRA-1A,stock,"Aluminium tube 8 x 1 mm, cut 53.5 mm",1,ABENICS centre-ball post (claw cable inside),89_abenics_housing -> 90_center_ball,[C],2
+common,pin,ISO 8734 hardened dowel 8 x 24,3,"drive-module pulley axles (J1, J2, J3)",12/22,[V] catalogue part,0.5
+WRA-1B,pin,ISO 8734 hardened dowel 8 x 24,1,J4 drive-module pulley axle,40,[V] catalogue part,0.5
+WRA-1A,pin,ISO 8734 hardened dowel 8 x 30,2,monopole axles (press in the -x arm),83_mp_fork,[V] catalogue part,0.5
+WRA-1A,pin,ISO 8734 dowel 3 x 12,2,CS-gear hemisphere alignment,80/81,[V] catalogue part,0.2
+WRA-1A,pin,ISO 8734 dowel 2 x 20 (or M2 x 20 screw + nut),1,centre ball cross pin (plus epoxy),90_center_ball,[V] catalogue part,0.2
+WRA-1B,pin,ISO 8734 dowel 8 x 14 (needs 13.9),1,wrist pitch stub axle,40_wrist_housing,[V] catalogue part,0.5
+WRA-1B,pin,ISO 8734 dowel 8 x 14 (needs 13.3),1,wrist pitch stub axle,40_wrist_housing,[V] catalogue part,0.5
+WRA-1B,pin,ISO 8734 dowel 3 x 8,2,spindle -> tool flange anti-rotation,45_roll_spindle,[V] catalogue part,0.2
+common,pin,ISO 8734 hardened dowel 6 x 20,2,dock locating dowels (pressed into receiver),01_receiver,[V] catalogue part,0.4
+common,pin,ISO 8734 dowel 6 x 12,1,J1 hard-stop pin,20_turntable,[V] catalogue part,0.3
+common,pin,ISO 8734 dowel 4 x 8,1,tool-flange clocking dowel,80_cs_gear_front (1A) / 46 (1B),[V] catalogue part,0.2
+common,pin,"ISO 7379 shoulder screw 6 x 10, M5 thread",2,parallelogram crank pins P and Q (626 bearings),"31_j3_hub, 34_forearm_root",[V] catalogue part,1.5
+common,collar,"Shaft collar 30 mm bore, OD <= 45, width 13 (clamp type)",1,J1 spindle axial retention,base cavity,[V] catalogue part,5
+common,collar,"Shaft collar 15 mm bore, OD <= 28, width <= 12 (set-screw)",1,stub stack retention,stub,[V] catalogue part,2
+common,collar,"Shaft collar 10 mm bore, OD <= 20, width <= 8 (set-screw)",1,elbow pin retention,elbow pin,[V] catalogue part,2
+common,shim,DIN 988 shim rings 15 x 21 assorted (0.1 / 0.3 / 0.5 / 1.0),1,stub stack end play,stub,[V] catalogue part,4
+common,shim,DIN 988 shim rings 10 x 16 x 0.5,2,elbow end play,elbow,[V] catalogue part,1
+WRA-1A,shim,DIN 988 shim rings 8 x 14 x 0.1 / 0.3,4,monopole axial play (between fork arm and 688),83_mp_fork,[V] catalogue part,0.3
+common,spring,Extension springs for gravity balance (rate/preload from calcs/report),4,"2 per joint (J2, J3); see calcs/output/springs.json","upper arm, turntable",[C] spec from calcs,3
+common,spring,"UHMWPE (Dyneema) braided cord 1.5-2 mm, >= 100 kg break",1,1 m,spring cords,[V] catalogue part,5
+common,spring,M4 eye bolts 40 mm + nuts (spring tension adjusters),4,,"32_elbow_block, 20_turntable",[V] catalogue part,0.5
+common,consumable,"Silicone rubber sheet 1.5 mm, Shore A 40-60, + silicone-compatible adhesive",1,claw pad facing (friction for knobs); replace when glazed,54_claw_pad_a/b,[E],8
+WRA-1A,consumable,PTFE dry-film lubricant or PTFE grease (plastic-safe),1,"ABENICS teeth, centre-ball socket, claw rack",wrist,[E],8
+common,fastener,DIN 464 knurled thumb screw M6 x 25 (+ 13 x 1.5 O-ring to make it captive),2,arm dock quick release,10_base_housing -> 01_receiver,[V] catalogue part,1.5
+common,mount,"Rod end SI5 (M5 female, 5 mm bore)",2,torque strut,04_post_bracket <-> strut clamp,[V] catalogue part,3
+common,mount,"M5 threaded rod, 150 mm, + 2 M5 jam nuts",1,torque strut (cut to fit 90-160 mm),strut,[V] catalogue part,1
+common,mount,Rubber liner 1.5 mm (bicycle inner tube) or printed TPU sleeve,5,inside every tube clamp,02/03,[V] catalogue part,0
+common,mount,"Steel safety tether, 1.5 mm wire rope loop with ferrule + snap hook",1,bracket eye -> chair frame (catches the arm if the dock is opened by mistake),04_post_bracket,[V] catalogue part,4
+common,insert,Brass heat-set insert M3 x 5.7 (pilot 4.0),34,counted from the CAD (+4 for the fit coupon / spares),"10_base_housing 4, 12_dm_bracket 4, 22_ddm_bracket_j2 4, 22_ddm_bracket_j3 4, 50_claw_palm 6, 60_electronics_box 4, 62_estop_pendant 4",[C],0.06
+common,insert,Brass heat-set insert M4 x 8.1 (pilot 5.6),23,counted from the CAD (+4 for the fit coupon / spares),"04_post_bracket 4, 12_dm_bracket 5, 20_turntable 8, 22_ddm_bracket_j2 1, 22_ddm_bracket_j3 1",[C],0.1
+common,insert,Brass heat-set insert M5 x 9.5 (pilot 6.4),16,counted from the CAD (+4 for the fit coupon / spares),"02_tube_clamp_body 10, 31_j3_hub 1, 34_forearm_root 1",[C],0.12
+common,insert,Brass heat-set insert M6 x 12.7 (pilot 8.0),6,counted from the CAD (+4 for the fit coupon / spares),01_receiver 2,[C],0.2
+WRA-1A,insert,Brass heat-set insert M3 x 5.7 (pilot 4.0),18,counted from the CAD,"80_cs_gear_front 4, 81_cs_gear_back 4, 84_mp_cradle 4, 87_module_frame 6",[C],0.06
+WRA-1A,insert,Brass heat-set insert M4 x 8.1 (pilot 5.6),4,counted from the CAD,89_abenics_housing 4,[C],0.1
+WRA-1B,insert,Brass heat-set insert M3 x 5.7 (pilot 4.0),16,counted from the CAD,"40_wrist_housing 4, 41_pitch_yoke 8, 46_tool_flange 4",[C],0.06
+WRA-1B,insert,Brass heat-set insert M5 x 9.5 (pilot 6.4),1,counted from the CAD,45_roll_spindle 1,[C],0.12

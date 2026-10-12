@@ -1,0 +1,174 @@
+[
+ {
+  "side": "right",
+  "pose": "park",
+  "q": null,
+  "interferences": [],
+  "clearance_mm": {
+   "chair_rear_wheel": [
+    102.0,
+    "turntable",
+    "chair_rear_wheel_R"
+   ],
+   "chair_hand_rim": [
+    118.2,
+    "turntable",
+    "chair_hand_rim_R"
+   ],
+   "chair_wheel_lock": [
+    60.8,
+    "turntable",
+    "chair_wheel_lock_R"
+   ],
+   "chair_footrest_hanger": [
+    11.5,
+    "post_bracket",
+    "chair_footrest_hanger_R"
+   ],
+   "user": [
+    62.0,
+    "j3_dm_cap",
+    "user_upper_arms_elbows"
+   ]
+  },
+  "outboard_extent_mm": 449.1,
+  "hand_rim_outer_mm": 308.6,
+  "added_width_mm": 140.5,
+  "front_extent_x_mm": 744.6,
+  "t_s": 192.1
+ },
+ {
+  "side": "right",
+  "pose": "knob_36in",
+  "q": {
+   "j1": -2.8573831852282083,
+   "j2": 64.61713355195928,
+   "j3": 10.809235812803571,
+   "wt": [
+    -10.795635388708561,
+    2.9089095669088736,
+    0.5453097893595374
+   ],
+   "j6": 28.0
+  },
+  "interferences": [],
+  "clearance_mm": {
+   "chair_rear_wheel": [
+    93.9,
+    "j1_dm_cap",
+    "chair_rear_wheel_R"
+   ],
+   "chair_hand_rim": [
+    111.9,
+    "j1_dm_cap",
+    "chair_hand_rim_R"
+   ],
+   "chair_wheel_lock": [
+    17.4,
+    "turntable",
+    "chair_wheel_lock_R"
+   ],
+   "chair_footrest_hanger": [
+    11.5,
+    "post_bracket",
+    "chair_footrest_hanger_R"
+   ],
+   "user": [
+    44.3,
+    "j3_dm_cap",
+    "user_upper_arms_elbows"
+   ]
+  },
+  "outboard_extent_mm": 460.2,
+  "hand_rim_outer_mm": 308.6,
+  "added_width_mm": 151.6,
+  "front_extent_x_mm": 950.5,
+  "t_s": 147.5
+ },
+ {
+  "side": "left",
+  "pose": "park",
+  "q": null,
+  "interferences": [],
+  "clearance_mm": {
+   "chair_rear_wheel": [
+    98.9,
+    "turntable",
+    "chair_rear_wheel_L"
+   ],
+   "chair_hand_rim": [
+    115.7,
+    "turntable",
+    "chair_hand_rim_L"
+   ],
+   "chair_wheel_lock": [
+    54.8,
+    "turntable",
+    "chair_wheel_lock_L"
+   ],
+   "chair_footrest_hanger": [
+    11.5,
+    "post_bracket",
+    "chair_footrest_hanger_L"
+   ],
+   "user": [
+    50.4,
+    "j2_dm_cap",
+    "user_upper_arms_elbows"
+   ]
+  },
+  "outboard_extent_mm": 436.0,
+  "hand_rim_outer_mm": 308.6,
+  "added_width_mm": 127.4,
+  "front_extent_x_mm": 755.9,
+  "t_s": 154.4
+ },
+ {
+  "side": "left",
+  "pose": "knob_36in",
+  "q": {
+   "j1": 2.8573831852282083,
+   "j2": 64.61713355195928,
+   "j3": 10.809235812803571,
+   "wt": [
+    -10.795635388708561,
+    -2.9089095669088736,
+    -0.5453097893595374
+   ],
+   "j6": 28.0
+  },
+  "interferences": [],
+  "clearance_mm": {
+   "chair_rear_wheel": [
+    93.9,
+    "j1_dm_cap",
+    "chair_rear_wheel_L"
+   ],
+   "chair_hand_rim": [
+    111.9,
+    "j1_dm_cap",
+    "chair_hand_rim_L"
+   ],
+   "chair_wheel_lock": [
+    16.4,
+    "turntable",
+    "chair_wheel_lock_L"
+   ],
+   "chair_footrest_hanger": [
+    11.5,
+    "post_bracket",
+    "chair_footrest_hanger_L"
+   ],
+   "user": [
+    44.5,
+    "ddm_bracket_j2",
+    "user_upper_arms_elbows"
+   ]
+  },
+  "outboard_extent_mm": 493.4,
+  "hand_rim_outer_mm": 308.6,
+  "added_width_mm": 184.8,
+  "front_extent_x_mm": 948.8,
+  "t_s": 149.7
+ }
+]

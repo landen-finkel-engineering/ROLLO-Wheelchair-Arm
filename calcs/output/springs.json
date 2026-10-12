@@ -1,0 +1,20 @@
+{
+ "j2": {
+  "G_Nm": 3.589,
+  "k_total_N_per_mm": 2.243,
+  "k_each_N_per_mm": 1.122,
+  "force_max_total_N": 175.0,
+  "force_max_each_N": 87.5,
+  "stroke_mm": 60.0,
+  "spec_each": "extension spring, rate 1.12 N/mm (+/-10%), max working force >= 114 N, working stroke >= 70 mm, initial tension < 10 N; cord length set so tension = k x (distance A-B)"
+ },
+ "j3": {
+  "G_Nm": 3.317,
+  "k_total_N_per_mm": 3.11,
+  "k_each_N_per_mm": 1.555,
+  "force_max_total_N": 211.5,
+  "force_max_each_N": 105.7,
+  "stroke_mm": 40.0,
+  "spec_each": "extension spring, rate 1.55 N/mm (+/-10%), max working force >= 137 N, working stroke >= 50 mm, initial tension < 22 N; cord length set so tension = k x (distance A-B)"
+ }
+}

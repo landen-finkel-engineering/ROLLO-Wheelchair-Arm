@@ -1,0 +1,182 @@
+{
+ "variant": "WRA-1A",
+ "generated_from_params_sha": "b8b62fd5c287d452",
+ "turntable_origin_z": 105.0,
+ "shoulder_h": 80.0,
+ "L2": 250.0,
+ "L3": 230.0,
+ "YC": 16.625,
+ "tcp_from_flange": 88.5,
+ "ratios": {
+  "j1": 1.5,
+  "j2": 2.388888888888889,
+  "j3": 2.0,
+  "j4": 1.5
+ },
+ "limits": {
+  "j1": [
+   [
+    -105,
+    105
+   ],
+   [
+    -110,
+    110
+   ]
+  ],
+  "j2": [
+   [
+    -30,
+    100
+   ],
+   [
+    -34,
+    104
+   ]
+  ],
+  "j3": [
+   [
+    -95,
+    60
+   ],
+   [
+    -99,
+    64
+   ]
+  ],
+  "j3_rel": [
+   42,
+   140
+  ],
+  "j4": [
+   [
+    -105,
+    105
+   ],
+   [
+    -110,
+    110
+   ]
+  ],
+  "j5": [
+   [
+    -150,
+    150
+   ],
+   [
+    -160,
+    160
+   ]
+  ],
+  "claw_mm": [
+   0,
+   32.5
+  ]
+ },
+ "home": {
+  "j1": 0,
+  "j2": 95,
+  "j3": -25,
+  "wt": [
+   -28,
+   0,
+   0
+  ],
+  "j4": -65,
+  "j5": 0
+ },
+ "claw_pinion_r": 10.5,
+ "claw_jaw_force_N_per_Nm": 47.61904761904761,
+ "theta_servo_per_theta": 0.75,
+ "servo_ids": {
+  "j1": 1,
+  "j2": 2,
+  "j3": 3,
+  "q1": 4,
+  "theta1": 5,
+  "q2": 6,
+  "theta2": 7,
+  "claw": 8
+ },
+ "servo": {
+  "stall_Nm": 2.94,
+  "continuous_fraction": 0.25,
+  "peak_fraction": 0.5,
+  "no_load_rpm": 45
+ },
+ "flange_from_wrist_center": 56.0,
+ "G_in_S_rotation": [
+  [
+   0.0,
+   0.707106781187,
+   0.707106781187
+  ],
+  [
+   -0.0,
+   -0.707106781187,
+   0.707106781187
+  ],
+  [
+   1.0,
+   -0.0,
+   0.0
+  ]
+ ],
+ "mount": {
+  "right": {
+   "xyz": [
+    0.445,
+    -0.3361,
+    0.46
+   ],
+   "rpy": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "note": "chair frame C: floor under the rear-axle centre, x forward, y left (PROVISIONAL chair)"
+  },
+  "left": {
+   "xyz": [
+    0.445,
+    0.3361,
+    0.46
+   ],
+   "rpy": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "note": "chair frame C: floor under the rear-axle centre, x forward, y left (PROVISIONAL chair)"
+  }
+ },
+ "user_keepout_C_mm": [
+  {
+   "name": "torso",
+   "min": [
+    45.0,
+    -200.0,
+    495.3
+   ],
+   "max": [
+    290.0,
+    200.0,
+    1095.3
+   ]
+  },
+  {
+   "name": "head",
+   "min": [
+    50.0,
+    -110.0,
+    1095.3
+   ],
+   "max": [
+    270.0,
+    110.0,
+    1345.3
+   ]
+  }
+ ],
+ "keepout_margin_mm": 50.0
+}

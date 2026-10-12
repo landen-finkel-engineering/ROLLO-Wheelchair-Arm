@@ -1,0 +1,52 @@
+variant,location / step,fastener,qty,into
+common,Servo horns J1-J3 (36T DM pulleys),ISO 7380 M3 x 8 button head,12,servo horn threads
+common,"Drive-module caps (J1, J2, J3)",ISO 4762 M3 x 10,12,M3 inserts in 12/22
+common,J1 drive module -> turntable (slotted),ISO 4762 M4 x 16 + washer,4,M4 inserts in 12_dm_bracket
+common,"Belt tensioners J1, J2, J3 (pull screws)",ISO 4762 M4 x 30 + washer,3,tension inserts in 12/22
+common,DDM halves -> turntable (slotted feet),ISO 4762 M4 x 16 + washer,4,M4 inserts in 20_turntable
+common,Stub cheek -> turntable,ISO 4762 M4 x 16,4,M4 inserts in 20_turntable
+common,Stub cheek pinch (stub clamp),ISO 4762 M4 x 25 + hex nut,2,nut traps in 21
+common,Fixed 54T pulley -> base housing,ISO 10642 countersunk M3 x 12,4,M3 inserts in 10_base_housing
+common,"Tube cross-bolts (UA hub, elbow block, forearm root)",ISO 4762 M3 x 20 + nyloc nut,6,drill the Al tubes 3.4 mm through the printed guide holes
+common,Rod-end cross-bolts,ISO 4762 M3 x 20 + nyloc nut,2,drill rod tube 3.4 mm
+common,Elbow pin pinch,ISO 4762 M3 x 20 + hex nut,2,nut traps in 32
+common,"Crank pins P, Q",ISO 7379 shoulder screw 6x10 / M5,2,"M5 inserts in 31, 34"
+common,J2 cord anchor (A2 post),ISO 4762 M4 x 16 + nut,1,20_turntable post
+common,"Cord idler axles (A3, B2, C2)",ISO 4762 M3 x 20 + nyloc nut + 623 bearing,3,"20, 30"
+WRA-1A,CS-gear hemispheres (front -> back),ISO 4762 M3 x 16,4,M3 inserts in 81
+WRA-1A,Tool adapter 56 -> CS-gear flange (BC 30),ISO 4762 M3 x 10,4,M3 inserts in 80
+WRA-1A,Theta gear 85 -> Theta-servo horn,ISO 7380 M3 x 8,8,servo horn threads
+WRA-1A,q coupling 86 -> q-servo horn,ISO 7380 M3 x 8,8,servo horn threads
+WRA-1A,Cradle 84 -> fork 83 (radial),ISO 10642 countersunk M3 x 8 (thread-forming in 2.5 mm pilot),4,fork ring
+WRA-1A,Holder retainer 91 -> module frame,ISO 10642 countersunk M3 x 8,6,M3 inserts in 87
+WRA-1A,Theta-servo strap 92,ISO 4762 M3 x 10,4,M3 inserts in 84
+WRA-1A,q-servo cap 88,ISO 4762 M3 x 12 (thread-forming in 2.5 mm pilot),8,bosses on 87
+WRA-1A,Module frame lugs -> housing pads,DIN 7984 low-head M4 x 16,4,M4 inserts in 89
+WRA-1A,Post clamp (housing slit),ISO 4762 M3 x 20 + hex nut,1,89
+WRA-1A,Housing -> forearm tubes (cross-bolts),ISO 4762 M3 x 20 + nyloc nut,2,drill tubes 3.4 mm
+WRA-1B,"Servo horns J4, J5 (pulley 12, horn adapter 44)",ISO 7380 M3 x 8 button head,8,servo horn threads
+WRA-1B,Drive-module cap J4,ISO 4762 M3 x 10,4,M3 inserts in 40
+WRA-1B,Wrist housing 40 -> forearm tubes (cross-bolts),ISO 4762 M3 x 20 + nyloc nut,2,drill tubes 3.4 mm
+WRA-1B,J4 back-side idler,ISO 4762 M5 x 40 + 3x 625 + washers + nyloc,1,slot in 40
+WRA-1B,Yoke cap,ISO 4762 M3 x 10,4,M3 inserts in 41
+WRA-1B,54T J4 pulley -> yoke,ISO 4762 M3 x 25,4,M3 inserts in 41
+WRA-1B,Tool flange -> roll spindle,ISO 4762 M5 x 16 + washer,1,M5 insert in 45
+WRA-1B,Tool adapter -> tool flange (BC 30),ISO 4762 M3 x 10,4,M3 inserts in 46
+common,Claw pinion 52 -> claw-servo horn,ISO 7380 M3 x 6,4,servo horn threads
+common,Claw cradle cap 51,ISO 7380 M2 x 10 (thread-forming in 1.8 mm pilot),4,side walls of 50
+common,MGN9 rail -> palm 50,ISO 4762 M3 x 8,6,M3 inserts in 50
+common,Jaws 53 -> MGN9C carriages,ISO 4762 M3 x 6,8,carriage threads (check length!)
+common,Pads 54 -> jaws 53,ISO 4762 M3 x 16 + hex nut,4,nut recess in the finger
+common,Dovetail lock (palm on tool adapter),M4 x 20 thumb screw (or SHCS) + hex nut,1,nut trap in 50
+common,Dock thumb screws,DIN 464 M6 x 25,2,M6 inserts in 01_receiver
+common,Receiver -> post bracket shelf (index ring),ISO 4762 M4 x 16 + washer,4,M4 inserts in 04
+common,"Tube clamps (body + cap), 5 clamps",ISO 4762 M5 x 30 + hex nut,10,nut traps in 02
+common,Post bracket -> 2 post clamps,ISO 4762 M5 x 16 + washer,4,M5 inserts in 02 pads
+common,Strut rod end -> bracket clevis,ISO 4762 M5 x 35 + nut (nut trap),1,04 clevis
+common,Strut rod end -> strut clamp pad,ISO 4762 M5 x 16 + washer,1,M5 insert in 02
+common,Stop collar,ISO 4762 M4 x 20 + nut,1,05
+common,Electronics box -> 2 cane clamps,ISO 4762 M5 x 12 + washer,4,M5 inserts in 02 pads
+common,Electronics box lid,ISO 4762 M3 x 10,4,M3 inserts in 60
+common,Pendant lid,ISO 4762 M3 x 10,4,M3 inserts in 62
+common,Electronics boards,M3 nylon standoffs + screws (assorted),1,floor slots in 60
+common,Dock microswitch,M2 x 10 self-tapping,2,01_receiver pocket
