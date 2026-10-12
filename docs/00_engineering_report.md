@@ -294,7 +294,7 @@ Orientation, walls, infill and supports for every part are in `docs/13_print_gui
 | `91_holder_retainer` | 6808 outer-race retainer ring (3x M3 countersunk) | 2 | PETG | 5 | 66 × 66 × 2 | yes |
 | `92_cradle_strap` | Theta-servo strap (closes the cradle, 2x M3) | 2 | PETG | 2 | 14 × 35 × 4 | — |
 | `93_mp_spacer` | Monopole pin spacer 10.5/8.2 x 6.5 (or brass tube) | 2 | PETG | 0 | 10 × 10 × 6 | — |
-| **total** | 49 files | **72** | | **2615 g** | | |
+| **total** | 49 files | **72** | | **2618 g** (from unrounded masses) | | |
 
 WRA-1B (pitch-roll fallback) replaces the ABENICS parts `80`–`93` with: `40_wrist_housing`, `41_pitch_yoke`, `42_yoke_cap`, `43_j4_pulley54`, `44_j5_horn_adapter`, `45_roll_spindle`, `46_tool_flange`, `47_roll_spacer`.
 
