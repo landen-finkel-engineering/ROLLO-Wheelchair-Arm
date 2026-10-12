@@ -1,10 +1,10 @@
 # 01 — Research findings (with sources)
 
-## 1. The task: doors and reaching from a power chair
+## 1. The task: doors and reaching from a manual wheelchair
 
 - **Where door hardware is.** ADA 2010 §404.2.7 places door hardware 34–48 in (864–1219 mm) above the floor. §309.4 limits operable parts to 5 lbf (22.2 N) with no tight grasping, pinching or wrist twisting. §404.2.9 limits interior hinged doors to 5 lbf opening force; that figure excludes latch retraction and closers on fire doors. [1]
 - **Latch torque.** BHMA A156.2 limits lever-handle torque to 28 lbf·in (3.2 N·m). ICC A117.1-2017 allows 28 in·lb for rotational hardware. [1] Knobs are not "accessible" hardware, but they are common in homes, which is exactly where a personal arm is needed.
-- **Strategy from robotics.** Robots that open doors reliably usually *unlatch* first, then follow the door's arc with compliance rather than a pre-programmed path. An example is equilibrium-point control on the Cody robot. [2] WRA-1 follows that pattern at a small scale: grip, turn, follow the hinge arc for a few degrees under the arm's torque limits, then release and let the chair push.
+- **Strategy from robotics.** Robots that open doors reliably usually *unlatch* first, then follow the door's arc with compliance rather than a pre-programmed path. An example is equilibrium-point control on the Cody robot. [2] WRA-1 follows that pattern at a small scale: grip, turn, follow the hinge arc for a few degrees under the arm's torque limits, then release; the user pushes the door the rest of the way while rolling through.
 
 ## 2. Wheelchair-mounted robotic arms (prior art)
 
@@ -15,6 +15,7 @@
   - A literature review of assistive manipulators found that tasks like door opening are among those most valued, and among the hardest to do reliably. [6]
 - **What WRA-1 keeps from them:** low-speed, low-force motion; a stowed pose beside the chair; a dock for transfers; user-driven tasks plus semi-automatic routines (door, pick).
 - **What it does differently:** fully 3D-printable on a 256 mm bed; hobby serial-bus servos; one design for LEFT or RIGHT mounting; and an ABENICS spherical wrist.
+- **Built for a manual chair.** The JACO studies above were with powered-wheelchair users [4]. A manual chair has no battery to draw from, and its user's hands are busy on the hand rims. So WRA-1 carries its own battery, parks clear of the hand rims, and comes off its dock when it isn't needed. A manual chair also has no motor brakes, so the wheel locks must be on before the arm pulls on a door (docs/10).
 
 ## 3. ABENICS (the wrist)
 

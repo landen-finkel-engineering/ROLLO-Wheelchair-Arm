@@ -73,7 +73,7 @@ Total printed mass (all instances, est.): **2618 g**.
 | electronics | ReSpeaker USB mic array | 1 | owned; USB to Jetson (voice commands) | user side | [V] owned | owned |
 | power | DC-DC buck 12 V / 20 A (input >= 15-24 V) | 1 | servo bus supply; output must stay <= 12.6 V | e-box | [E] generic | 18 |
 | power | DC-DC converter for the Jetson (voltage per YOUR carrier spec, >= 45 W) | 1 | do NOT feed raw 5S battery (21 V full) unless the carrier datasheet allows it | e-box | [E] generic | 15 |
-| power | 18-20 V power-tool battery (5S Li-ion, >= 4 Ah) + adapter with fuse/switch | 1 | or any 15-24 V pack with BMS; separate from any chair battery | e-box / chair | [E] | 60 |
+| power | 18-20 V power-tool battery (5S Li-ion, >= 4 Ah) + adapter with fuse/switch | 1 | or any 15-24 V pack with BMS; the arm's own supply (a manual chair has no battery) | e-box / chair | [E] | 60 |
 | power | ATO blade fuse holder + fuses 25 A, 5 A, 2 A | 1 | servo bus / Jetson / logic | e-box | [E] | 8 |
 | power | TVS diode SMBJ15A (or 1.5KE15A) + 2200 uF 25 V low-ESR capacitor | 1 | servo bus clamp/bulk | e-box | [E] | 3 |
 | power | XT60 connector pair | 2 | battery input | e-box | [E] | 2 |

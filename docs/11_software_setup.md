@@ -96,13 +96,13 @@ pip3 install vosk sounddevice
 cd ~ && curl -LO https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip && unzip vosk-model-small-en-us-0.15.zip
 ros2 run wra_driver voice_node --ros-args -p model_path:=$HOME/vosk-model-small-en-us-0.15
 ```
-Say "robot go home", "robot open hand", and "stop".
+Say "robot go home", "robot open hand", and "stop". Set both wheel locks before you say "robot open the door": the voice command does not ask.
 
 **Door knob.** Teach the knob once:
 ```bash
 python3 wra_cli.py --port /dev/wra_esp32 teach-knob
 ```
-With torque off, guide the claw onto the knob and press Enter. Then run the task:
+Set both wheel locks. With torque off, guide the claw onto the knob and press Enter. Then run the task (it asks you to confirm the wheel locks are on; answer `y`):
 ```bash
 python3 wra_cli.py --port /dev/wra_esp32 door
 ```

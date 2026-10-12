@@ -6,7 +6,7 @@
   python3 wra_cli.py --port /dev/ttyUSB0 move 0 60 -10 0 0 0 10   # th1 th2 th3 pitch yaw roll claw_half_mm
   python3 wra_cli.py --port /dev/ttyUSB0 home | off | power-down | clear | claw 40
   python3 wra_cli.py --port /dev/ttyUSB0 teach-knob     # torque OFF, guide the claw onto the knob by hand
-  python3 wra_cli.py --port /dev/ttyUSB0 door           # runs the door task on the taught knob
+  python3 wra_cli.py --port /dev/ttyUSB0 door           # runs the door task on the taught knob (asks: wheel locks on?)
   python3 wra_cli.py --fake ...                         # same, against the simulated ESP32
 """
 from __future__ import annotations
@@ -38,6 +38,8 @@ def main():
     ap.add_argument("--port", default="/dev/ttyUSB0")
     ap.add_argument("--fake", action="store_true", help="use the simulated ESP32")
     ap.add_argument("--speed", type=float, default=30.0, help="max joint speed deg/s (default 30)")
+    ap.add_argument("--yes", action="store_true",
+                    help="door: skip the wheel-lock question (only when the wheel locks are known to be on)")
     ap.add_argument("--no-keepout", action="store_true",
                     help="disable the user keep-out zone: BENCH STAND ONLY, never with anyone in the chair")
     ap.add_argument("cmd", choices=["status", "arm", "off", "power-down", "clear", "home", "move", "claw",
@@ -92,7 +94,7 @@ def main():
             q = c.joints()
             print(c.move_joints((*q[:4], max(0.0, min(65.0, a.vals[0])) / 2)))
         elif a.cmd == "teach-knob":
-            print("Torque OFF.  Guide the open claw onto the knob (pads at the knob's widest part, tool axis on the "
+            print("Set both wheel locks first.  Torque OFF.  Guide the open claw onto the knob (pads at the knob's widest part, tool axis on the "
                   "knob axis, jaws horizontal).  Press Enter when it sits right.")
             c.torque_off()
             input()
@@ -106,6 +108,10 @@ def main():
             print("saved", KNOB_FILE)
         elif a.cmd == "door":
             k = json.loads(KNOB_FILE.read_text())
+            if not (a.fake or a.yes):                  # a manual chair has no motor brakes (docs/10, docs/09 H15)
+                ans = input("Both wheel locks ON?  An unlocked manual chair can roll when the arm pulls the door. [y/N] ")
+                if ans.strip().lower() not in ("y", "yes"):
+                    raise SystemExit("door task not started: set both wheel locks, then run it again")
             ok = DoorKnobTask(c).run(np.array(k["p"]), np.array(k["R"]), KnobParams())
             print("door task", "OK" if ok else "aborted")
         elif a.cmd == "watch":

@@ -141,7 +141,7 @@ class DoorKnobTask:
                 Rz = rz(math.radians(sgn * a))
                 p = hinge_pt + Rz @ (grip - hinge_pt)
                 if not self.reachable(p, Rz @ R_turn):
-                    break                       # door is cracked open; the rest is done by the chair / a push
+                    break                       # door is cracked open; the user pushes it the rest of the way
                 self._tcp(p, Rz @ R_turn, duration=0.25)
                 achieved = a
             self.log(f"   door swung {achieved:.1f} deg")

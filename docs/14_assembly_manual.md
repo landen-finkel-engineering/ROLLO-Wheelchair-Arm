@@ -84,7 +84,7 @@ Part numbers refer to `output/stl/<number>_*.stl`; quantities and fasteners are 
 
 28. Post bracket `04` + 2 clamps `02/03` (+ liners) on the front post, shelf outboard, at `mount_z`. Stop collar `05` under the lower clamp. Steel tether to the frame.
 29. Third clamp on the lower rail, torque strut (SI5 rod ends + M5 rod), adjusted unstressed. Receiver `01` on the shelf (index 0, 4× M4).
-30. E-box `60/61` on the rear cane (2 clamps). Pendant `62/63` within reach. Route the arm cable along the frame, clear of the wheels and brakes.
+30. E-box `60/61` on the rear cane (2 clamps). Pendant `62/63` within reach. Route the arm cable along the frame, clear of the wheels, hand rims, wheel locks and the folding cross-brace.
 31. Dock the arm (dowels, 2 thumb screws). The dock switch must read *docked*.
 
 ## I. Bring-up

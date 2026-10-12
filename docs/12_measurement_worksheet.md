@@ -1,6 +1,6 @@
 # 12 — Chair measurement worksheet (do this before printing the mount)
 
-The CAD uses a **provisional** Drive Silver Sport 2. Only the published catalogue values are real: seat width 16/18/20", seat depth 16", seat-to-floor 17.5–19.5", back height 16", 8" casters. Everything below tagged **[P]** is a placeholder.
+The CAD uses a **provisional** Drive Silver Sport 2, a manual (self-propelled) folding wheelchair. Only the published catalogue values are real: seat width 16/18/20", seat depth 16", seat-to-floor 17.5–19.5", back height 16", 8" casters. Everything below tagged **[P]** is a placeholder.
 
 Measure your chair with a tape and calipers. Enter each value in `cad/wra/params.yaml`, then run:
 
@@ -32,6 +32,9 @@ Measure with the chair on a level floor, tyres at normal pressure, seat cushion 
 | T15 | user reach: where the user can press the pendant E-stop comfortably | with the user | pendant cable length | — | |
 | T16 | clear width of each doorway you use. With the arm parked it adds ≈ 127–141 mm beyond the hand rim (`output/reports/chair_check.json`) | tape, door fully open | compare with T11 × 2 + the added width | 813 mm (32") | |
 | T17 | latch torque of each knob: hang a luggage scale on a lever clamped to the knob and turn until it unlatches; torque = force × lever length | luggage scale, 100 mm lever | must stay below 2.65 N·m (docs/10) | 0.3–1.5 N·m [E] | |
+| T18 | your push stroke: with the arm docked and parked, push one full stroke on each hand rim; note the closest gap between your hand or knuckles and the arm, bracket or cable | ruler, with the user | — (T4.2: ≥ 25 mm) | — | |
+| T19 | swing-away footrest on the arm side: swing it away (both ways if it can) with the post bracket fitted | by hand | — (must not hit the bracket; if it does, swing it the other way or lift it off for transfers) | — | |
+| T20 | folding: arm undocked, fold the chair with the bracket, receiver, strut and e-box fitted | by hand | — (must fold fully) | — | |
 
 **Also photograph** the post, the lower rail and the rear cane with a ruler in view, and keep the photos with this sheet. Mark the clamp positions with tape before drilling or fitting anything. Nothing in this design drills the chair frame.
 

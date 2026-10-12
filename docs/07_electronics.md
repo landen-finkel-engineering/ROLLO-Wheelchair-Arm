@@ -8,7 +8,7 @@
 
 ```
  18-20 V battery (5S Li-ion + BMS) --F1 30 A--+-- buck 12 V / 20 A --+-- F2 25 A -- K2 (40 A NO) --+-- TVS SMBJ15A + 2200 uF
-   (separate from the chair battery)           |                       |                              +-- Bus Servo Adapter (A) 12 V in
+   (the arm's own pack: no chair battery)      |                       |                              +-- Bus Servo Adapter (A) 12 V in
                                                |                       |                              +-- arm cable (GX16-5) -> turntable star
                                                |                       |                                   -> 8x ST3215 (daisy-chained DATA)
                                                |                       +-- F3 2 A -- E-stop chain (12 V logic, see 2)

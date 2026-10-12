@@ -64,10 +64,12 @@ In that pose the chair is square to the door, and the footplates stop ≈ 215 mm
 **Positioning the chair:**
 - Stop with the arm base 0.42–0.48 m from the door face, measured to the knob.
 - Keep the knob within ±50 mm of the arm's straight-ahead line, or up to 100 mm to its left.
+- **Set both wheel locks.** A manual chair has no motor brakes. When the arm pulls the door, an unlocked chair can roll toward it instead of the door swinging. `wra_cli.py door` asks you to confirm this first.
 - The ROS driver refuses unreachable targets *before* moving, and `/wra/status` reports why.
 
 ## 3. The sequence (`wra_driver/tasks.py → DoorKnobTask`)
 
+0. **Wheel locks on** (see above). The task cannot check this itself.
 1. **Pre-grasp:** TCP 80 mm in front of the knob on its axis; claw opened to knob Ø + 20 mm.
 2. **Approach** along the knob axis to 28 mm behind the knob face (the pads straddle the widest part).
 3. **Close in knob mode.** The claw stalls on the knob at the torque limit. **Grip-width check:** the task aborts unless the measured opening is within −16/+12 mm of the expected knob diameter (no knob, wrong knob, or slipped).
@@ -76,7 +78,7 @@ In that pose the chair is square to the door, and the footplates stop ≈ 215 mm
 6. **Release** knob mode, open the claw slightly and **un-roll**; the open claw turns freely around the knob.
 7. **Retreat** along the knob axis, then **park**.
 
-The door is then pushed or pulled further by the chair or by the arm on the door edge. That avoids holding a sprung door with a 0.3 kg-class arm.
+You then release the wheel locks and push the door the rest of the way with your hand (or the footplates as you roll through), or the arm pushes on the door edge. That avoids holding a sprung door with a 0.3 kg-class arm.
 
 Any fault, stop request, E-stop, or a target outside the limits aborts the task. The arm **holds position and keeps its grip**, and the user decides: release with "robot open hand", or reverse.
 
@@ -88,11 +90,11 @@ Two cases are automated tests in `software/wra_ros2/wra_driver/test/test_core.py
 
 ## 4. Inputs for the knob pose
 
-- **Teach:** `wra_cli.py teach-knob`. With torque off, guide the claw onto the knob by hand; the pose is saved and reused for that door and chair position.
+- **Teach:** `wra_cli.py teach-knob`. Set the wheel locks, then, with torque off, guide the claw onto the knob by hand; the pose is saved and reused for that door and chair position.
 - **Vision (future):** publish `/wra/knob_pose`. Your stereo doorknob grasp project can do this; no camera mount is part of this design. Remember that the knob pose is only valid while the chair stays where it was when the pose was measured.
 
 ## 5. Limits you should expect
 
-- Heavy or closer-equipped doors: exterior doors and fire doors (15 lbf / 67 N or more) are beyond what this arm should pull. Unlatch, then use the chair.
+- Heavy or closer-equipped doors: exterior doors and fire doors (15 lbf / 67 N or more) are beyond what this arm should pull. Unlatch with the arm, then push the door with your hand.
 - Knob heights outside 34–38" or very small knobs (< 40 mm): adjust `mount_z` or use the lever strategy.
 - Glazed or dirty pads: friction drops to around μ 0.3 → re-face (docs/15).

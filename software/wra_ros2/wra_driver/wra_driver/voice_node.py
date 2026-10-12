@@ -6,6 +6,7 @@
 Every other command must start with the wake word (default "robot"), e.g. "robot open the door",
 "robot go home", "robot open hand", "robot close hand", "robot arm on", "robot arm off".
 Voice is a CONVENIENCE input: the hard-wired E-stop on the pendant is the safety function.
+"robot open the door" does not ask about the wheel locks: set both before saying it (manual chair, docs/10).
 """
 from __future__ import annotations
 

@@ -20,7 +20,7 @@ Every number can be regenerated from `cad/wra/params.yaml` with the commands in 
 
 ## 1. Executive summary
 
-**What it is.** WRA-1 is a 6-DoF assistive arm for a power wheelchair; the reference chair is the Drive Silver Sport 2. It docks on the **left or right** front frame post using exactly the same parts. Its main job is **opening doors**: grip a knob, turn it, crack the door open, and let go. It also fetches and moves light objects.
+**What it is.** WRA-1 is a 6-DoF assistive arm for a **manual (self-propelled) wheelchair**; the reference chair is the Drive Silver Sport 2. The chair has no motors, joystick or battery, so the arm carries its own battery, stays clear of the hand rims, and undocks (two thumb screws) when it isn't needed. It docks on the **left or right** front frame post using exactly the same parts. Its main job is **opening doors**: grip a knob, turn it, crack the door open, and let go. It also fetches and moves light objects.
 
 **Hardware.**
 - 8 × Waveshare ST3215 serial-bus servos.
@@ -171,7 +171,7 @@ Details: `docs/06_abenics_wrist.md`.
 
 At park, the outboard-most parts are the J2/J3 drive modules on the turntable, not the wrist. They are 449 mm from the chair centreline on the RIGHT and 436 mm on the LEFT; the arm is not mirrored, so the dual drive module faces outboard on one side and inboard on the other.
 
-The installation never enters the wheel, hand-rim or footrest envelopes in these checks. Transfers are done with the arm parked or undocked (two thumb screws). **All of this has to be re-checked with your measurements.**
+The installation never enters the wheel, hand-rim or footrest envelopes in these checks. They do not model your hands on the rims during a push, the footrest swinging away, or the chair folding; test T4.2 checks those on the real chair. Transfers are done with the arm parked or undocked (two thumb screws). **All of this has to be re-checked with your measurements.**
 
 ## 5. Engineering calculations
 
@@ -397,13 +397,15 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 **Safety concept** (`docs/09_safety.md`):
 - **Hard-wired Cat 0 E-stop with manual reset.** The dock switch is in the same chain, and the ESP32 supervisor sits underneath it with its own limits, watchdogs and heartbeat. The Jetson cannot move the arm outside the limits stored in the ESP32 and in the servo EEPROM.
 - **User keep-out zone (software).** With the mounting side set, the driver refuses any target or path point that would put the upper arm, forearm, wrist, flange or TCP inside the head/torso boxes of the CAD occupant envelope plus 50 mm. It can be switched off only with `wra_cli --no-keepout`, for the bench stand.
+- **Wheel locks on before any task.** A manual chair has no motor brakes, and pulling a door can roll an unlocked chair. `wra_cli.py door` asks for it; nothing senses the wheel locks yet.
 - **Low energy by design:** derated servos, software speed limits (J1 30°/s, TCP ≤ 80 mm/s) and springs that hold the arm's weight when power is cut. The knob claw stalls at a set force instead of squeezing harder.
 - **No claims.** The pattern borrows the structure of IEC 60204-1, ISO 13850 and ISO 13849-1, but claims no Performance Level. The ESP32 is not a certified safety controller.
 
 **FMEA:**
-- 18 failure modes with severity, occurrence and detection ratings, actions, and the risk priority number (RPN) after the actions.
+- 19 failure modes with severity, occurrence and detection ratings, actions, and the risk priority number (RPN) after the actions.
 - The highest RPNs before action are:
   - a printed load part cracking (120);
+  - the chair rolling during the door task because the wheel locks are off (120);
   - a stop-chain relay contact welding (108);
   - a belt tooth jump, and an ABENICS q-branch flip (90 each).
 - Each has a design or test action that lowers its RPN.
@@ -416,8 +418,8 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 | T1 | servos on the bench, not in the arm | IDs, telemetry, clamped limits, torque limit |
 | T2 | arm on a bench stand, **no person within reach** | calibration, spring balance, workspace walk, backlash / accuracy, ABENICS sweeps |
 | T3 | loads | rated payload hold, 2 × rated proof load unpowered, E-stop at full speed, 50 knob cycles on a door fixture, then tooth inspection |
-| T4 | on the chair, **unoccupied** | the Jetson's geometry matches your verified build (`params_sha`), mounts, clearances (≥ 10 mm) LEFT and RIGHT, stability on a 6° ramp |
-| T5 | with the user, an attendant present | keep-out zone, 50 % speed, user practises the E-stop; stop on any unplanned contact |
+| T4 | on the chair, **unoccupied** | the Jetson's geometry matches your verified build (`params_sha`), mounts, clearances (≥ 10 mm) LEFT and RIGHT, a full push stroke on the hand rims, the footrest still swings away, the chair still folds (arm undocked), stability on a 6° ramp |
+| T5 | with the user, an attendant present | keep-out zone, 50 % speed, user practises the E-stop, tasks with the wheel locks on, pushing the chair with the arm docked; stop on any unplanned contact |
 
 **Rules for the stages:**
 - Never test a loaded arm over or near a person before T0–T3 pass.
@@ -428,7 +430,7 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 **Known limitations (honest list).**
 1. **Not built, not tested.** Every structural margin uses typical datasheet strengths [E] and assumed print quality. Proof-test before use (T3.2).
 2. **Θ gear pair at its limit.** It runs at margin 1.00 at the 30 % knob cap. Knob torque above ≈ 2.65 N·m is out of reach, and the teeth need inspection after the first 50 knob cycles. If they wear, reduce the cap or switch to WRA-1B.
-3. **Narrow knob reach window.** The wrist cone (±30°, 21° toward a module) requires the chair to be positioned: 0.42–0.48 m from the door, knob within −50 / +100 mm laterally. The arm cracks a door open by 5–15°; the chair or a push does the rest.
+3. **Narrow knob reach window.** The wrist cone (±30°, 21° toward a module) requires the chair to be positioned: 0.42–0.48 m from the door, knob within −50 / +100 mm laterally. The arm cracks a door open by 5–15°; you push it the rest of the way.
 4. **Wrist size.** The wrist is 245 mm wide across the two modules. It is the bulkiest part of the arm, and 4 servos at the end of the forearm cost payload at reach.
 5. **Width.** The parked arm adds ≈ 127–141 mm beyond the hand rim on the reference chair. Check this against your doorways: 2 × 308.6 + 141 ≈ 758 mm total vs 813 mm (32") clear width.
 6. **Accuracy is unproven.** The ≈ 5.7 mm RSS is an estimate; teaching the knob pose by hand (`teach-knob`) removes most of it for repeated doors.
@@ -437,11 +439,13 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 9. **Open safety items** (docs/09), all needed before user trials (T5):
    - no guards are modelled yet over the open belts and gears, and there is no cover sleeve over the exposed ABENICS teeth;
    - the firmware does not yet flag a position deviation, such as after a belt tooth jump;
-   - the J1 soft window is the same on both sides, with no tighter inboard limit per side.
-10. **No vision hardware,** by design. Knob poses come from teaching or from your own perception node via `/wra/knob_pose`.
+   - the J1 soft window is the same on both sides, with no tighter inboard limit per side;
+   - nothing senses the wheel locks: the door task relies on the user setting them.
+10. **Weight on a manual chair.** The arm (3.16 kg) sits over the front caster on its side, so it makes pushing harder and can pull the chair toward that side; the e-box and battery add more. Undock the arm when you don't need it, and check this in T5.3.
+11. **No vision hardware,** by design. Knob poses come from teaching or from your own perception node via `/wra/knob_pose`.
 
 **Measurements needed next** (`docs/12_measurement_worksheet.md` has the full list and maps each to a parameter):
-- **Chair:** front-post OD and free length, the post's position from the seat edge and rear axle, the lower-rail height and OD, the rear-cane OD, and the wheel-lock and footrest-hanger positions.
+- **Chair:** front-post OD and free length, the post's position from the seat edge and rear axle, the lower-rail height and OD, the rear-cane OD, and the wheel-lock and footrest-hanger positions. Also check your push stroke, the footrest swing-away and folding against the mount (docs/12 T18–T20).
 - **Doorways:** your doorway clear widths, and the knob heights and diameters at home.
 - **Latch torque:** with a luggage scale on a lever arm.
 - **After printing:** the fit-coupon results, the actual part masses (weigh them), servo backlash and TCP repeatability (T2.4), and spring rates.

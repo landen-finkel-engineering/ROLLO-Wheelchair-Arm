@@ -1,6 +1,6 @@
 # WRA-1 — 3D-printable wheelchair robotic arm (ABENICS wrist, knob claw)
 
-A modular, fully 3D-printable assistive arm for a power wheelchair. It mounts on the **LEFT or RIGHT** front post with the same parts. Its main job is **opening doors**, especially gripping and turning **door knobs**; it also fetches and moves light objects.
+A modular, fully 3D-printable assistive arm for a **manual (self-propelled) wheelchair**: no motors, joystick or battery on the chair, so the arm brings its own battery, and it comes off the dock (two thumb screws) when you don't need it. It mounts on the **LEFT or RIGHT** front post with the same parts. Its main job is **opening doors**, especially gripping and turning **door knobs**; it also fetches and moves light objects.
 
 Hardware:
 - 8× Waveshare **ST3215** serial-bus servos
