@@ -62,18 +62,18 @@ common,pin,ISO 8734 hardened dowel 6 x 20,2,dock locating dowels (pressed into r
 common,pin,ISO 8734 dowel 6 x 12,1,J1 hard-stop pin,20_turntable,[V] catalogue part,0.3
 common,pin,ISO 8734 dowel 4 x 8,1,tool-flange clocking dowel,80_cs_gear_front (1A) / 46 (1B),[V] catalogue part,0.2
 common,pin,"ISO 7379 shoulder screw 6 x 10, M5 thread",2,parallelogram crank pins P and Q (626 bearings),"31_j3_hub, 34_forearm_root",[V] catalogue part,1.5
-common,collar,"Shaft collar 30 mm bore, OD <= 45, width 13 (clamp type)",1,J1 spindle axial retention,base cavity,[V] catalogue part,5
+common,collar,"Shaft collar 30 mm bore, OD <= 45, width 13 (clamp type)",1,"J1 spindle axial retention. OPEN: standard 30 mm collars are 16 mm wide or over 45 mm OD, so none fits the base cavity as drawn (docs/16)",base cavity,[open] no standard part found,5
 common,collar,"Shaft collar 15 mm bore, OD <= 28, width <= 12 (set-screw)",1,stub stack retention,stub,[V] catalogue part,2
 common,collar,"Shaft collar 10 mm bore, OD <= 20, width <= 8 (set-screw)",1,elbow pin retention,elbow pin,[V] catalogue part,2
 common,shim,DIN 988 shim rings 15 x 21 assorted (0.1 / 0.3 / 0.5 / 1.0),1,stub stack end play,stub,[V] catalogue part,4
 common,shim,DIN 988 shim rings 10 x 16 x 0.5,2,elbow end play,elbow,[V] catalogue part,1
 WRA-1A,shim,DIN 988 shim rings 8 x 14 x 0.1 / 0.3,4,monopole axial play (between fork arm and 688),83_mp_fork,[V] catalogue part,0.3
-common,spring,Extension springs for gravity balance (rate/preload from calcs/report),4,"2 per joint (J2, J3); see calcs/output/springs.json","upper arm, turntable",[C] spec from calcs,3
+common,spring,Extension springs for gravity balance (rate/preload from calcs/report),4,"2 per joint (J2, J3); see calcs/output/springs.json. OPEN: a spring meeting this spec is about 12-16 mm OD and 85-100 mm long unstretched; the CAD only has a 9 mm placeholder, so its mounting is not designed yet (docs/16)","upper arm, turntable",[C] spec from calcs; [open] size and mounting,3
 common,spring,"UHMWPE (Dyneema) braided cord 1.5-2 mm, >= 100 kg break",1,1 m,spring cords,[V] catalogue part,5
 common,spring,M4 eye bolts 40 mm + nuts (spring tension adjusters),4,,"32_elbow_block, 20_turntable",[V] catalogue part,0.5
 common,consumable,"Silicone rubber sheet 1.5 mm, Shore A 40-60, + silicone-compatible adhesive",1,claw pad facing (friction for knobs); replace when glazed,54_claw_pad_a/b,[E],8
 WRA-1A,consumable,PTFE dry-film lubricant or PTFE grease (plastic-safe),1,"ABENICS teeth, centre-ball socket, claw rack",wrist,[E],8
-common,fastener,DIN 464 knurled thumb screw M6 x 25 (+ 13 x 1.5 O-ring to make it captive),2,arm dock quick release,10_base_housing -> 01_receiver,[V] catalogue part,1.5
+common,fastener,"DIN 464 knurled thumb screw M6 x 25 (+ 5 x 1.5 mm O-ring on the thread, in the 13 mm recess, to make it captive)",2,arm dock quick release,10_base_housing -> 01_receiver,[V] catalogue part,1.5
 common,mount,"Rod end SI5 (M5 female, 5 mm bore)",2,torque strut,04_post_bracket <-> strut clamp,[V] catalogue part,3
 common,mount,"M5 threaded rod, 150 mm, + 2 M5 jam nuts",1,torque strut (cut to fit 90-160 mm),strut,[V] catalogue part,1
 common,mount,Rubber liner 1.5 mm (bicycle inner tube) or printed TPU sleeve,5,inside every tube clamp,02/03,[V] catalogue part,0

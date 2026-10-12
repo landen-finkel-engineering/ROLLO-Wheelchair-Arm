@@ -52,7 +52,7 @@ Change a dimension, a fit, a chair measurement or the wrist type in `cad/wra/par
 ## Start here
 
 1. `docs/00_engineering_report.md` — the whole design in 13 sections.
-2. **Materials list:** [`output/reports/BOM.md`](output/reports/BOM.md) — every part to print, every part to buy (with estimated prices, about $577 in all) and every screw. The buy list is also a spreadsheet: [`bom_purchased.csv`](output/reports/bom_purchased.csv).
+2. **Materials list:** [`output/reports/BOM.md`](output/reports/BOM.md) — every part to print, every part to buy (with estimated prices, about $577 in all) and every screw. The buy list is also a spreadsheet: [`bom_purchased.csv`](output/reports/bom_purchased.csv). Where to buy each part (mostly Amazon links): [`docs/16_shopping_list.md`](docs/16_shopping_list.md).
 3. `docs/12_measurement_worksheet.md` — measure your chair; the CAD chair is provisional.
 4. `docs/13_print_guide.md` → `docs/14_assembly_manual.md` → `docs/11_software_setup.md` → `docs/09_safety.md` test stages.
 5. `docs/test_log.md` — what has been verified in CAD/simulation so far, and the table for your physical test results.

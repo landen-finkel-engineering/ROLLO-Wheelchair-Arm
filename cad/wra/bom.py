@@ -150,8 +150,9 @@ def vitamins():
     add("pin", "ISO 8734 dowel 4 x 8", 1, "tool-flange clocking dowel", "80_cs_gear_front (1A) / 46 (1B)", price=0.2)
     add("pin", "ISO 7379 shoulder screw 6 x 10, M5 thread", 2, "parallelogram crank pins P and Q (626 bearings)",
         "31_j3_hub, 34_forearm_root", price=1.5)
-    add("collar", "Shaft collar 30 mm bore, OD <= 45, width 13 (clamp type)", 1, "J1 spindle axial retention",
-        "base cavity", price=5)
+    add("collar", "Shaft collar 30 mm bore, OD <= 45, width 13 (clamp type)", 1,
+        "J1 spindle axial retention. OPEN: standard 30 mm collars are 16 mm wide or over 45 mm OD, so none fits "
+        "the base cavity as drawn (docs/16)", "base cavity", "[open] no standard part found", 5)
     add("collar", "Shaft collar 15 mm bore, OD <= 28, width <= 12 (set-screw)", 1, "stub stack retention", "stub", price=2)
     add("collar", "Shaft collar 10 mm bore, OD <= 20, width <= 8 (set-screw)", 1, "elbow pin retention", "elbow pin", price=2)
     add("shim", "DIN 988 shim rings 15 x 21 assorted (0.1 / 0.3 / 0.5 / 1.0)", 1, "stub stack end play", "stub", price=4)
@@ -160,7 +161,9 @@ def vitamins():
         "83_mp_fork", price=0.3, var="WRA-1A")
     # ---------------------------------------------------------------- springs / cord / consumables
     add("spring", "Extension springs for gravity balance (rate/preload from calcs/report)", 4,
-        "2 per joint (J2, J3); see calcs/output/springs.json", "upper arm, turntable", "[C] spec from calcs", 3)
+        "2 per joint (J2, J3); see calcs/output/springs.json. OPEN: a spring meeting this spec is about 12-16 mm OD "
+        "and 85-100 mm long unstretched; the CAD only has a 9 mm placeholder, so its mounting is not designed yet "
+        "(docs/16)", "upper arm, turntable", "[C] spec from calcs; [open] size and mounting", 3)
     add("spring", "UHMWPE (Dyneema) braided cord 1.5-2 mm, >= 100 kg break", 1, "1 m", "spring cords", price=5)
     add("spring", "M4 eye bolts 40 mm + nuts (spring tension adjusters)", 4, "", "32_elbow_block, 20_turntable", price=0.5)
     add("consumable", "Silicone rubber sheet 1.5 mm, Shore A 40-60, + silicone-compatible adhesive", 1,
@@ -168,7 +171,7 @@ def vitamins():
     add("consumable", "PTFE dry-film lubricant or PTFE grease (plastic-safe)", 1,
         "ABENICS teeth, centre-ball socket, claw rack", "wrist", "[E]", 8, "WRA-1A")
     # ---------------------------------------------------------------- dock / mount
-    add("fastener", "DIN 464 knurled thumb screw M6 x 25 (+ 13 x 1.5 O-ring to make it captive)", 2,
+    add("fastener", "DIN 464 knurled thumb screw M6 x 25 (+ 5 x 1.5 mm O-ring on the thread, in the 13 mm recess, to make it captive)", 2,
         "arm dock quick release", "10_base_housing -> 01_receiver", price=1.5)
     add("mount", "Rod end SI5 (M5 female, 5 mm bore)", 2, "torque strut", "04_post_bracket <-> strut clamp", price=3)
     add("mount", "M5 threaded rod, 150 mm, + 2 M5 jam nuts", 1, "torque strut (cut to fit 90-160 mm)", "strut", price=1)
