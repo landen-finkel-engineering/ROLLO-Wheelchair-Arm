@@ -47,7 +47,7 @@ cd ../calcs && python arm_calcs.py && python knob_window.py   # calculations -> 
 cd ../software/wra_ros2/wra_driver && python -m pytest -q test  # driver tests (no hardware, ~1 min)
 ```
 
-Change a dimension, a fit, a chair measurement or the wrist type in `cad/wra/params.yaml` and re-run. Never edit the generated files by hand.
+Change a dimension, a fit, a chair measurement or the wrist type in `cad/wra/params.yaml` and re-run. Never edit the generated files by hand. `--verify` also refreshes `software/wra_ros2/wra_driver/config/arm_geometry.json` (the driver's chair → arm transform and user keep-out boxes): after a change, copy it to the Jetson (docs/11 §G).
 
 ## Start here
 

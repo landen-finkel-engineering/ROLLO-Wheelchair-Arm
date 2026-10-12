@@ -74,7 +74,9 @@ class WraDriver(Node):
         self.create_service(Trigger, "/wra/home", self.srv_home)
         self.create_service(Trigger, "/wra/open_door", self.srv_open_door)
         self.create_timer(0.02, self.publish)
-        self.get_logger().info(f"WRA-1 driver ({self.m.variant}) on {self.get_parameter('port').value}")
+        self.get_logger().info(f"WRA-1 driver ({self.m.variant}) on {self.get_parameter('port').value}; "
+                               f"arm_geometry.json params_sha {self.m.g.get('params_sha', 'missing')} "
+                               f"(must match output/reports/verification.json)")
 
     # ------------------------------------------------------------------ helpers
     def _trig(self, rs, code):

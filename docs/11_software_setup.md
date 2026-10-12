@@ -123,3 +123,26 @@ python3 wra_cli.py --fake move 10 60 -15 -10 5 20 15         # simulated ESP32, 
 ros2 run wra_driver fake_esp32 --pty                         # prints /dev/pts/N
 ros2 launch wra_driver wra_bringup.launch.py port:=/dev/pts/N rviz:=true
 ```
+
+## G. After you change `params.yaml` (your chair measurements, fits)
+
+The driver takes the chair → arm transform and the user keep-out boxes from `software/wra_ros2/wra_driver/config/arm_geometry.json`. The PC writes that file; the Jetson uses the new values only after these steps.
+
+1. **On the PC**, in the `Arm-Design` folder:
+   ```bash
+   cd cad
+   python build.py --parts --verify     # new mount parts + clearance checks; also refreshes arm_geometry.json
+   ```
+   Open `output/reports/verification.md`. It must say **Overall: PASS**. Write down the 16-character code after `sha256:` in the line that starts with "Generated"; that is the `params_sha`.
+2. **Copy the file to the Jetson.** With a USB stick, copy `Arm-Design\software\wra_ros2\wra_driver\config\arm_geometry.json` to `~/wra_ws/src/ROLLO-Wheelchair-Arm/software/wra_ros2/wra_driver/config/` on the Jetson and replace the old one. (If your PC copy is a git clone, you can instead commit and push, then run `git pull` in `~/wra_ws/src/ROLLO-Wheelchair-Arm` on the Jetson.)
+3. **Rebuild on the Jetson:**
+   ```bash
+   cd ~/wra_ws && colcon build --symlink-install --packages-select wra_driver wra_description
+   source ~/wra_ws/install/setup.bash
+   ```
+4. **Check that they match** (docs/09 test T4.0):
+   ```bash
+   cd ~/wra_ws/src/ROLLO-Wheelchair-Arm/software/tools
+   python3 wra_cli.py --port /dev/wra_esp32 status    # "geometry_params_sha" must equal the params_sha from step 1
+   ```
+   Without the ESP32 connected, `python3 wra_cli.py --fake status` prints the same value. The ROS driver also logs it when it starts.

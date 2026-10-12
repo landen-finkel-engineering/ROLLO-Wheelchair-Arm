@@ -16,7 +16,7 @@ Slip torque at the knob = 2 × F_jaw × 1.31 × μ × r_knob. Wrist roll capacit
 | case | jaw force | Ø56 knob, μ 0.5 (TPU) | μ 0.8 (silicone) | wrist roll capacity |
 |---|---|---|---|---|
 | continuous grip | 35 N | 1.28 N·m | 2.05 N·m | 2.2 N·m (Θ at 25 %) |
-| knob mode (≤ 10 s) | 70 N | 2.57 N·m | 4.10 N·m | 2.65 N·m (Θ capped at 30 %) |
+| knob mode (≤ 10 s) | 70 N | 2.56 N·m | 4.09 N·m | 2.65 N·m (Θ capped at 30 %) |
 
 The demand side:
 - Residential latches typically need roughly 0.3–1.5 N·m. This is an estimate — measure your doors with a luggage scale on a lever arm.
@@ -48,7 +48,7 @@ With a ±30° wrist cone the forearm must stay within about 30° of horizontal t
 | 400 mm | up to about 36" (914 mm), right at the top edge |
 | **460 mm (default in `params.yaml`)** | 34–38" knobs in the middle of the window ✓ — a 36" knob sits at z_B = 454 |
 
-→ **Mount the dock as high as your post allows, ideally ≈ 460 mm.** Measure your post (docs/12), set `chair.mount_z`, and re-run `python cad/build.py --verify` to re-check clearances.
+→ **Mount the dock as high as your post allows, ideally ≈ 460 mm.** Measure your post (docs/12), set `chair.mount_z`, and re-run `python cad/build.py --parts --verify` to re-check clearances (this also refreshes the driver's chair → arm transform). Then update the Jetson (docs/11 §G).
 
 The CAD check at 460 mm (`output/reports/chair_check.json`) is clean on both sides. That covers the park pose and the arm gripping a 36" knob 450 mm ahead. The closest approaches on that check are:
 - footrest hanger 11.5 mm (post bracket)

@@ -178,5 +178,6 @@
    ]
   }
  ],
- "keepout_margin_mm": 50.0
+ "keepout_margin_mm": 50.0,
+ "params_sha": "b8b62fd5c287d452"
 }

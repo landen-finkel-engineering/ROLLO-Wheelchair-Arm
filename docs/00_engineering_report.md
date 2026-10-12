@@ -167,7 +167,7 @@ Details: `docs/06_abenics_wrist.md`.
 | closest: footrest hanger (post bracket) | 11.5 mm | 11.5 mm | 11.5 mm | 11.5 mm |
 | closest: wheel lock | 60.8 mm | 17.4 mm | 54.8 mm | 16.4 mm |
 | closest: user's elbows (envelope) | 62.0 mm | 44.3 mm | 50.4 mm | 44.5 mm |
-| width added beyond the hand rim | 140.5 mm | 149.5 mm | 127.4 mm | 182.7 mm |
+| width added beyond the hand rim | 140.5 mm | 151.6 mm | 127.4 mm | 184.8 mm |
 
 At park, the outboard-most parts are the J2/J3 drive modules on the turntable, not the wrist. They are 449 mm from the chair centreline on the RIGHT and 436 mm on the LEFT; the arm is not mirrored, so the dual drive module faces outboard on one side and inboard on the other.
 
@@ -416,7 +416,7 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 | T1 | servos on the bench, not in the arm | IDs, telemetry, clamped limits, torque limit |
 | T2 | arm on a bench stand, **no person within reach** | calibration, spring balance, workspace walk, backlash / accuracy, ABENICS sweeps |
 | T3 | loads | rated payload hold, 2 × rated proof load unpowered, E-stop at full speed, 50 knob cycles on a door fixture, then tooth inspection |
-| T4 | on the chair, **unoccupied** | mounts, clearances (≥ 10 mm) LEFT and RIGHT, stability on a 6° ramp |
+| T4 | on the chair, **unoccupied** | the Jetson's geometry matches your verified build (`params_sha`), mounts, clearances (≥ 10 mm) LEFT and RIGHT, stability on a 6° ramp |
 | T5 | with the user, an attendant present | keep-out zone, 50 % speed, user practises the E-stop; stop on any unplanned contact |
 
 **Rules for the stages:**
@@ -446,7 +446,11 @@ Maintenance (`docs/15_maintenance.md`) covers per-session E-stop checks, weekly 
 - **Latch torque:** with a luggage scale on a lever arm.
 - **After printing:** the fit-coupon results, the actual part masses (weigh them), servo backlash and TCP repeatability (T2.4), and spring rates.
 
-Then set the values in `params.yaml`, run `python cad/build.py --all`, and re-check the verification report and chair checks before mounting anything.
+Then set the values in `params.yaml` and regenerate:
+- **Chair measurements only:** `python cad/build.py --parts --verify` (docs/12).
+- **Fits or arm/wrist parameters:** the full sequence in `README.md`, including `tools/wrist_sweep.py --mesh` before `--verify`. `--verify` reads the last wrist sweep and does not re-run it.
+
+`--verify` also refreshes `arm_geometry.json`, which holds the chair → arm transform and the user keep-out boxes the driver enforces. Copy it to the Jetson (docs/11 §G) and confirm the `params_sha` match (docs/09 T4.0). Re-check the verification report and chair checks before mounting anything.
 
 ---
 

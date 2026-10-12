@@ -66,6 +66,7 @@ def main():
             t = c.tel
             print(json.dumps({"state": t.state, "faults": t.faults, "estop_ok": t.estop_ok, "docked": t.docked,
                               "bus_V": t.bus_V, "calibrated": t.calibrated,
+                              "geometry_params_sha": m.g.get("params_sha", "missing"),
                               "servos": {s.id: dict(online=s.online, pos=s.pos, temp=s.temp, volt=s.volt, load=s.load)
                                          for s in t.servos.values()}}, indent=1))
             q = c.joints()

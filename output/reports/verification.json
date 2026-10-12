@@ -814,7 +814,7 @@
   "all_pass": true,
   "parts": 57,
   "parts_pass": 57,
-  "note": "interface checks re-run after replacing the approximate belt-length formula with the exact one"
+  "note": "interface checks re-run after replacing the approximate belt-length formula with the exact one; arm_geometry_params_sha recorded after the run (software export regenerated from the same params.yaml: only the new params_sha field changed, URDF and meshes byte-identical)"
  },
  "interfaces": {
   "dock_dowel_0_clears_base_hole": {
@@ -1299,5 +1299,6 @@
    "front_extent_x_mm": 948.8,
    "t_s": 149.7
   }
- ]
+ ],
+ "arm_geometry_params_sha": "b8b62fd5c287d452"
 }

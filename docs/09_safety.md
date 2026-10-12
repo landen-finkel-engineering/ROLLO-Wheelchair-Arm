@@ -102,6 +102,7 @@ S = severity, O = occurrence, D = detection (1 best … 10 worst). RPN = S·O·D
 
 | step | test | pass criteria |
 |---|---|---|
+| T4.0 | build match | `wra_cli.py status` prints `geometry_params_sha` (the driver also logs it at start-up). It must equal `params_sha` in `output/reports/verification.json` of the build you checked with YOUR chair measurements. If it differs, the chair → arm transform and the user keep-out boxes on the Jetson belong to other measurements: update the Jetson (docs/11 §G) |
 | T4.1 | mount | clamp + strut torque check; mark witness lines; tether fitted |
 | T4.2 | installation clearance | park and move through the workspace: clearance to wheels, rims, wheel locks and footrests ≥ 10 mm; LEFT and RIGHT if both are used |
 | T4.3 | chair stability | arm at max reach with payload; tilt the chair 6° (ramp): no tipping tendency |

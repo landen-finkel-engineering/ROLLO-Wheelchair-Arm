@@ -370,8 +370,12 @@ def print_guide(rows):
 # ============================================================================ verification
 def verify(parts):
     import trimesh
+    # The driver's chair -> arm transform and user keep-out boxes live in arm_geometry.json, and the chair
+    # checks below solve the knob pose with the driver's model: refresh it from THIS params.yaml first.
+    software_export(meshes=False)
     rep = {"generated": datetime.datetime.now().isoformat(timespec="seconds"), "params_sha": _params_hash(),
-           "build_volume_mm": BUILD_VOLUME, "margin_mm": BED_MARGIN, "parts": [], "summary": {}}
+           "build_volume_mm": BUILD_VOLUME, "margin_mm": BED_MARGIN, "parts": [], "summary": {},
+           "arm_geometry_params_sha": json.loads((SW / "wra_driver" / "config" / "arm_geometry.json").read_text())["params_sha"]}
     ok_all = True
     for pd in parts:
         shp = pd.shape
@@ -536,12 +540,18 @@ def _verification_md(rep):
               f"{w['poses']} poses at the hard limits (tilt 33 deg, 24 deg toward a module axis, roll -90/0/+90, "
               f"claw closed/open); toothed gear-mesh check: {w['with_mesh_check']}.  Problems: "
               f"{w['problems'] or 'none'} -> **{'PASS' if w['pass'] else 'FAIL'}**"]
-    L += ["", "## Installation checks on the PROVISIONAL reference chair (park pose)", ""]
+    L += ["", "## Installation checks on the PROVISIONAL reference chair (park, and gripping a 36-inch knob)", ""]
     for c in rep["installation_checks"]:
-        L.append(f"* **{c['side'].upper()}**: interferences {c['interferences'] or 'none'}; added width beyond hand rim "
-                 f"{c['added_width_mm']} mm; minimum clearances {c['clearance_mm']}")
+        L.append(f"* **{c['side'].upper()}, {c.get('pose', 'park')}**: interferences {c['interferences'] or 'none'}; "
+                 f"added width beyond hand rim {c['added_width_mm']} mm; minimum clearances {c['clearance_mm']}")
+    if "arm_geometry_params_sha" in rep:
+        L += ["", f"`software/wra_ros2/wra_driver/config/arm_geometry.json` (chair -> arm transform, user keep-out boxes) "
+                  f"was refreshed from this params.yaml (params_sha {rep['arm_geometry_params_sha']}). The driver logs "
+                  f"this value at start-up and `wra_cli.py status` prints it: it must match before the arm is used "
+                  f"on the chair (docs/09 T4.0)."]
     L += ["", "Clearances to the provisional chair are only as good as the provisional chair: re-run "
-          "`python build.py --verify` after entering YOUR measurements in params.yaml."]
+          "`python build.py --parts --verify` after entering YOUR measurements in params.yaml, then update the "
+          "Jetson (docs/11 section G)."]
     (OUT / "reports" / "verification.md").write_text("\n".join(L) + "\n")
 
 
@@ -598,6 +608,9 @@ def software_export(meshes=True):  # noqa: C901
             g["user_keepout_C_mm"].append({"name": nm, "min": [round(v, 1) for v in (bb.min.X, bb.min.Y, bb.min.Z)],
                                            "max": [round(v, 1) for v in (bb.max.X, bb.max.Y, bb.max.Z)]})
     g["keepout_margin_mm"] = 50.0
+    # which params.yaml this file came from: the driver logs it at start-up and `wra_cli.py status` prints it;
+    # it must equal params_sha in output/reports/verification.json (docs/09 T4.0)
+    g["params_sha"] = _params_hash()
     d = SW / "wra_driver" / "config"
     d.mkdir(parents=True, exist_ok=True)
     (d / "arm_geometry.json").write_text(json.dumps(g, indent=1))
@@ -729,14 +742,14 @@ def main():
         rows = export_parts(parts)
     if a.all or a.parts or a.bom:
         bom(rows)
+    if a.all or a.software:                     # first: the knob-pose render and the checks use the driver model
+        software_export()
     if a.all or a.assemblies:
         export_assemblies()
     if a.all or a.drawings:
         drawings(parts)
     if a.all or a.renders:
         renders()
-    if a.all or a.software:
-        software_export()
     if a.all or a.verify:
         verify(parts)
     log(f"done in {time.time() - t0:.0f}s")

@@ -5,8 +5,11 @@ The CAD uses a **provisional** Drive Silver Sport 2. Only the published catalogu
 Measure your chair with a tape and calipers. Enter each value in `cad/wra/params.yaml`, then run:
 
 ```bash
-cd cad && python build.py --parts --verify     # re-generates the mount parts and re-checks every clearance
+cd cad && python build.py --parts --verify     # re-generates the mount parts, re-checks every clearance and refreshes
+                                               # arm_geometry.json (the driver's chair -> arm transform and user keep-out boxes)
 ```
+
+Then copy the new `arm_geometry.json` to the Jetson (docs/11 §G). The driver only uses your chair geometry after that, and test T4.0 (docs/09) checks it.
 
 Measure with the chair on a level floor, tyres at normal pressure, seat cushion fitted, footrests in the driving position. **Origin:** floor, directly under the centre of the rear axle. **x** forward, **y** to the user's left, **z** up.
 
