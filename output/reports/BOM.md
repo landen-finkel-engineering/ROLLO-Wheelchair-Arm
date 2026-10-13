@@ -108,8 +108,8 @@ Total printed mass (all instances, est.): **2618 g**.
 | stock | Aluminium tube 10 x 1 mm, cut 222.0 mm | 1 | parallelogram rod | 33_rod_end x2 | [C] | 3 |
 | stock | 15 mm h6 linear shaft (hardened), cut 94.0 mm | 1 | J2/J3 stub axle (cantilever) | 21_stub_cheek | [C] length | 6 |
 | stock | 10 mm h6 linear shaft, cut 56.2 mm | 1 | elbow pin | 32_elbow_block | [C] | 4 |
-| stock | Aluminium tube 8 x 1 mm, cut 53.5 mm | 1 | ABENICS centre-ball post (claw cable inside) | 89_abenics_housing -> 90_center_ball | [C] | 2 |
-| pin | ISO 8734 hardened dowel 8 x 24 | 3 | drive-module pulley axles (J1, J2, J3) | 12/22 | [V] catalogue part | 0.5 |
+| stock | Stainless steel (304) tube 8 x 1 mm, cut 53.5 mm | 1 | ABENICS centre-ball post (claw cable inside) | 89_abenics_housing -> 90_center_ball | [C] | 2 |
+| pin | dowel pin 8 x 25, hardened or stainless (the 608s must slide on) | 3 | drive-module pulley axles (J1, J2, J3) | 12/22 | [V] catalogue part | 0.5 |
 | pin | ISO 8734 hardened dowel 8 x 30 | 2 | monopole axles (press in the -x arm) | 83_mp_fork | [V] catalogue part | 0.5 |
 | pin | ISO 8734 dowel 3 x 12 | 2 | CS-gear hemisphere alignment | 80/81 | [V] catalogue part | 0.2 |
 | pin | ISO 8734 dowel 2 x 20 (or M2 x 20 screw + nut) | 1 | centre ball cross pin (plus epoxy) | 90_center_ball | [V] catalogue part | 0.2 |
@@ -234,7 +234,7 @@ Printed: 40_wrist_housing x1, 41_pitch_yoke x1, 42_yoke_cap x1, 43_j4_pulley54 x
 | bearing | 688-2RS 8x16x5 | 2 | 41/43 |
 | bearing | 625-2RS 5x16x5 | 3 | 40_wrist_housing |
 | belt | HTD-3M closed belt 276-3M-15 (92 teeth) | 1 | J4 |
-| pin | ISO 8734 hardened dowel 8 x 24 | 1 | 40 |
+| pin | dowel pin 8 x 25, hardened or stainless (the 608s must slide on) | 1 | 40 |
 | pin | ISO 8734 dowel 8 x 14 (needs 13.9) | 1 | 40_wrist_housing |
 | pin | ISO 8734 dowel 8 x 14 (needs 13.3) | 1 | 40_wrist_housing |
 | pin | ISO 8734 dowel 3 x 8 | 2 | 45_roll_spindle |

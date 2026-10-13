@@ -1,6 +1,6 @@
 {
  "variant": "WRA-1A",
- "generated_from_params_sha": "b8b62fd5c287d452",
+ "generated_from_params_sha": "5d1eef09daa8874d",
  "turntable_origin_z": 105.0,
  "shoulder_h": 80.0,
  "L2": 250.0,
@@ -179,5 +179,5 @@
   }
  ],
  "keepout_margin_mm": 50.0,
- "params_sha": "b8b62fd5c287d452"
+ "params_sha": "5d1eef09daa8874d"
 }

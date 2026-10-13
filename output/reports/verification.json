@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-12T10:40:35",
- "params_sha": "b8b62fd5c287d452",
+ "generated": "2026-10-12T23:46:36",
+ "params_sha": "5d1eef09daa8874d",
  "build_volume_mm": [
   256.0,
   256.0,
@@ -813,9 +813,9 @@
  "summary": {
   "all_pass": true,
   "parts": 57,
-  "parts_pass": 57,
-  "note": "interface checks re-run after replacing the approximate belt-length formula with the exact one; arm_geometry_params_sha recorded after the run (software export regenerated from the same params.yaml: only the new params_sha field changed, URDF and meshes byte-identical)"
+  "parts_pass": 57
  },
+ "arm_geometry_params_sha": "5d1eef09daa8874d",
  "interfaces": {
   "dock_dowel_0_clears_base_hole": {
    "value_mm3": 0,
@@ -1163,7 +1163,7 @@
    "hand_rim_outer_mm": 308.6,
    "added_width_mm": 140.5,
    "front_extent_x_mm": 744.6,
-   "t_s": 192.1
+   "t_s": 211.7
   },
   {
    "side": "right",
@@ -1211,7 +1211,7 @@
    "hand_rim_outer_mm": 308.6,
    "added_width_mm": 151.6,
    "front_extent_x_mm": 950.5,
-   "t_s": 147.5
+   "t_s": 206.8
   },
   {
    "side": "left",
@@ -1249,7 +1249,7 @@
    "hand_rim_outer_mm": 308.6,
    "added_width_mm": 127.4,
    "front_extent_x_mm": 755.9,
-   "t_s": 154.4
+   "t_s": 217.5
   },
   {
    "side": "left",
@@ -1297,8 +1297,7 @@
    "hand_rim_outer_mm": 308.6,
    "added_width_mm": 184.8,
    "front_extent_x_mm": 948.8,
-   "t_s": 149.7
+   "t_s": 208.6
   }
- ],
- "arm_geometry_params_sha": "b8b62fd5c287d452"
+ ]
 }

@@ -130,10 +130,15 @@ def vitamins():
     add("stock", f"15 mm h6 linear shaft (hardened), cut {c['stub']:.1f} mm", 1, "J2/J3 stub axle (cantilever)",
         "21_stub_cheek", "[C] length", 6)
     add("stock", f"10 mm h6 linear shaft, cut {c['elbow_pin']:.1f} mm", 1, "elbow pin", "32_elbow_block", "[C]", 4)
-    add("stock", f"Aluminium tube 8 x 1 mm, cut {c['abenics_post_1A']:.1f} mm", 1,
+    add("stock", f"Stainless steel (304) tube 8 x 1 mm, cut {c['abenics_post_1A']:.1f} mm", 1,
         "ABENICS centre-ball post (claw cable inside)", "89_abenics_housing -> 90_center_ball", "[C]", 2, "WRA-1A")
-    add("pin", "ISO 8734 hardened dowel 8 x 24", 3, "drive-module pulley axles (J1, J2, J3)", "12/22", price=0.5)
-    add("pin", "ISO 8734 hardened dowel 8 x 24", 1, "J4 drive-module pulley axle", "40", price=0.5, var="WRA-1B")
+    dm_pin = "dowel pin 8 x {:.0f}, hardened or stainless (the 608s must slide on)"
+    if P.dm.pin_len == P.ddm.pin_len:
+        add("pin", dm_pin.format(P.dm.pin_len), 3, "drive-module pulley axles (J1, J2, J3)", "12/22", price=0.5)
+    else:
+        add("pin", dm_pin.format(P.dm.pin_len), 1, "J1 drive-module pulley axle", "12_dm_bracket", price=0.5)
+        add("pin", dm_pin.format(P.ddm.pin_len), 2, "J2/J3 drive-module pulley axles", "22_ddm_bracket_*", price=0.5)
+    add("pin", dm_pin.format(P.dm.pin_len), 1, "J4 drive-module pulley axle", "40", price=0.5, var="WRA-1B")
     add("pin", f"ISO 8734 hardened dowel 8 x {P.abenics.mp_pin[1]:.0f}", 2, "monopole axles (press in the -x arm)",
         "83_mp_fork", price=0.5, var="WRA-1A")
     add("pin", "ISO 8734 dowel 3 x 12", 2, "CS-gear hemisphere alignment", "80/81", price=0.2, var="WRA-1A")

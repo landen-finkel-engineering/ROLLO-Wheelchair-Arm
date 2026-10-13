@@ -124,7 +124,7 @@ dm:
   teeth: 36
   bearing: "608"
   pin_dia: 8.0
-  pin_len: 24.0                 # ISO 8734 hardened dowel 8 x 24 (fixed pulley axle)
+  pin_len: 25.0                 # 8 x 25 dowel (fixed pulley axle), pressed flush with the mounting face
   flange_plate: 5.0             # pulley bottom plate bolted to horn
   gap_horn: 0.6
   wall: 5.0                     # bracket wall
@@ -202,7 +202,8 @@ belt_lengths:                   # chosen standard HTD-3M-15 pitch lengths (mm)
   j4: 276                       # C = 69.97 (DM clears the pitch-yoke sweep)
 ddm:                            # Dual Drive Module: J2 + J3 drive brackets back-to-back behind O.
   angle_deg: 180.0              # direction O -> DDM axes in the turntable XZ plane
-  pin_len: 24.0                 # each half: own 8 x 24 dowel (independent belt tension)
+  pin_len: 25.0                 # each half: own 8 x 25 dowel (independent belt tension); 24 left the
+                                #   lower 608 0.8 mm off the pin
   center_wall: [-17.4, 3.4]     # Y extent of the two pin walls together
   split_y: -7.0
 

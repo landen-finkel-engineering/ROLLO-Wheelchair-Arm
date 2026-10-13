@@ -86,7 +86,7 @@ def bracket(wall_t: float | None = None, mount: bool = True, tension_lug: bool =
     # ---- clearances for horn and pulley
     cradle -= cyl(22.0, 3.0, z=-3.0)
     cradle -= cyl(2 * PULLEY_FLANGE_R + 2.0, Z_PULLEY_TOP + 0.5, z=-0.55)
-    # ---- dowel press bore (8 x 24 dowel, inserted from the mounting face)
+    # ---- dowel press bore (8 x 25 dowel, pressed in from the mounting face until flush)
     cradle -= cyl(D.pin_dia - P.fit.pin_press_minus, 40, z=Z_PULLEY_TOP - 1)
     # ---- mounting: 4x M4 heat-set inserts in the post tops (host part carries the slots)
     if mount:

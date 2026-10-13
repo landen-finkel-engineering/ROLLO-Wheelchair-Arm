@@ -1,16 +1,16 @@
 {
  "variant": "WRA-1A (ABENICS wrist)",
- "generated": "2026-10-12T10:17:25",
+ "generated": "2026-10-13T00:04:59",
  "mass_g": {
   "base_fixed_B": 419,
-  "turntable_T_incl_J1J2J3_servos": 997,
+  "turntable_T_incl_J1J2J3_servos": 998,
   "upper_arm_U": 312,
   "j3_hub_K": 64,
   "parallelogram_rod": 74,
   "forearm_F_incl_ABENICS_housing_modules_4_servos": 909,
   "tool_S_cs_gear": 89,
   "claw_G_incl_servo": 293,
-  "arm_total_on_dock": 3157,
+  "arm_total_on_dock": 3159,
   "moving_beyond_J2": 1741
  },
  "mass_model_missing_parts_json": [],

@@ -190,7 +190,7 @@ def arm_instances(q=None, explode: float = 0.0, vitamins: bool = True, side: str
         add(f"thumb_screw_{i}", "V_DIN464_M6x25", ts, COL["metal"], VITAMIN, group="dock", dz=60)
     add("stub", "V_stub15", _c(tt.stub), COL["metal"], VITAMIN, loc=T, group="shoulder", dz=tz + 40)
     for i, p_ in enumerate(_c(tt.ddm_pins)):
-        add(f"ddm_pin_{i}", "V_dowel8x25", p_, COL["metal"], VITAMIN, loc=T, group="turntable", dz=tz + 60)
+        add(f"ddm_pin_{i}", f"V_dowel8x{P.ddm.pin_len:.0f}", p_, COL["metal"], VITAMIN, loc=T, group="turntable", dz=tz + 60)
     for i, t_ in enumerate(_c(arm.ua_tubes)):
         add(f"ua_tube_{i}", "V_tube12", t_, COL["tube"], VITAMIN, loc=U, group="upper_arm", dz=tz + 140)
     for i, t_ in enumerate(_c(wr.fa_tubes)):
@@ -201,9 +201,9 @@ def arm_instances(q=None, explode: float = 0.0, vitamins: bool = True, side: str
     add("stub_collar", "V_collar15", _c(arm.stub_collar), COL["metal"], VITAMIN, loc=T, group="shoulder", dz=tz + 160)
     add("j1_collar", "V_collar30", lib.tube(BSP.collar[1], BSP.collar[0], BSP.collar[2], z=BSP.collar_z[0]),
         COL["metal"], VITAMIN, group="base", dz=-20)
-    add("j1_dm_pin", "V_dowel8x24", _c(dm.pin), COL["metal"], VITAMIN, loc=T * L.J1_DM_LOC_T, group="turntable", dz=tz - 30)
+    add("j1_dm_pin", f"V_dowel8x{P.dm.pin_len:.0f}", _c(dm.pin), COL["metal"], VITAMIN, loc=T * L.J1_DM_LOC_T, group="turntable", dz=tz - 30)
     if wrist == "pitch_roll":
-        add("j4_dm_pin", "V_dowel8x24", _c(dm.pin), COL["metal"], VITAMIN, loc=F * wr.J4_DM_LOC_F, group="forearm", dz=tz + 200)
+        add("j4_dm_pin", f"V_dowel8x{P.dm.pin_len:.0f}", _c(dm.pin), COL["metal"], VITAMIN, loc=F * wr.J4_DM_LOC_F, group="forearm", dz=tz + 200)
         for i, p_ in enumerate(_c(wr.pitch_pins)):
             add(f"pitch_pin_{i}", "V_dowel8x16", p_, COL["metal"], VITAMIN, loc=F, group="forearm", dz=tz + 200)
         add("j4_servo", "ST3215", _c(lib.servo_model), COL["servo"], VITAMIN, loc=F * wr.J4_DM_LOC_F * dm.servo_loc(), group="forearm", dz=tz + 200)

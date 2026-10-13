@@ -1,6 +1,6 @@
 # Verification report (generated)
 
-Generated 2026-10-12T10:40:35 from params.yaml sha256:b8b62fd5c287d452.
+Generated 2026-10-12T23:46:36 from params.yaml sha256:5d1eef09daa8874d.
 
 **Overall: PASS** (57/57 parts pass).
 
@@ -115,11 +115,11 @@ Generated 2026-10-12T10:40:35 from params.yaml sha256:b8b62fd5c287d452.
 
 ## Installation checks on the PROVISIONAL reference chair (park, and gripping a 36-inch knob)
 
-* **RIGHT, park**: interferences none; added width beyond hand rim 140.5 mm; minimum clearances {'chair_rear_wheel': [102.0, 'turntable', 'chair_rear_wheel_R'], 'chair_hand_rim': [118.2, 'turntable', 'chair_hand_rim_R'], 'chair_wheel_lock': [60.8, 'turntable', 'chair_wheel_lock_R'], 'chair_footrest_hanger': [11.5, 'post_bracket', 'chair_footrest_hanger_R'], 'user': [62.0, 'j3_dm_cap', 'user_upper_arms_elbows']}
-* **RIGHT, knob_36in**: interferences none; added width beyond hand rim 151.6 mm; minimum clearances {'chair_rear_wheel': [93.9, 'j1_dm_cap', 'chair_rear_wheel_R'], 'chair_hand_rim': [111.9, 'j1_dm_cap', 'chair_hand_rim_R'], 'chair_wheel_lock': [17.4, 'turntable', 'chair_wheel_lock_R'], 'chair_footrest_hanger': [11.5, 'post_bracket', 'chair_footrest_hanger_R'], 'user': [44.3, 'j3_dm_cap', 'user_upper_arms_elbows']}
-* **LEFT, park**: interferences none; added width beyond hand rim 127.4 mm; minimum clearances {'chair_rear_wheel': [98.9, 'turntable', 'chair_rear_wheel_L'], 'chair_hand_rim': [115.7, 'turntable', 'chair_hand_rim_L'], 'chair_wheel_lock': [54.8, 'turntable', 'chair_wheel_lock_L'], 'chair_footrest_hanger': [11.5, 'post_bracket', 'chair_footrest_hanger_L'], 'user': [50.4, 'j2_dm_cap', 'user_upper_arms_elbows']}
-* **LEFT, knob_36in**: interferences none; added width beyond hand rim 184.8 mm; minimum clearances {'chair_rear_wheel': [93.9, 'j1_dm_cap', 'chair_rear_wheel_L'], 'chair_hand_rim': [111.9, 'j1_dm_cap', 'chair_hand_rim_L'], 'chair_wheel_lock': [16.4, 'turntable', 'chair_wheel_lock_L'], 'chair_footrest_hanger': [11.5, 'post_bracket', 'chair_footrest_hanger_L'], 'user': [44.5, 'ddm_bracket_j2', 'user_upper_arms_elbows']}
+* **RIGHT, park**: interferences none; added width beyond hand rim 140.5 mm; minimum clearances {'chair_rear_wheel': (102.0, 'turntable', 'chair_rear_wheel_R'), 'chair_hand_rim': (118.2, 'turntable', 'chair_hand_rim_R'), 'chair_wheel_lock': (60.8, 'turntable', 'chair_wheel_lock_R'), 'chair_footrest_hanger': (11.5, 'post_bracket', 'chair_footrest_hanger_R'), 'user': (62.0, 'j3_dm_cap', 'user_upper_arms_elbows')}
+* **RIGHT, knob_36in**: interferences none; added width beyond hand rim 151.6 mm; minimum clearances {'chair_rear_wheel': (93.9, 'j1_dm_cap', 'chair_rear_wheel_R'), 'chair_hand_rim': (111.9, 'j1_dm_cap', 'chair_hand_rim_R'), 'chair_wheel_lock': (17.4, 'turntable', 'chair_wheel_lock_R'), 'chair_footrest_hanger': (11.5, 'post_bracket', 'chair_footrest_hanger_R'), 'user': (44.3, 'j3_dm_cap', 'user_upper_arms_elbows')}
+* **LEFT, park**: interferences none; added width beyond hand rim 127.4 mm; minimum clearances {'chair_rear_wheel': (98.9, 'turntable', 'chair_rear_wheel_L'), 'chair_hand_rim': (115.7, 'turntable', 'chair_hand_rim_L'), 'chair_wheel_lock': (54.8, 'turntable', 'chair_wheel_lock_L'), 'chair_footrest_hanger': (11.5, 'post_bracket', 'chair_footrest_hanger_L'), 'user': (50.4, 'j2_dm_cap', 'user_upper_arms_elbows')}
+* **LEFT, knob_36in**: interferences none; added width beyond hand rim 184.8 mm; minimum clearances {'chair_rear_wheel': (93.9, 'j1_dm_cap', 'chair_rear_wheel_L'), 'chair_hand_rim': (111.9, 'j1_dm_cap', 'chair_hand_rim_L'), 'chair_wheel_lock': (16.4, 'turntable', 'chair_wheel_lock_L'), 'chair_footrest_hanger': (11.5, 'post_bracket', 'chair_footrest_hanger_L'), 'user': (44.5, 'ddm_bracket_j2', 'user_upper_arms_elbows')}
 
-`software/wra_ros2/wra_driver/config/arm_geometry.json` (chair -> arm transform, user keep-out boxes) was refreshed from this params.yaml (params_sha b8b62fd5c287d452). The driver logs this value at start-up and `wra_cli.py status` prints it: it must match before the arm is used on the chair (docs/09 T4.0).
+`software/wra_ros2/wra_driver/config/arm_geometry.json` (chair -> arm transform, user keep-out boxes) was refreshed from this params.yaml (params_sha 5d1eef09daa8874d). The driver logs this value at start-up and `wra_cli.py status` prints it: it must match before the arm is used on the chair (docs/09 T4.0).
 
 Clearances to the provisional chair are only as good as the provisional chair: re-run `python build.py --parts --verify` after entering YOUR measurements in params.yaml, then update the Jetson (docs/11 section G).

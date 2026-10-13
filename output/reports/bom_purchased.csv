@@ -49,9 +49,9 @@ common,stock,"Aluminium tube 12 x 1 mm, cut 15.71 mm (deburr square)",1,elbow in
 common,stock,"Aluminium tube 10 x 1 mm, cut 222.0 mm",1,parallelogram rod,33_rod_end x2,[C],3
 common,stock,"15 mm h6 linear shaft (hardened), cut 94.0 mm",1,J2/J3 stub axle (cantilever),21_stub_cheek,[C] length,6
 common,stock,"10 mm h6 linear shaft, cut 56.2 mm",1,elbow pin,32_elbow_block,[C],4
-WRA-1A,stock,"Aluminium tube 8 x 1 mm, cut 53.5 mm",1,ABENICS centre-ball post (claw cable inside),89_abenics_housing -> 90_center_ball,[C],2
-common,pin,ISO 8734 hardened dowel 8 x 24,3,"drive-module pulley axles (J1, J2, J3)",12/22,[V] catalogue part,0.5
-WRA-1B,pin,ISO 8734 hardened dowel 8 x 24,1,J4 drive-module pulley axle,40,[V] catalogue part,0.5
+WRA-1A,stock,"Stainless steel (304) tube 8 x 1 mm, cut 53.5 mm",1,ABENICS centre-ball post (claw cable inside),89_abenics_housing -> 90_center_ball,[C],2
+common,pin,"dowel pin 8 x 25, hardened or stainless (the 608s must slide on)",3,"drive-module pulley axles (J1, J2, J3)",12/22,[V] catalogue part,0.5
+WRA-1B,pin,"dowel pin 8 x 25, hardened or stainless (the 608s must slide on)",1,J4 drive-module pulley axle,40,[V] catalogue part,0.5
 WRA-1A,pin,ISO 8734 hardened dowel 8 x 30,2,monopole axles (press in the -x arm),83_mp_fork,[V] catalogue part,0.5
 WRA-1A,pin,ISO 8734 dowel 3 x 12,2,CS-gear hemisphere alignment,80/81,[V] catalogue part,0.2
 WRA-1A,pin,ISO 8734 dowel 2 x 20 (or M2 x 20 screw + nut),1,centre ball cross pin (plus epoxy),90_center_ball,[V] catalogue part,0.2

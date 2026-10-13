@@ -35,7 +35,7 @@
   "hand_rim_outer_mm": 308.6,
   "added_width_mm": 140.5,
   "front_extent_x_mm": 744.6,
-  "t_s": 192.1
+  "t_s": 211.7
  },
  {
   "side": "right",
@@ -83,7 +83,7 @@
   "hand_rim_outer_mm": 308.6,
   "added_width_mm": 151.6,
   "front_extent_x_mm": 950.5,
-  "t_s": 147.5
+  "t_s": 206.8
  },
  {
   "side": "left",
@@ -121,7 +121,7 @@
   "hand_rim_outer_mm": 308.6,
   "added_width_mm": 127.4,
   "front_extent_x_mm": 755.9,
-  "t_s": 154.4
+  "t_s": 217.5
  },
  {
   "side": "left",
@@ -169,6 +169,6 @@
   "hand_rim_outer_mm": 308.6,
   "added_width_mm": 184.8,
   "front_extent_x_mm": 948.8,
-  "t_s": 149.7
+  "t_s": 208.6
  }
 ]

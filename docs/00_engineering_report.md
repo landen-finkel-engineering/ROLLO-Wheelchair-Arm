@@ -319,6 +319,8 @@ Full lists:
 
 **Estimated purchase cost: ≈ $577** [E, before tax and shipping]. It excludes the Jetson and the mic. It includes all 9 servos (≈ $22 each), so subtract any servos you already have.
 
+Buying everything on the Amazon list in docs/16 costs about **$1,210** (2026-10-12 prices). The difference comes from pack sizes (the estimate counts only the pieces the arm uses), the servos at about $31 each there, the charger in the battery kit, and the Loctite glue and primer (about $77).
+
 ## 9. Printing
 
 The full guide is `docs/13_print_guide.md`, generated with the parts.

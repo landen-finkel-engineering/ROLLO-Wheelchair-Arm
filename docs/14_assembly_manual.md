@@ -40,7 +40,7 @@ Part numbers refer to `output/stl/<number>_*.stl`; quantities and fasteners are 
 6. Press the 2× 6806 face-to-face into `10_base_housing`. Fit `11_j1_fixed_pulley` (4× M3 countersunk).
 7. Insert the turntable spindle (`20_turntable`) through the bearings from above. Fit the 30 mm clamp collar from below, snug, with no end play. Fit the J1 hard-stop pin (6×12).
 8. Assemble the J1 drive module:
-   - 2× 608 in `12_dm_pulley36`, on the 8×24 dowel pressed into `12_dm_bracket`
+   - 2× 608 in `12_dm_pulley36`, on the 8×25 dowel pressed into `12_dm_bracket` from the mounting face until flush (first check that a 608 slides onto the dowel by hand)
    - servo ID 1 in the pocket, horn bolted to the pulley (4× M3×8)
    - cap `12_dm_cap`
    - hang it under the turntable on its slotted M4 screws with the 240 mm belt round the fixed pulley
@@ -48,7 +48,7 @@ Part numbers refer to `output/stl/<number>_*.stl`; quantities and fasteners are 
 
 ## C. Shoulder (J2, J3) and upper arm
 
-9. Assemble the two halves of the dual drive module (`22_ddm_bracket_j2/j3`, servos ID 2 and 3, pulleys, 8×24 pins). Bolt them behind the shoulder with slotted feet; do not tension yet.
+9. Assemble the two halves of the dual drive module (`22_ddm_bracket_j2/j3`, servos ID 2 and 3, pulleys, 8×25 pins pressed in from the split face until flush). Bolt them behind the shoulder with slotted feet; do not tension yet.
 10. Clamp the 15 mm stub axle in `21_stub_cheek` (2× M4 pinch). Stack on it: `30_ua_hub` (2× 6802) → stub spacers `35_*` → `31_j3_hub` (2× 6802) → shims → 15 mm collar. End play 0.05–0.15 mm.
 11. Fit the 345 mm (J2) and 321 mm (J3) belts and tension both as in step 8.
 12. Bond (structural epoxy) and cross-bolt (M3×20 through 3.4 mm drilled holes) the two 182 mm tubes into `30_ua_hub` and `32_elbow_block`. Check the elbow pin bore is parallel to the stub (≤ 0.3 mm over the length) before the epoxy cures.
